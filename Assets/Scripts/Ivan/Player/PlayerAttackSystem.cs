@@ -2,8 +2,26 @@ using UnityEngine;
 
 public class PlayerAttackSystem : MonoBehaviour
 {
-    public void Shoot()
+    public GameObject bulletPrefab;
+
+    public void Shoot(float speedPlayer)
     {
-        Debug.Log("Player Shoot Attack System");
+        if (null != bulletPrefab)
+        {
+            Debug.Log("Shoot");
+            // Instancie la bombe devant le kart, dans sa rotation actuelle
+            GameObject bulletObject = Instantiate(
+                bulletPrefab,
+                transform.position,
+                transform.rotation
+            );
+
+            Bullet bullet = bulletObject.GetComponent<Bullet>();
+            if (null != bullet)
+            {
+                bullet.speed += speedPlayer;
+                // currentAmmo -= 1;
+            }
+        }
     }
 }

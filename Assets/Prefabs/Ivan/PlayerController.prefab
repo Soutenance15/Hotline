@@ -273,6 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 982de98abf1b4c642b968b8472e9775d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttackSystem
+  bulletPrefab: {fileID: 5432595796052714190, guid: 4d0a8924d8f9c30419ed89b8ce024761, type: 3}
 --- !u!50 &3876447044603170057
 Rigidbody2D:
   serializedVersion: 5

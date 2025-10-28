@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
         {
             if (playerInput.ShootPressed)
             {
-                playerAttack.Shoot();
+                playerAttack.Shoot(rb.linearVelocity.magnitude);
             }
         }
     }
