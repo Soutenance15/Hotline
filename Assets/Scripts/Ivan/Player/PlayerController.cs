@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
         if (null != playerInput && null != playerMove)
         {
             playerMove.Move(playerInput.MoveInput);
+            playerMove.Turn(playerInput.TurnInput);
         }
     }
 

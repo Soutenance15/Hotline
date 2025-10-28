@@ -5,6 +5,7 @@ public class PlayerMoveSystem : MonoBehaviour
 {
     // --- Mouvements ---
     private float currentSpeed = 3f;
+    private float rotateSpeed = 10f;
 
     // --- Composant ---
     private Rigidbody2D rb;
@@ -20,6 +21,11 @@ public class PlayerMoveSystem : MonoBehaviour
 
         // --- Appliquer la vitesse ---
         rb.linearVelocity = direction * currentSpeed;
+    }
+
+    public void Turn(float turnInput)
+    {
+        rb.rotation += rotateSpeed * turnInput;
     }
 
     public void ResetVelocity()
