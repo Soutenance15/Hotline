@@ -1,0 +1,45 @@
+using UnityEngine;
+
+public class PlayerController : MonoBehaviour
+{
+    // Scripts System
+    PlayerMoveSystem playerMove;
+    PlayerInputSystem playerInput;
+    PlayerAttackSystem playerAttack;
+
+    // Composants
+    Rigidbody2D rb;
+
+    void Awake()
+    {
+        playerMove = GetComponent<PlayerMoveSystem>();
+        playerInput = GetComponent<PlayerInputSystem>();
+        playerAttack = GetComponent<PlayerAttackSystem>();
+        rb = GetComponent<Rigidbody2D>();
+
+        // Init
+        if (null != playerMove && null != rb)
+        {
+            playerMove.Init(rb);
+        }
+    }
+
+    void FixedUpdate()
+    {
+        if (null != playerInput && null != playerMove)
+        {
+            playerMove.Move(playerInput.MoveInput);
+        }
+    }
+
+    void Update()
+    {
+        if (null != playerInput)
+        {
+            if (playerInput.ShootPressed)
+            {
+                playerAttack.Shoot();
+            }
+        }
+    }
+}
