@@ -331,7 +331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IntroToDialogue
   IntroText: {fileID: 1305591517}
   PanelDialogue: {fileID: 1035278800}
-  delay: 2
+  delay: 15
 --- !u!1 &872732778
 GameObject:
   m_ObjectHideFlags: 0
