@@ -3,13 +3,30 @@ using UnityEngine;
 public class PlayerAttackSystem : MonoBehaviour
 {
     public GameObject bulletPrefab;
+    public AmmoBullet ammoBullet;
+
+    // Gestion evenement exterieur
+
+    void OnEnable()
+    {
+        AmmoBullet.OnAmmoBulletEnter += TakeAmmoBullet;
+    }
+
+    void OnDisable()
+    {
+        AmmoBullet.OnAmmoBulletEnter -= TakeAmmoBullet;
+    }
+
+    void TakeAmmoBullet(AmmoBullet ammoBullet)
+    {
+        this.ammoBullet = ammoBullet;
+    }
 
     public void Shoot(float speedPlayer)
     {
+        Debug.Log(ammoBullet.nbBullet.ToString());
         if (null != bulletPrefab)
         {
-            Debug.Log("Shoot");
-            // Instancie la bombe devant le kart, dans sa rotation actuelle
             GameObject bulletObject = Instantiate(
                 bulletPrefab,
                 transform.position,
@@ -19,8 +36,8 @@ public class PlayerAttackSystem : MonoBehaviour
             Bullet bullet = bulletObject.GetComponent<Bullet>();
             if (null != bullet)
             {
+                // Ajoute la vitesse du player a la balle (utile si il avance)
                 bullet.speed += speedPlayer;
-                // currentAmmo -= 1;
             }
         }
     }

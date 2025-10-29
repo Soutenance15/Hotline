@@ -37,9 +37,14 @@ public class PlayerController : MonoBehaviour
     {
         if (null != playerInput)
         {
-            if (playerInput.ShootPressed)
+            // Attack
+            if (playerInput.ShootPressed && null != playerAttack.ammoBullet)
             {
-                playerAttack.Shoot(rb.linearVelocity.magnitude);
+                if (!playerAttack.ammoBullet.canNotShoot)
+                {
+                    playerAttack.Shoot(rb.linearVelocity.magnitude);
+                    playerAttack.ammoBullet.UsedOneBullet();
+                }
             }
         }
     }

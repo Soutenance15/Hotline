@@ -36,7 +36,7 @@
             ],
             "bindings": [
                 {
-                    "name": "KeyBoard",
+                    "name": "KeyBoard Arrow",
                     "id": "4509f21e-6c86-40f5-ae14-5d7741812951",
                     "path": "2DVector",
                     "interactions": "",
@@ -91,9 +91,75 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "KeyBoard ZQDW",
+                    "id": "2db40a86-0749-46a0-8662-1f25401e5892",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "fa1b31c3-803f-4c46-8ad5-d892ab9e4a4a",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "e92e97f7-eae9-4fac-921e-dbb64ed4c4e0",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "91842030-f8fb-4631-bfa4-95157a9010e4",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "b1f23be8-a3fc-4724-aef8-9c093fc108c3",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
                     "id": "492c2302-70cd-467c-a682-d9613d64a6bb",
                     "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1109222b-951f-48d7-a961-3134286ab718",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
