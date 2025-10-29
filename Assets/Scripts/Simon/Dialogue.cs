@@ -1,58 +1,74 @@
-using System.Linq;
-using TMPro;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
-
+[System.Serializable]
 public class Dialogue : MonoBehaviour
 {
-    [SerializeField] private GameObject canvas;
-    [SerializeField] private TextMeshProUGUI speakerText;
-    [SerializeField] private TextMeshProUGUI dialogText;
-    [SerializeField] private Image portraitText;
+    public string speakerName;
+    [TextArea] public string[] sentences;
+}
 
-    [SerializeField] private string[] speaker;
-    [SerializeField] [TextArea] private string[] dialogueWords;
-    [SerializeField] private Sprite[] portrait;
+public class DialogueManager : MonoBehaviour
+{
+    public GameObject dialoguePanel;
+    public TMP_Text dialogueText;
+    public TMP_Text speakerText;
+    public Button continueButton;
 
-    private bool dialogueActivated;
-    private int step;
+    private Queue<string> sentences;
 
-
-    void Update()
+    void Start()
     {
-        if (Input.GetKeyDown("E") && dialogueActivated == true)
+        sentences = new Queue<string>();
+        dialoguePanel.SetActive(false);
+    }
+
+    public void StartDialogue(Dialogue dialogue)
+    {
+        dialoguePanel.SetActive(true);
+        continueButton.gameObject.SetActive(false);
+        speakerText.text = dialogue.speakerName;
+
+        sentences.Clear();
+        foreach (string sentence in dialogue.sentences)
         {
-            if (step >= speaker.Length)
-            {
-                canvas.SetActive(false);
-                step = 0;
-            }
-            else
-            {
-                canvas.SetActive(true);
-                speakerText.text = speaker[step];
-                dialogText.text = dialogueWords[step];
-                portraitText.sprite = portrait[step];
-                step += 1;
-            }
+            sentences.Enqueue(sentence);
+        }
+
+
+
+        DisplayNextSentence();
+    }
+
+    public void DisplayNextSentence()
+    {
+        if (sentences.Count == 0)
+        {
+            EndDialogue();
+            continueButton.gameObject.SetActive(true);
+            return;
+        }
+
+        string sentence = sentences.Dequeue();
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(sentence));
+    }
+
+    IEnumerator TypeSentence(string sentence)
+    {
+        dialogueText.text = "";
+        foreach (char letter in sentence.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(0.02f);
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void EndDialogue()
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            dialogueActivated = true;
-        }
-    }    
-    
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if(collision.gameObject.tag == "Player")
-        {
-            dialogueActivated = false;
-            canvas.SetActive(false);
-        }
+        dialoguePanel.SetActive(false);
     }
 }
