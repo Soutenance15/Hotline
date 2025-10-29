@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class PlayerController : MonoBehaviour
 {
@@ -6,15 +7,53 @@ public class PlayerController : MonoBehaviour
     PlayerMoveSystem playerMove;
     PlayerInputSystem playerInput;
     PlayerAttackSystem playerAttack;
+    PlayerUISystem playerUI;
+
+    // Scripts Globaux
+    GameVisualEffect visualEffect;
 
     // Composants
     Rigidbody2D rb;
+
+    // Gestion Evenement exterieur
+
+    void OnEnable()
+    {
+        AmmoWeapon.OnAmmoWeaponEnter += TakeAmmoWeapon;
+    }
+
+    void OnDisable()
+    {
+        AmmoWeapon.OnAmmoWeaponEnter -= TakeAmmoWeapon;
+    }
+
+    // Functions
+    private void TakeAmmoWeapon(AmmoWeapon ammoWeapon)
+    {
+        if (null != playerAttack)
+        {
+            playerAttack.SetAmmoWeapon(ammoWeapon);
+        }
+        string weaponName = playerAttack.ammoWeapon.weaponName.ToString();
+        if (null != weaponName)
+        {
+            playerUI.UpdateWeaponNameText(weaponName);
+        }
+        string nbAmmo = playerAttack.ammoWeapon.nbAmmo.ToString();
+        if (null != nbAmmo)
+        {
+            playerUI.UpdateNbAmmoNameText(nbAmmo);
+        }
+    }
 
     void Awake()
     {
         playerMove = GetComponent<PlayerMoveSystem>();
         playerInput = GetComponent<PlayerInputSystem>();
         playerAttack = GetComponent<PlayerAttackSystem>();
+        playerUI = GetComponent<PlayerUISystem>();
+        visualEffect = GetComponent<GameVisualEffect>();
+
         rb = GetComponent<Rigidbody2D>();
 
         // Init
@@ -37,13 +76,26 @@ public class PlayerController : MonoBehaviour
     {
         if (null != playerInput)
         {
-            // Attack
-            if (playerInput.ShootPressed && null != playerAttack.ammoBullet)
+            if (playerInput.ShootPressed && null != playerAttack.ammoWeapon)
             {
-                if (!playerAttack.ammoBullet.canNotShoot)
+                if (!playerAttack.ammoWeapon.canNotShoot)
                 {
+                    // Attack
                     playerAttack.Shoot(rb.linearVelocity.magnitude);
-                    playerAttack.ammoBullet.UsedOneBullet();
+                    playerAttack.ammoWeapon.UsedOneWeapon();
+                    string nbAmmo = playerAttack.ammoWeapon.nbAmmo.ToString();
+
+                    // UI
+                    if (null != nbAmmo)
+                    {
+                        playerUI.UpdateNbAmmoNameText(nbAmmo);
+                    }
+
+                    // Visual Effect
+                    if (null != visualEffect)
+                    {
+                        visualEffect.ShootEffect(transform);
+                    }
                 }
             }
         }

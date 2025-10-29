@@ -104,8 +104,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e53fa14dd2f05b4da0252ffed90ce4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  nbBullet: 0
-  canShoot: 0
+  nbAmmo: 12
+  canNotShoot: 0
+  weaponName: 0
 --- !u!58 &7542852101072240536
 CircleCollider2D:
   m_ObjectHideFlags: 0
