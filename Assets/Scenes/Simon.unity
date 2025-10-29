@@ -764,6 +764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae72025b60f566241b8124abb88e3b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  canvas: {fileID: 1605376288}
   speakerText: {fileID: 1666771133}
   dialogText: {fileID: 959030853}
   portraitText: {fileID: 1863553234}

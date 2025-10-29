@@ -1,6 +1,8 @@
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 public class Dialogue : MonoBehaviour
 {
@@ -17,10 +19,9 @@ public class Dialogue : MonoBehaviour
     private int step;
 
 
-
     void Update()
     {
-        if (Input.GetKeyDown("Interact") && dialogueActivated == true)
+        if (Input.GetKeyDown("E") && dialogueActivated == true)
         {
             if (step >= speaker.Length)
             {
@@ -32,7 +33,7 @@ public class Dialogue : MonoBehaviour
                 canvas.SetActive(true);
                 speakerText.text = speaker[step];
                 dialogText.text = dialogueWords[step];
-                portrait.sprite = portrait[step];
+                portraitText.sprite = portrait[step];
                 step += 1;
             }
         }
