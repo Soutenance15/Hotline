@@ -4,6 +4,8 @@ using UnityEngine;
 public class UIMenuEvent : MonoBehaviour
 {
     public static Action<MenuState> OnMenuChange;
+    public GameObject menuTitle;
+    public GameObject menuPause;
 
     public enum MenuState
     {
@@ -15,6 +17,18 @@ public class UIMenuEvent : MonoBehaviour
     }
 
     public MenuState menuState;
+
+    // void Awake()
+    // {
+    //     if (null != menuTitle)
+    //     {
+    //         menuTitle = GameObject.Find("MenuTitle");
+    //     }
+    //     if (null != menuPause)
+    //     {
+    //         menuPause = GameObject.Find("MenuPause");
+    //     }
+    // }
 
     void OnEnable()
     {
@@ -58,6 +72,5 @@ public class UIMenuEvent : MonoBehaviour
     {
         menuState = MenuState.BackGame;
         OnMenuChange?.Invoke(menuState);
-        // SceneManager.LoadScene("TitleMenu");
     }
 }

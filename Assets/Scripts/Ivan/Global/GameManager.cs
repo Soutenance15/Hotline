@@ -3,15 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    // UIMenuEvent uIMenuManager;
-    // UITitleMenu uITitleMenu;
 
-    // void Awake()
-    // {
-    //     uIMenuManager = GetComponent<UIMenuEvent>();
-    //     uITitleMenu = GetComponent<UITitleMenu>();
-    // }
-
+    // Menu
     void OnEnable()
     {
         UIMenuEvent.OnMenuChange += HandleMenuChange;
@@ -22,29 +15,34 @@ public class GameManager : MonoBehaviour
         switch (menuState)
         {
             case UIMenuEvent.MenuState.PlayGame:
-                SceneManager.LoadScene("PlayerScene");
+                LoadScene("PlayerScene");
                 break;
             case UIMenuEvent.MenuState.ResumeGame:
                 ResumeGame();
                 break;
             case UIMenuEvent.MenuState.BackGame:
-                SceneManager.LoadScene("TitleMenu");
+                LoadScene("TitleMenu");
                 break;
             case UIMenuEvent.MenuState.Quit:
                 QuitApplication();
                 break;
-            // case UIMenuEvent.MenuState.None:
-            //     break;
         }
+    }
 
-        // Functions
-        void ResumeGame()
-        {
-            Debug.Log("Resume Game");
-        }
-        void QuitApplication()
-        {
-            Debug.Log("Quitter Application");
-        }
+    // Functions Menu
+
+    void ResumeGame()
+    {
+        Debug.Log("Resume Game");
+    }
+
+    void QuitApplication()
+    {
+        Debug.Log("Quitter Application");
+    }
+
+    static void LoadScene(string nameScene)
+    {
+        SceneManager.LoadScene(nameScene);
     }
 }
