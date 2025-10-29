@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class PlayerController : MonoBehaviour
 {
@@ -7,6 +8,9 @@ public class PlayerController : MonoBehaviour
     PlayerInputSystem playerInput;
     PlayerAttackSystem playerAttack;
     PlayerUISystem playerUI;
+
+    // Scripts Globaux
+    GameVisualEffect visualEffect;
 
     // Composants
     Rigidbody2D rb;
@@ -48,6 +52,8 @@ public class PlayerController : MonoBehaviour
         playerInput = GetComponent<PlayerInputSystem>();
         playerAttack = GetComponent<PlayerAttackSystem>();
         playerUI = GetComponent<PlayerUISystem>();
+        visualEffect = GetComponent<GameVisualEffect>();
+
         rb = GetComponent<Rigidbody2D>();
 
         // Init
@@ -70,17 +76,25 @@ public class PlayerController : MonoBehaviour
     {
         if (null != playerInput)
         {
-            // Attack
             if (playerInput.ShootPressed && null != playerAttack.ammoWeapon)
             {
                 if (!playerAttack.ammoWeapon.canNotShoot)
                 {
+                    // Attack
                     playerAttack.Shoot(rb.linearVelocity.magnitude);
                     playerAttack.ammoWeapon.UsedOneWeapon();
                     string nbAmmo = playerAttack.ammoWeapon.nbAmmo.ToString();
+
+                    // UI
                     if (null != nbAmmo)
                     {
                         playerUI.UpdateNbAmmoNameText(nbAmmo);
+                    }
+
+                    // Visual Effect
+                    if (null != visualEffect)
+                    {
+                        visualEffect.ShootEffect(transform);
                     }
                 }
             }

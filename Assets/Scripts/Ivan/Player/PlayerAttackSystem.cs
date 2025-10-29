@@ -13,7 +13,6 @@ public class PlayerAttackSystem : MonoBehaviour
 
     public void Shoot(float speedPlayer)
     {
-        Debug.Log(ammoWeapon.nbAmmo.ToString());
         if (null != bulletPrefab)
         {
             GameObject bulletObject = Instantiate(
