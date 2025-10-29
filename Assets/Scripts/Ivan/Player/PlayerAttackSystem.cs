@@ -3,28 +3,16 @@ using UnityEngine;
 public class PlayerAttackSystem : MonoBehaviour
 {
     public GameObject bulletPrefab;
-    public AmmoBullet ammoBullet;
+    public AmmoWeapon ammoWeapon;
 
-    // Gestion evenement exterieur
-
-    void OnEnable()
+    // Functions
+    public void SetAmmoWeapon(AmmoWeapon ammoWeapon)
     {
-        AmmoBullet.OnAmmoBulletEnter += TakeAmmoBullet;
-    }
-
-    void OnDisable()
-    {
-        AmmoBullet.OnAmmoBulletEnter -= TakeAmmoBullet;
-    }
-
-    void TakeAmmoBullet(AmmoBullet ammoBullet)
-    {
-        this.ammoBullet = ammoBullet;
+        this.ammoWeapon = ammoWeapon;
     }
 
     public void Shoot(float speedPlayer)
     {
-        Debug.Log(ammoBullet.nbBullet.ToString());
         if (null != bulletPrefab)
         {
             GameObject bulletObject = Instantiate(
