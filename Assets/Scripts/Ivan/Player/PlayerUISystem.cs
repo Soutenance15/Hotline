@@ -26,7 +26,7 @@ public class PlayerUISystem : MonoBehaviour
         }
     }
 
-    public void UpdateNbBulletNameText(string nbBullet)
+    public void UpdateNbAmmoNameText(string nbBullet)
     {
         if (null != nbBulletText)
         {

@@ -3,29 +3,17 @@ using UnityEngine;
 public class PlayerAttackSystem : MonoBehaviour
 {
     public GameObject bulletPrefab;
-    public AmmoBullet ammoBullet;
-
-    // // Gestion Evenement exterieur
-
-    // void OnEnable()
-    // {
-    //     AmmoBullet.OnAmmoBulletEnter += TakeAmmoBullet;
-    // }
-
-    // void OnDisable()
-    // {
-    //     AmmoBullet.OnAmmoBulletEnter -= TakeAmmoBullet;
-    // }
+    public AmmoWeapon ammoWeapon;
 
     // Functions
-    public void SetAmmoBullet(AmmoBullet ammoBullet)
+    public void SetAmmoWeapon(AmmoWeapon ammoWeapon)
     {
-        this.ammoBullet = ammoBullet;
+        this.ammoWeapon = ammoWeapon;
     }
 
     public void Shoot(float speedPlayer)
     {
-        Debug.Log(ammoBullet.nbBullet.ToString());
+        Debug.Log(ammoWeapon.nbAmmo.ToString());
         if (null != bulletPrefab)
         {
             GameObject bulletObject = Instantiate(
@@ -42,13 +30,4 @@ public class PlayerAttackSystem : MonoBehaviour
             }
         }
     }
-
-    // public string GetWeaponName()
-    // {
-    //     if (ammoBullet == null)
-    //     {
-    //         return null;
-    //     }
-    //     return ammoBullet.weaponName.ToString();
-    // }
 }

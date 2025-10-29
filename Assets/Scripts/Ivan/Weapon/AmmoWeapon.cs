@@ -1,10 +1,10 @@
 using System;
 using UnityEngine;
 
-public class AmmoBullet : MonoBehaviour
+public class AmmoWeapon : MonoBehaviour
 {
-    public static Action<AmmoBullet> OnAmmoBulletEnter;
-    public int nbBullet;
+    public static Action<AmmoWeapon> OnAmmoWeaponEnter;
+    public int nbAmmo = 9;
     public bool canNotShoot;
 
     public enum WeaponName
@@ -15,6 +15,15 @@ public class AmmoBullet : MonoBehaviour
         Famas,
     }
 
+    void Awake()
+    {
+        if (nbAmmo <= 0)
+        {
+            // Au minimum 1 balles dans le chargeur a ramassé
+            nbAmmo = 1;
+        }
+    }
+
     public WeaponName weaponName = WeaponName.Beretta;
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -22,19 +31,19 @@ public class AmmoBullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Trigger enter");
-            OnAmmoBulletEnter?.Invoke(this);
+            OnAmmoWeaponEnter?.Invoke(this);
         }
     }
 
-    public void UsedOneBullet()
+    public void UsedOneWeapon()
     {
-        nbBullet -= 1;
+        nbAmmo -= 1;
         canNotShoot = CanNotShoot();
     }
 
     bool CanNotShoot()
     {
-        if (nbBullet < 1)
+        if (nbAmmo < 1)
         {
             return true;
         }

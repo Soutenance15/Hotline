@@ -15,30 +15,30 @@ public class PlayerController : MonoBehaviour
 
     void OnEnable()
     {
-        AmmoBullet.OnAmmoBulletEnter += TakeAmmoBullet;
+        AmmoWeapon.OnAmmoWeaponEnter += TakeAmmoWeapon;
     }
 
     void OnDisable()
     {
-        AmmoBullet.OnAmmoBulletEnter -= TakeAmmoBullet;
+        AmmoWeapon.OnAmmoWeaponEnter -= TakeAmmoWeapon;
     }
 
     // Functions
-    private void TakeAmmoBullet(AmmoBullet ammoBullet)
+    private void TakeAmmoWeapon(AmmoWeapon ammoWeapon)
     {
         if (null != playerAttack)
         {
-            playerAttack.SetAmmoBullet(ammoBullet);
+            playerAttack.SetAmmoWeapon(ammoWeapon);
         }
-        string weaponName = playerAttack.ammoBullet.weaponName.ToString();
+        string weaponName = playerAttack.ammoWeapon.weaponName.ToString();
         if (null != weaponName)
         {
             playerUI.UpdateWeaponNameText(weaponName);
         }
-        string nbBullet = playerAttack.ammoBullet.nbBullet.ToString();
-        if (null != nbBullet)
+        string nbAmmo = playerAttack.ammoWeapon.nbAmmo.ToString();
+        if (null != nbAmmo)
         {
-            playerUI.UpdateNbBulletNameText(nbBullet);
+            playerUI.UpdateNbAmmoNameText(nbAmmo);
         }
     }
 
@@ -71,16 +71,16 @@ public class PlayerController : MonoBehaviour
         if (null != playerInput)
         {
             // Attack
-            if (playerInput.ShootPressed && null != playerAttack.ammoBullet)
+            if (playerInput.ShootPressed && null != playerAttack.ammoWeapon)
             {
-                if (!playerAttack.ammoBullet.canNotShoot)
+                if (!playerAttack.ammoWeapon.canNotShoot)
                 {
                     playerAttack.Shoot(rb.linearVelocity.magnitude);
-                    playerAttack.ammoBullet.UsedOneBullet();
-                    string nbBullet = playerAttack.ammoBullet.nbBullet.ToString();
-                    if (null != nbBullet)
+                    playerAttack.ammoWeapon.UsedOneWeapon();
+                    string nbAmmo = playerAttack.ammoWeapon.nbAmmo.ToString();
+                    if (null != nbAmmo)
                     {
-                        playerUI.UpdateNbBulletNameText(nbBullet);
+                        playerUI.UpdateNbAmmoNameText(nbAmmo);
                     }
                 }
             }
