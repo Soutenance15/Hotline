@@ -7,6 +7,16 @@ public class AmmoBullet : MonoBehaviour
     public int nbBullet;
     public bool canNotShoot;
 
+    public enum WeaponName
+    {
+        Beretta,
+        Shotgun,
+        Uzi,
+        Famas,
+    }
+
+    public WeaponName weaponName = WeaponName.Beretta;
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))

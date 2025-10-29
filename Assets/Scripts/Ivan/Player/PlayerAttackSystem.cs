@@ -5,20 +5,20 @@ public class PlayerAttackSystem : MonoBehaviour
     public GameObject bulletPrefab;
     public AmmoBullet ammoBullet;
 
-    // Gestion Evenement exterieur
+    // // Gestion Evenement exterieur
 
-    void OnEnable()
-    {
-        AmmoBullet.OnAmmoBulletEnter += TakeAmmoBullet;
-    }
+    // void OnEnable()
+    // {
+    //     AmmoBullet.OnAmmoBulletEnter += TakeAmmoBullet;
+    // }
 
-    void OnDisable()
-    {
-        AmmoBullet.OnAmmoBulletEnter -= TakeAmmoBullet;
-    }
+    // void OnDisable()
+    // {
+    //     AmmoBullet.OnAmmoBulletEnter -= TakeAmmoBullet;
+    // }
 
     // Functions
-    private void TakeAmmoBullet(AmmoBullet ammoBullet)
+    public void SetAmmoBullet(AmmoBullet ammoBullet)
     {
         this.ammoBullet = ammoBullet;
     }
@@ -42,4 +42,13 @@ public class PlayerAttackSystem : MonoBehaviour
             }
         }
     }
+
+    // public string GetWeaponName()
+    // {
+    //     if (ammoBullet == null)
+    //     {
+    //         return null;
+    //     }
+    //     return ammoBullet.weaponName.ToString();
+    // }
 }

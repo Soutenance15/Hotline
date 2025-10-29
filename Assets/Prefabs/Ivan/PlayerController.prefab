@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 5966980218578065719}
   - component: {fileID: 1852450432894873240}
   - component: {fileID: 5015324517236121457}
+  - component: {fileID: 5237156780894679098}
   - component: {fileID: 3876447044603170057}
   - component: {fileID: 413274981560146287}
   m_Layer: 0
@@ -276,6 +277,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttackSystem
   bulletPrefab: {fileID: 5432595796052714190, guid: 4d0a8924d8f9c30419ed89b8ce024761, type: 3}
   ammoBullet: {fileID: 0}
+--- !u!114 &5237156780894679098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4089716006832711108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e32580b137a6d5499ab73ff0bcfa9b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerUISystem
 --- !u!50 &3876447044603170057
 Rigidbody2D:
   serializedVersion: 5
