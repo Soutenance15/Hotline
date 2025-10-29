@@ -4,8 +4,8 @@ using UnityEngine.UI;
 
 public class UITitleMenu : MonoBehaviour
 {
-    Button playButton;
-    Button quitButton;
+    public Button playButton;
+    public Button quitButton;
 
     public static Action OnPlay;
     public static Action OnQuit;
