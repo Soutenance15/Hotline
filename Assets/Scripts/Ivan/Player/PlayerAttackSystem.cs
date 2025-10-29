@@ -5,7 +5,7 @@ public class PlayerAttackSystem : MonoBehaviour
     public GameObject bulletPrefab;
     public AmmoBullet ammoBullet;
 
-    // Gestion evenement exterieur
+    // Gestion Evenement exterieur
 
     void OnEnable()
     {
@@ -17,7 +17,8 @@ public class PlayerAttackSystem : MonoBehaviour
         AmmoBullet.OnAmmoBulletEnter -= TakeAmmoBullet;
     }
 
-    void TakeAmmoBullet(AmmoBullet ammoBullet)
+    // Functions
+    private void TakeAmmoBullet(AmmoBullet ammoBullet)
     {
         this.ammoBullet = ammoBullet;
     }
