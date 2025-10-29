@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class DialogueScene : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class DialogueScene : MonoBehaviour
 
     public Button boutonContinue;
 
+    public string sceneSuivante;
     private int index = 0;
 
     void Start()
@@ -29,7 +31,6 @@ public class DialogueScene : MonoBehaviour
 
     void AfficherDialogue()
     {
-        Debug.Log($"Index {index} : {dialogues[index].nom} - {dialogues[index].phrase}");
         nomUI.text = dialogues[index].nom;
         phraseUI.text = dialogues[index].phrase;
         spriteUI.sprite = dialogues[index].sprite;
@@ -43,7 +44,10 @@ public class DialogueScene : MonoBehaviour
 
         if (index >= dialogues.Length)
         {
-            Debug.Log("Fin du dialogue");
+            if (!string.IsNullOrEmpty(sceneSuivante))
+            {
+                SceneManager.LoadScene(sceneSuivante);
+            }
             return;
         }
 

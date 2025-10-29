@@ -301,6 +301,7 @@ MonoBehaviour:
   phraseUI: {fileID: 872732781}
   spriteUI: {fileID: 2129068419}
   boutonContinue: {fileID: 1564614136}
+  sceneSuivante: Lucas
 --- !u!4 &687463760
 Transform:
   m_ObjectHideFlags: 0
