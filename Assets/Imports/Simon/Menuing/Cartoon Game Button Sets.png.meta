@@ -1,0 +1,1682 @@
+fileFormatVersion: 2
+guid: 9c743644086b69d479322b5e96954e99
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5032273306099949813
+    second: Cartoon Game Button Sets_0
+  - first:
+      213: 5925976169913449188
+    second: Cartoon Game Button Sets_1
+  - first:
+      213: 6438459477353579751
+    second: Cartoon Game Button Sets_2
+  - first:
+      213: 7032588370142584968
+    second: Cartoon Game Button Sets_3
+  - first:
+      213: -5528949222276040677
+    second: Cartoon Game Button Sets_4
+  - first:
+      213: -7288381950737847186
+    second: Cartoon Game Button Sets_5
+  - first:
+      213: -2209032148319051771
+    second: Cartoon Game Button Sets_6
+  - first:
+      213: -8939940866884001257
+    second: Cartoon Game Button Sets_7
+  - first:
+      213: -3896040238259552687
+    second: Cartoon Game Button Sets_8
+  - first:
+      213: -2844609191846067548
+    second: Cartoon Game Button Sets_9
+  - first:
+      213: 1190953800643763474
+    second: Cartoon Game Button Sets_10
+  - first:
+      213: -8099449251077316292
+    second: Cartoon Game Button Sets_11
+  - first:
+      213: 2926523955330404209
+    second: Cartoon Game Button Sets_12
+  - first:
+      213: -6175203314826786736
+    second: Cartoon Game Button Sets_13
+  - first:
+      213: -5440713986613287700
+    second: Cartoon Game Button Sets_14
+  - first:
+      213: -7471142268160441267
+    second: Cartoon Game Button Sets_15
+  - first:
+      213: -5421969273242883737
+    second: Cartoon Game Button Sets_16
+  - first:
+      213: 1496606193196867469
+    second: Cartoon Game Button Sets_17
+  - first:
+      213: 1225692396847431040
+    second: Cartoon Game Button Sets_18
+  - first:
+      213: 514625675864271715
+    second: Cartoon Game Button Sets_19
+  - first:
+      213: -7645643137072999907
+    second: Cartoon Game Button Sets_20
+  - first:
+      213: -4575046052224340875
+    second: Cartoon Game Button Sets_21
+  - first:
+      213: 4879774853211793395
+    second: Cartoon Game Button Sets_22
+  - first:
+      213: 7270459834350935568
+    second: Cartoon Game Button Sets_23
+  - first:
+      213: 2219189894240798647
+    second: Cartoon Game Button Sets_24
+  - first:
+      213: 2670130857515971722
+    second: Cartoon Game Button Sets_25
+  - first:
+      213: 4006605849476261097
+    second: Cartoon Game Button Sets_26
+  - first:
+      213: 9178793861541380358
+    second: Cartoon Game Button Sets_27
+  - first:
+      213: -686415707675046150
+    second: Cartoon Game Button Sets_28
+  - first:
+      213: -5381270585519116643
+    second: Cartoon Game Button Sets_29
+  - first:
+      213: 5856695286298047810
+    second: Cartoon Game Button Sets_30
+  - first:
+      213: -8385875227630955936
+    second: Cartoon Game Button Sets_31
+  - first:
+      213: 5745163974222083631
+    second: Cartoon Game Button Sets_32
+  - first:
+      213: -2446728868554924602
+    second: Cartoon Game Button Sets_33
+  - first:
+      213: -1521857945571497083
+    second: Cartoon Game Button Sets_34
+  - first:
+      213: 3909601522866817954
+    second: Cartoon Game Button Sets_35
+  - first:
+      213: 2328400541869170880
+    second: Cartoon Game Button Sets_36
+  - first:
+      213: -384124366903294355
+    second: Cartoon Game Button Sets_37
+  - first:
+      213: -697851336531695827
+    second: Cartoon Game Button Sets_38
+  - first:
+      213: -885419283573401040
+    second: Cartoon Game Button Sets_39
+  - first:
+      213: 7998444165500448615
+    second: Cartoon Game Button Sets_40
+  - first:
+      213: 6872302279212802975
+    second: Cartoon Game Button Sets_41
+  - first:
+      213: -8865241605827024456
+    second: Cartoon Game Button Sets_42
+  - first:
+      213: 9064442018448057835
+    second: Cartoon Game Button Sets_43
+  - first:
+      213: -6116713443966634677
+    second: Cartoon Game Button Sets_44
+  - first:
+      213: 7878606832096377177
+    second: Cartoon Game Button Sets_45
+  - first:
+      213: -892878102187647718
+    second: Cartoon Game Button Sets_46
+  - first:
+      213: 6427202412515697870
+    second: Cartoon Game Button Sets_47
+  - first:
+      213: 7812961633466883894
+    second: Cartoon Game Button Sets_48
+  - first:
+      213: 2410754142648855628
+    second: Cartoon Game Button Sets_49
+  - first:
+      213: -2957690578930077533
+    second: Cartoon Game Button Sets_50
+  - first:
+      213: 1574451276784502696
+    second: Cartoon Game Button Sets_51
+  - first:
+      213: 7798617934527038560
+    second: Cartoon Game Button Sets_52
+  - first:
+      213: 654092312257938894
+    second: Cartoon Game Button Sets_53
+  - first:
+      213: -2291796771233939175
+    second: Cartoon Game Button Sets_54
+  - first:
+      213: 7515360759569743548
+    second: Cartoon Game Button Sets_55
+  - first:
+      213: 5443436359866793852
+    second: Cartoon Game Button Sets_56
+  - first:
+      213: 4963761878974183535
+    second: Cartoon Game Button Sets_57
+  - first:
+      213: -5843463314027477162
+    second: Cartoon Game Button Sets_58
+  - first:
+      213: 374451255668012813
+    second: Cartoon Game Button Sets_59
+  - first:
+      213: -8949972933114409248
+    second: Cartoon Game Button Sets_60
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_0
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 3065
+        width: 727
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f0a4c6e8e936d540800000000000000
+      internalID: 5032273306099949813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_1
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 3059
+        width: 867
+        height: 247
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eafe1bedeb4d3250800000000000000
+      internalID: 5925976169913449188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_2
+      rect:
+        serializedVersion: 2
+        x: 1807
+        y: 3059
+        width: 806
+        height: 247
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e4486048c00a5950800000000000000
+      internalID: 6438459477353579751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_3
+      rect:
+        serializedVersion: 2
+        x: 2691
+        y: 3071
+        width: 1102
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88064e5ccd5c89160800000000000000
+      internalID: 7032588370142584968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_4
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 2749
+        width: 727
+        height: 234
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b187019d9f93543b0800000000000000
+      internalID: -5528949222276040677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_5
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 2743
+        width: 867
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6ce6e63b377ada90800000000000000
+      internalID: -7288381950737847186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_6
+      rect:
+        serializedVersion: 2
+        x: 1813
+        y: 2743
+        width: 804
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 500660e07f0f751e0800000000000000
+      internalID: -2209032148319051771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_7
+      rect:
+        serializedVersion: 2
+        x: 2691
+        y: 2768
+        width: 1102
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 712a16cb523fee380800000000000000
+      internalID: -8939940866884001257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_8
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 2465
+        width: 727
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15e39ef9b0c7ee9c0800000000000000
+      internalID: -3896040238259552687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_9
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 2458
+        width: 869
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a2443be20be588d0800000000000000
+      internalID: -2844609191846067548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_10
+      rect:
+        serializedVersion: 2
+        x: 1822
+        y: 2458
+        width: 805
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21dd547fb2e178010800000000000000
+      internalID: 1190953800643763474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_11
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 2432
+        width: 224
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c31ab31a1d9f89f80800000000000000
+      internalID: -8099449251077316292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_12
+      rect:
+        serializedVersion: 2
+        x: 3098
+        y: 2430
+        width: 224
+        height: 286
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17fc320380a1d9820800000000000000
+      internalID: 2926523955330404209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_13
+      rect:
+        serializedVersion: 2
+        x: 3357
+        y: 2411
+        width: 231
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0584fe38d454d4aa0800000000000000
+      internalID: -6175203314826786736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_14
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 2186
+        width: 727
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce46a6f8473be74b0800000000000000
+      internalID: -5440713986613287700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_15
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 2178
+        width: 867
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4404efd0bb215890800000000000000
+      internalID: -7471142268160441267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_16
+      rect:
+        serializedVersion: 2
+        x: 1828
+        y: 2178
+        width: 805
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 769664d3cab41c4b0800000000000000
+      internalID: -5421969273242883737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_17
+      rect:
+        serializedVersion: 2
+        x: 2850
+        y: 2108
+        width: 224
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8f1622476305c410800000000000000
+      internalID: 1496606193196867469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_18
+      rect:
+        serializedVersion: 2
+        x: 3107
+        y: 2108
+        width: 225
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08dfcfdadb8820110800000000000000
+      internalID: 1225692396847431040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_19
+      rect:
+        serializedVersion: 2
+        x: 3369
+        y: 2086
+        width: 229
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36b6f2a5351542700800000000000000
+      internalID: 514625675864271715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_20
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1834
+        width: 1272
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d125c5f331835e590800000000000000
+      internalID: -7645643137072999907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_21
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 1842
+        width: 883
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57c6d1aeadb2280c0800000000000000
+      internalID: -4575046052224340875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_22
+      rect:
+        serializedVersion: 2
+        x: 2473
+        y: 1842
+        width: 574
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f7a295ff5178b340800000000000000
+      internalID: 4879774853211793395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_23
+      rect:
+        serializedVersion: 2
+        x: 3160
+        y: 1793
+        width: 600
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01e9b34e2bcd5e460800000000000000
+      internalID: 7270459834350935568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_24
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1528
+        width: 1272
+        height: 234
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b70c5773752cce10800000000000000
+      internalID: 2219189894240798647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_25
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 1528
+        width: 883
+        height: 234
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a847c023ed53e0520800000000000000
+      internalID: 2670130857515971722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_26
+      rect:
+        serializedVersion: 2
+        x: 2563
+        y: 1545
+        width: 410
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e4e80dcac25a9730800000000000000
+      internalID: 4006605849476261097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_27
+      rect:
+        serializedVersion: 2
+        x: 3160
+        y: 1516
+        width: 600
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 601c5bfb260a16f70800000000000000
+      internalID: 9178793861541380358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_28
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1227
+        width: 1272
+        height: 234
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afec7c7fc8c5976f0800000000000000
+      internalID: -686415707675046150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_29
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 1227
+        width: 885
+        height: 234
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9eefd5e9e2e155b0800000000000000
+      internalID: -5381270585519116643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_30
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 1227
+        width: 574
+        height: 234
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 245ff713559274150800000000000000
+      internalID: 5856695286298047810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_31
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 1243
+        width: 861
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0621f4629e26f9b80800000000000000
+      internalID: -8385875227630955936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_32
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 922
+        width: 1272
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f26f0e3023ceabf40800000000000000
+      internalID: 5745163974222083631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_33
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 922
+        width: 883
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cd1710be097b0ed0800000000000000
+      internalID: -2446728868554924602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_34
+      rect:
+        serializedVersion: 2
+        x: 2508
+        y: 912
+        width: 410
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58bea9bf24641eae0800000000000000
+      internalID: -1521857945571497083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_35
+      rect:
+        serializedVersion: 2
+        x: 3061
+        y: 936
+        width: 912
+        height: 224
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ab8dcffed1b14630800000000000000
+      internalID: 3909601522866817954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_36
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 563
+        width: 699
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c060f8d4f3205020800000000000000
+      internalID: 2328400541869170880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_37
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 576
+        width: 219
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6648296ce05baaf0800000000000000
+      internalID: -384124366903294355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_38
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 576
+        width: 215
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d272ff328ebb056f0800000000000000
+      internalID: -697851336531695827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_39
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 613
+        width: 188
+        height: 208
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03a935d4adb56b3f0800000000000000
+      internalID: -885419283573401040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_40
+      rect:
+        serializedVersion: 2
+        x: 1637
+        y: 613
+        width: 189
+        height: 208
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76f2378479e200f60800000000000000
+      internalID: 7998444165500448615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_41
+      rect:
+        serializedVersion: 2
+        x: 1910
+        y: 576
+        width: 110
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f93269d03825f5f50800000000000000
+      internalID: 6872302279212802975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_42
+      rect:
+        serializedVersion: 2
+        x: 2111
+        y: 524
+        width: 102
+        height: 355
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b9aaa4cab558f480800000000000000
+      internalID: -8865241605827024456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_43
+      rect:
+        serializedVersion: 2
+        x: 2289
+        y: 576
+        width: 180
+        height: 284
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be5a8b48dfd5bcd70800000000000000
+      internalID: 9064442018448057835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_44
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 674
+        width: 187
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b45338bc7811d1ba0800000000000000
+      internalID: -6116713443966634677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_45
+      rect:
+        serializedVersion: 2
+        x: 2773
+        y: 576
+        width: 110
+        height: 217
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 959f110db2f665d60800000000000000
+      internalID: 7878606832096377177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_46
+      rect:
+        serializedVersion: 2
+        x: 2871
+        y: 526
+        width: 143
+        height: 353
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1d5163c81cdb93f0800000000000000
+      internalID: -892878102187647718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_47
+      rect:
+        serializedVersion: 2
+        x: 3184
+        y: 563
+        width: 712
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec428899a82023950800000000000000
+      internalID: 6427202412515697870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_48
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 301
+        width: 604
+        height: 234
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63f9c86f5373d6c60800000000000000
+      internalID: 7812961633466883894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_49
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 176
+        width: 230
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4ce269be18b47120800000000000000
+      internalID: 2410754142648855628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_50
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 174
+        width: 225
+        height: 234
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a07a57c61c24f6d0800000000000000
+      internalID: -2957690578930077533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_51
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 213
+        width: 199
+        height: 217
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a786ec281399d510800000000000000
+      internalID: 1574451276784502696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_52
+      rect:
+        serializedVersion: 2
+        x: 1697
+        y: 213
+        width: 199
+        height: 217
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 064897e41b14a3c60800000000000000
+      internalID: 7798617934527038560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_53
+      rect:
+        serializedVersion: 2
+        x: 2170
+        y: 123
+        width: 113
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec5c2721e7dc31900800000000000000
+      internalID: 654092312257938894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_54
+      rect:
+        serializedVersion: 2
+        x: 2348
+        y: 176
+        width: 191
+        height: 293
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 911c631aaf6e130e0800000000000000
+      internalID: -2291796771233939175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_55
+      rect:
+        serializedVersion: 2
+        x: 2578
+        y: 274
+        width: 199
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbe7011facceb4860800000000000000
+      internalID: 7515360759569743548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_56
+      rect:
+        serializedVersion: 2
+        x: 2832
+        y: 123
+        width: 252
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7f3e4b5788fa8b40800000000000000
+      internalID: 5443436359866793852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_57
+      rect:
+        serializedVersion: 2
+        x: 3184
+        y: 272
+        width: 712
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f68b1e93123d2e440800000000000000
+      internalID: 4963761878974183535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_58
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 33
+        width: 604
+        height: 235
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6578d5d6319d7eea0800000000000000
+      internalID: -5843463314027477162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cartoon Game Button Sets_59
+      rect:
+        serializedVersion: 2
+        x: 1969
+        y: 176
+        width: 121
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d077acfde61523500800000000000000
+      internalID: 374451255668012813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 3b81badd9d222854881e93cae9c347c9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Cartoon Game Button Sets_0: 5032273306099949813
+      Cartoon Game Button Sets_1: 5925976169913449188
+      Cartoon Game Button Sets_10: 1190953800643763474
+      Cartoon Game Button Sets_11: -8099449251077316292
+      Cartoon Game Button Sets_12: 2926523955330404209
+      Cartoon Game Button Sets_13: -6175203314826786736
+      Cartoon Game Button Sets_14: -5440713986613287700
+      Cartoon Game Button Sets_15: -7471142268160441267
+      Cartoon Game Button Sets_16: -5421969273242883737
+      Cartoon Game Button Sets_17: 1496606193196867469
+      Cartoon Game Button Sets_18: 1225692396847431040
+      Cartoon Game Button Sets_19: 514625675864271715
+      Cartoon Game Button Sets_2: 6438459477353579751
+      Cartoon Game Button Sets_20: -7645643137072999907
+      Cartoon Game Button Sets_21: -4575046052224340875
+      Cartoon Game Button Sets_22: 4879774853211793395
+      Cartoon Game Button Sets_23: 7270459834350935568
+      Cartoon Game Button Sets_24: 2219189894240798647
+      Cartoon Game Button Sets_25: 2670130857515971722
+      Cartoon Game Button Sets_26: 4006605849476261097
+      Cartoon Game Button Sets_27: 9178793861541380358
+      Cartoon Game Button Sets_28: -686415707675046150
+      Cartoon Game Button Sets_29: -5381270585519116643
+      Cartoon Game Button Sets_3: 7032588370142584968
+      Cartoon Game Button Sets_30: 5856695286298047810
+      Cartoon Game Button Sets_31: -8385875227630955936
+      Cartoon Game Button Sets_32: 5745163974222083631
+      Cartoon Game Button Sets_33: -2446728868554924602
+      Cartoon Game Button Sets_34: -1521857945571497083
+      Cartoon Game Button Sets_35: 3909601522866817954
+      Cartoon Game Button Sets_36: 2328400541869170880
+      Cartoon Game Button Sets_37: -384124366903294355
+      Cartoon Game Button Sets_38: -697851336531695827
+      Cartoon Game Button Sets_39: -885419283573401040
+      Cartoon Game Button Sets_4: -5528949222276040677
+      Cartoon Game Button Sets_40: 7998444165500448615
+      Cartoon Game Button Sets_41: 6872302279212802975
+      Cartoon Game Button Sets_42: -8865241605827024456
+      Cartoon Game Button Sets_43: 9064442018448057835
+      Cartoon Game Button Sets_44: -6116713443966634677
+      Cartoon Game Button Sets_45: 7878606832096377177
+      Cartoon Game Button Sets_46: -892878102187647718
+      Cartoon Game Button Sets_47: 6427202412515697870
+      Cartoon Game Button Sets_48: 7812961633466883894
+      Cartoon Game Button Sets_49: 2410754142648855628
+      Cartoon Game Button Sets_5: -7288381950737847186
+      Cartoon Game Button Sets_50: -2957690578930077533
+      Cartoon Game Button Sets_51: 1574451276784502696
+      Cartoon Game Button Sets_52: 7798617934527038560
+      Cartoon Game Button Sets_53: 654092312257938894
+      Cartoon Game Button Sets_54: -2291796771233939175
+      Cartoon Game Button Sets_55: 7515360759569743548
+      Cartoon Game Button Sets_56: 5443436359866793852
+      Cartoon Game Button Sets_57: 4963761878974183535
+      Cartoon Game Button Sets_58: -5843463314027477162
+      Cartoon Game Button Sets_59: 374451255668012813
+      Cartoon Game Button Sets_6: -2209032148319051771
+      Cartoon Game Button Sets_7: -8939940866884001257
+      Cartoon Game Button Sets_8: -3896040238259552687
+      Cartoon Game Button Sets_9: -2844609191846067548
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
