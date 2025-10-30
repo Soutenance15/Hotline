@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
 
     // Functions Menu
 
-    void OnPause(InputValue value)
+    void OnPause()
     {
         if (gameState == GameState.Pause)
         {
@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Pause Game");
     }
 
-    void ResumeGame()
+    public void ResumeGame()
     {
         if (null != pauseMenu)
         {
