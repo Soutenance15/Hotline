@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4aaafb51730b7e24abb1f18c5a70d1d2
+guid: e6c850e96d389914ca06a9df3381d1ea
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8531688673829074182
-    second: roof top_0
+      213: -3909925754258287521
+    second: Scene2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: roof top_0
+      name: Scene2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1600
-        height: 909
+        width: 1456
+        height: 816
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: afac13e9a5a599980800000000000000
-      internalID: -8531688673829074182
+      spriteID: f54984ffd372db9c0800000000000000
+      internalID: -3909925754258287521
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      roof top_0: -8531688673829074182
+      Scene2_0: -3909925754258287521
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

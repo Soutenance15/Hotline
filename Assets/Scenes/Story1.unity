@@ -525,7 +525,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7244093059430438775, guid: 6d3fd9a7c26ce7740bab590adf26d505, type: 3}
+  m_Sprite: {fileID: 1413876465709611863, guid: 2be36b7798a84074d95981e558f9313f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -679,18 +679,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Il y a six mois, ton fr\xE8re a disparu. Les autorit\xE9s l'ont vite class\xE9
-    comme \xAB mort accidentellement \xBB, mais toi, tu sais la v\xE9rit\xE9 : il
-    a \xE9t\xE9 abattu dans l'arri\xE8re-cour d\u2019un grand h\xF4tel de luxe, qui
-    est le repaire d\u2019un r\xE9seau criminel dirig\xE9 par son propri\xE9taire,
-    LUCAS KLEIN. \r\nLa rumeur dit que LUCAS KLEIN r\xE8gle tout ce qu\u2019il veut
-    par la loi du plus fort, la violence. \r\nToi tu choisis la loi de la vengeance.\r\n\r\nTu
-    arrives devant l\u2019h\xF4tel la nuit, tu entres par la porte principale, arm\xE9
-    d\u2019un pistolet et de d\xE9termination, et un seul but : remonter jusqu\u2019au
-    Roof Top, retrouver LUCAS KLEIN et lui faire payer la mort de ton fr\xE8re."
+  m_text: "Il y a six mois, ton frere a disparu. Les autorites l'ont vite classe
+    comme \xAB mort accidentellement \xBB, mais toi, tu sais la verite : il a ete
+    abattu dans l'arriere-cour d\u2019un grand hotel de luxe, qui est le repaire
+    d\u2019un reseau criminel dirige par son proprietaire, LUCAS KLEIN. \r\nLa rumeur
+    dit que LUCAS KLEIN regle tout ce qu\u2019il veut par la loi du plus fort, la
+    violence. \r\nToi tu choisis la loi de la vengeance.\r\n\r\nTu arrives devant
+    l\u2019hotel la nuit, tu entres par la porte principale, arme d\u2019un pistolet
+    et de determination, et un seul but : remonter jusqu\u2019au Roof Top, retrouver
+    LUCAS KLEIN et lui faire payer la mort de ton fr\xE8re."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8acbfbab55db73a40a24a5e2735e11bc, type: 2}
+  m_sharedMaterial: {fileID: -3210405156021922836, guid: 8acbfbab55db73a40a24a5e2735e11bc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -701,10 +701,10 @@ MonoBehaviour:
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 0.05490196, g: 1, b: 1, a: 1}
+    topRight: {r: 0.7132075, g: 0.17090063, b: 0.17090063, a: 1}
+    bottomLeft: {r: 0.7949656, g: 1, b: 0, a: 1}
+    bottomRight: {r: 0, g: 0, b: 0, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -714,8 +714,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 54.7
+  m_fontSizeBase: 54.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

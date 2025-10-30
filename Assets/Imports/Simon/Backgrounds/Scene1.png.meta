@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ec96f863818f6f34d994136f2757ada0
+guid: 2be36b7798a84074d95981e558f9313f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1366104746844208739
-    second: ascenseur_0
+      213: 1413876465709611863
+    second: Scene1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ascenseur_0
+      name: Scene1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 300
-        height: 168
+        width: 1456
+        height: 816
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d91406e78fe9a0de0800000000000000
-      internalID: -1366104746844208739
+      spriteID: 75bf7ee87291f9310800000000000000
+      internalID: 1413876465709611863
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ascenseur_0: -1366104746844208739
+      Scene1_0: 1413876465709611863
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

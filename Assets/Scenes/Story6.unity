@@ -315,6 +315,7 @@ MonoBehaviour:
   phraseUI: {fileID: 872732781}
   spriteUI: {fileID: 2129068419}
   boutonContinue: {fileID: 1564614136}
+  sceneSuivante: 
 --- !u!4 &687463760
 Transform:
   m_ObjectHideFlags: 0
@@ -387,7 +388,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8531688673829074182, guid: 4aaafb51730b7e24abb1f18c5a70d1d2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5e6a8bf2f55730345b569c4b7631ceae, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

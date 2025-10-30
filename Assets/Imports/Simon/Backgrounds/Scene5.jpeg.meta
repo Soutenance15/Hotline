@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3ea6a94b00e2cfb48a938e2880c4e917
+guid: 4d072bdd9af1a3d4ea4624977a6399b3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2255676356591025775
-    second: parking_0
+      213: -118444934011705414
+    second: Scene5_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: parking_0
+      name: Scene5_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 800
-        height: 449
+        height: 457
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 19105250e4a32b0e0800000000000000
-      internalID: -2255676356591025775
+      spriteID: ab7a9c6c5f23b5ef0800000000000000
+      internalID: -118444934011705414
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      parking_0: -2255676356591025775
+      Scene5_0: -118444934011705414
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
