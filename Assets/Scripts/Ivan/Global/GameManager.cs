@@ -98,7 +98,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Quitter Application");
     }
 
-    static void LoadScene(string nameScene)
+    public void LoadScene(string nameScene)
     {
         SceneManager.LoadScene(nameScene);
     }
