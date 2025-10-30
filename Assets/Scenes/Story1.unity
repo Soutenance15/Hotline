@@ -152,15 +152,22 @@ MonoBehaviour:
   dialogues:
   - nom: Moi
     sprite: {fileID: 21300000, guid: c9e2d817fee92994a8a36b670e7b413a, type: 3}
-    phrase: Mon frere disait toujours que les lieux ont une ame. Celle-ci pue le
-      sang et le mensonge.
-  - nom: Moi
-    sprite: {fileID: 21300000, guid: c9e2d817fee92994a8a36b670e7b413a, type: 3}
-    phrase: "Six mois\u2026 Six mois que je le vois tomber chaque nuit dans mes reves.
-      Il ne faut pas qu'on me reconnaisse. Je vais mettre \xE7a, tiens !"
+    phrase: "Six mois. Six mois que je vois sa chute dans mes reves. Ils ont appele
+      \xE7a un accident. La verite sent le sang et le cuir neuf. Ce soir, je remonte.
+      Ce soir, l\u2019hotel brule."
+  - nom: Copine
+    sprite: {fileID: 21300000, guid: 334391a880bb1e244a2b473fbbdbe0e6, type: 3}
+    phrase: "Tu\u2026 tu fais vraiment ca ? Tu ne vas pas\u2026 te faire tuer ?"
   - nom: Moi
     sprite: {fileID: 21300000, guid: d3d33b99599be1e4d9c98e2c2944ff03, type: 3}
-    phrase: "Ce soir, c\u2019est a son tour de tomber."
+    phrase: "Il est mort il y a six mois. J\u2019ai attendu. Ce soir, je rentre le
+      couteau."
+  - nom: Copine
+    sprite: {fileID: 21300000, guid: 334391a880bb1e244a2b473fbbdbe0e6, type: 3}
+    phrase: Promets moi que tu reviendras.
+  - nom: Moi
+    sprite: {fileID: 21300000, guid: d3d33b99599be1e4d9c98e2c2944ff03, type: 3}
+    phrase: Je ne peux rien te promettre.
   nomUI: {fileID: 1539353678}
   phraseUI: {fileID: 872732781}
   spriteUI: {fileID: 2129068419}
@@ -195,7 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IntroToDialogue
   IntroText: {fileID: 1305591517}
   PanelDialogue: {fileID: 1035278800}
-  delay: 15
+  delay: 4
 --- !u!1 &872732778
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,8 +237,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 135, y: 68.2828}
-  m_SizeDelta: {x: 1502.9, y: 132.3656}
+  m_AnchoredPosition: {x: 81.895, y: 89.313}
+  m_SizeDelta: {x: 1396.7, y: 132.3656}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &872732780
 CanvasRenderer:
@@ -424,7 +431,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1035278801
 RectTransform:
   m_ObjectHideFlags: 0
@@ -516,12 +523,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1306933782}
+  m_Father: {fileID: 2073617654}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00002002716, y: 0}
-  m_SizeDelta: {x: 1794.1685, y: 957.0903}
+  m_AnchoredPosition: {x: -9.776779, y: -0.0001}
+  m_SizeDelta: {x: 1740.6631, y: 894.4037}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1305591519
 MonoBehaviour:
@@ -543,15 +550,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Il y a six mois, ton frere a disparu. Les autorites l'ont vite classe
-    comme \xAB mort accidentellement \xBB, mais toi, tu sais la verite : il a ete
-    abattu dans l'arriere-cour d\u2019un grand hotel de luxe, qui est le repaire
-    d\u2019un reseau criminel dirige par son proprietaire, LUCAS KLEIN. \r\nLa rumeur
-    dit que LUCAS KLEIN regle tout ce qu\u2019il veut par la loi du plus fort, la
-    violence. \r\nToi tu choisis la loi de la vengeance.\r\n\r\nTu arrives devant
-    l\u2019hotel la nuit, tu entres par la porte principale, arme d\u2019un pistolet
-    et de determination, et un seul but : remonter jusqu\u2019au Roof Top, retrouver
-    LUCAS KLEIN et lui faire payer la mort de ton fr\xE8re."
+  m_text: En arrivant devant un grand hotel de luxe....
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -578,8 +577,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 54.7
-  m_fontSizeBase: 54.7
+  m_fontSize: 30.4
+  m_fontSizeBase: 30.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -629,82 +628,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1305591517}
-  m_CullTransparentMesh: 1
---- !u!1 &1306933781
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1306933782}
-  - component: {fileID: 1306933784}
-  - component: {fileID: 1306933783}
-  m_Layer: 0
-  m_Name: PanelText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1306933782
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1306933781}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1305591518}
-  m_Father: {fileID: 2073617654}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10.74408, y: 0}
-  m_SizeDelta: {x: -125.83154, y: -122.90973}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1306933783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1306933781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1306933784
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1306933781}
   m_CullTransparentMesh: 1
 --- !u!1 &1539353675
 GameObject:
@@ -804,7 +727,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 3
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -877,7 +800,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 815, y: -65}
+  m_AnchoredPosition: {x: 838, y: -76.046}
   m_SizeDelta: {x: 69.4918, y: 65.177}
   m_Pivot: {x: 0.5, y: 0.49999997}
 --- !u!114 &1564614136
@@ -1222,7 +1145,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 908370205}
-  - {fileID: 1306933782}
+  - {fileID: 1305591518}
   - {fileID: 1035278801}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

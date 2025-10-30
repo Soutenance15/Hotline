@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1af48b3b146da624f9fa6d4cf66f3ed5
+guid: ef0ae62525b17b340ae14839524f6053
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Neon Sans
+  - Cyberphont 2.0
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

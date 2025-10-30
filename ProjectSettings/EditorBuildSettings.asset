@@ -27,13 +27,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Story3.unity
     guid: 46b38f9744f3c6b47ae8a1df126f28a8
   - enabled: 1
-    path: Assets/Scenes/Story4.unity
+    path: Assets/Scenes/Story3.unity
     guid: 1637966aae6c004459f2c593ed2c9c5c
   - enabled: 1
-    path: Assets/Scenes/Story5.unity
+    path: Assets/Scenes/Story4.unity
     guid: 4d5c37741698bad408823bfe78e0f370
   - enabled: 1
-    path: Assets/Scenes/Story6.unity
+    path: Assets/Scenes/Story5.unity
     guid: 731a5556a09162741b2b021b73b8d181
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

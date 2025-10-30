@@ -149,20 +149,84 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueScene
   dialogues:
+  - nom: 
+    sprite: {fileID: 0}
+    phrase: ..... [Le telephone vibre] .....
   - nom: Copine
     sprite: {fileID: 21300000, guid: 334391a880bb1e244a2b473fbbdbe0e6, type: 3}
-    phrase: "Tu as trouv\xE9 quelque chose ?"
+    phrase: "Tu as la clef ? ? Fais attention. S\u2019ils t\u2019ont repere, ils
+      vont appeler du renfort."
   - nom: Moi
     sprite: {fileID: 21300000, guid: d3d33b99599be1e4d9c98e2c2944ff03, type: 3}
-    phrase: "Une clef dans le parking pour acc\xE9der \xE0 l'immeuble, et quelques
-      corps au sol peut-\xEAtre."
+    phrase: "J\u2019ai la cle. J\u2019ai la rage. Ils vont regretter chaque sourire
+      qu\u2019ils ont vole."
+  - nom: 
+    sprite: {fileID: 0}
+    phrase: "Qu\u2019est-ce que t\u2019as trouve ?"
+  - nom: 
+    sprite: {fileID: 0}
+    phrase: "Une clef pour l\u2019ascenseur prive, quelques noms, une note \u2014
+      \u201CConference privee, chambre 405, 22h\u201D."
+  - nom: 
+    sprite: {fileID: 0}
+    phrase: "Lucas Klein n\u2019est pas un simple homme d\u2019affaires. Il a la
+      ville attachee \xE0 ses bottes \u2014 juges, flics, meme des ministres."
+  - nom: Moi
+    sprite: {fileID: 21300000, guid: d3d33b99599be1e4d9c98e2c2944ff03, type: 3}
+    phrase: Alors il reste moi. Et la loi que je connais.
   - nom: Copine
     sprite: {fileID: 21300000, guid: 334391a880bb1e244a2b473fbbdbe0e6, type: 3}
-    phrase: "Fais attention. LUCAS KLEIN est intouchable. Ses gardes, ses juges,
-      m\xEAme la police lui ob\xE9issent - il a les pleins pouvoirs."
+    phrase: 'Ne deviens pas ce que tu veux detruire. Reviens vivant.
+
+'
   - nom: Moi
     sprite: {fileID: 21300000, guid: d3d33b99599be1e4d9c98e2c2944ff03, type: 3}
-    phrase: "Alors il reste moi. Et moi, j\u2019ob\xE9is \xE0 personne."
+    phrase: "Revenir vivant n\u2019est pas dans le plan. Revenir avec sa tete, peut-\xEAtre."
+  - nom: Portier
+    sprite: {fileID: 21300000, guid: 4c4f834555d9b3a479ef761d648b38e9, type: 3}
+    phrase: Bonsoir, monsieur. Vous avez une reservation ?
+  - nom: Moi
+    sprite: {fileID: 21300000, guid: d3d33b99599be1e4d9c98e2c2944ff03, type: 3}
+    phrase: "J\u2019ai une visite a faire."
+  - nom: Portier
+    sprite: {fileID: 21300000, guid: 4c4f834555d9b3a479ef761d648b38e9, type: 3}
+    phrase: "Les visiteurs imposent parfois des surprises. Etrange cle\u2026 Vous
+      venez pour le bal ? Les ragots vont vite ici."
+  - nom: Moi
+    sprite: {fileID: 21300000, guid: d3d33b99599be1e4d9c98e2c2944ff03, type: 3}
+    phrase: Ou est la chambre 405 ?
+  - nom: Portier
+    sprite: {fileID: 21300000, guid: 4c4f834555d9b3a479ef761d648b38e9, type: 3}
+    phrase: "Ce batiment a ses histoires\u2026 Ton frere \u2014 je l\u2019ai vu parler.
+      Il etait trop curieux. Il a paye cher."
+  - nom: Moi
+    sprite: {fileID: 21300000, guid: d3d33b99599be1e4d9c98e2c2944ff03, type: 3}
+    phrase: Tu le connais ?
+  - nom: Portier
+    sprite: {fileID: 21300000, guid: 4c4f834555d9b3a479ef761d648b38e9, type: 3}
+    phrase: "Assez pour savoir que le patron n\u2019aime pas qu\u2019on fouille.
+      Je peux t\u2019aider\u2026 pour un prix."
+  - nom: Moi
+    sprite: {fileID: 21300000, guid: d3d33b99599be1e4d9c98e2c2944ff03, type: 3}
+    phrase: Ta monnaie vaut quoi face a sa conscience ?
+  - nom: Portier
+    sprite: {fileID: 21300000, guid: 4c4f834555d9b3a479ef761d648b38e9, type: 3}
+    phrase: "La conscience, ici, se paie en silence. Tiens \u2014 prends la carte.
+      Et bonne chance\u2026 si on peut appeler \xE7a de la chance."
+  - nom: Copine
+    sprite: {fileID: 21300000, guid: 334391a880bb1e244a2b473fbbdbe0e6, type: 3}
+    phrase: "C\u2019est plus gros que tu pensais ?"
+  - nom: Moi
+    sprite: {fileID: 21300000, guid: d3d33b99599be1e4d9c98e2c2944ff03, type: 3}
+    phrase: "Fichiers voles. Ton frere a mis le doigt dans un nid d\u2019abeilles
+      de fer. Armes, deals, dossiers. C\u2019est pour \xE7a qu\u2019ils l\u2019ont
+      tue."
+  - nom: Copine
+    sprite: {fileID: 21300000, guid: 334391a880bb1e244a2b473fbbdbe0e6, type: 3}
+    phrase: "Alors va-t\u2019en. Quitte la ville."
+  - nom: Moi
+    sprite: {fileID: 21300000, guid: d3d33b99599be1e4d9c98e2c2944ff03, type: 3}
+    phrase: Ils ont pris sa vie. Je reprends la justice a ma maniere.
   nomUI: {fileID: 1539353678}
   phraseUI: {fileID: 872732781}
   spriteUI: {fileID: 2129068419}
@@ -217,8 +281,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 126.803925, y: 71.16872}
-  m_SizeDelta: {x: 1465.2079, y: 142.3374}
+  m_AnchoredPosition: {x: 88.114, y: 87.392}
+  m_SizeDelta: {x: 1387.839, y: 142.3374}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &872732780
 CanvasRenderer:
@@ -571,7 +635,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 3
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -644,7 +708,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 801.5, y: -60.1}
+  m_AnchoredPosition: {x: 834, y: -70.562}
   m_SizeDelta: {x: 77.0639, y: 71.4288}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1564614136
