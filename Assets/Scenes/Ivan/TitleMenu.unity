@@ -265,6 +265,7 @@ GameObject:
   - component: {fileID: 460468638}
   - component: {fileID: 460468637}
   - component: {fileID: 460468639}
+  - component: {fileID: 460468640}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -325,12 +326,30 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6f07dabb-d307-4c60-ab7e-92e18b2ff721
+    m_ActionName: 'MenuAction/Pause[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: MenuAction
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &460468640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460468636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c2e82cf8f72e2499e505061dee3a49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UITitleMenu
+  playButton: {fileID: 534943047}
+  quitButton: {fileID: 854246957}
 --- !u!1 &534943045
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,7 +431,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 534943048}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 460468637}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Story1
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &534943048
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -20,6 +20,14 @@ public class Bullet : MonoBehaviour
             health.UpdateDamage(-20);
             Destroy(gameObject);
         }
+        if (collision.CompareTag("TurnTable"))
+        {
+            TurnTable turnTable = collision.GetComponent<TurnTable>();
+            if (turnTable.onSide)
+            {
+                Destroy(gameObject);
+            }
+        }
 
     }
 
@@ -31,18 +39,6 @@ public class Bullet : MonoBehaviour
         if (timer > 4)
         {
             Destroy(gameObject);
-        }
-    }
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("TurnTable"))
-        {
-            TurnTable turnTable = collision.GetComponent<TurnTable>();
-            if (turnTable.onSide)
-            {
-                Destroy(gameObject);
-            }
         }
     }
 }
