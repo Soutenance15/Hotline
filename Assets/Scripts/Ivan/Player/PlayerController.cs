@@ -1,12 +1,11 @@
 using UnityEngine;
-using UnityEngine.VFX;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
     // Scripts System
     PlayerMoveSystem playerMove;
-    PlayerInputSystem playerInput;
+    public PlayerInputSystem playerInput;
     PlayerAttackSystem playerAttack;
     PlayerUISystem playerUI;
 
@@ -15,6 +14,13 @@ public class PlayerController : MonoBehaviour
 
     // Composants
     Rigidbody2D rb;
+
+    [Header("Interaction")]
+    public LayerMask turnTableLayer;
+    private float interactRange = 0.6f;
+
+    // Interract Objects
+    TurnTable turnTableTouch;
 
     // Gestion Evenement exterieur
 
@@ -29,6 +35,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Functions
+
     private void TakeAmmoWeapon(AmmoWeapon ammoWeapon)
     {
         if (null != playerAttack)
@@ -73,6 +80,25 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    TurnTable HitTurnTable()
+    {
+        // Centre de détection = position du joueur
+        Vector2 origin = transform.position;
+
+        // On cherche un collider de type TurnTable dans la zone
+        Collider2D hit = Physics2D.OverlapCircle(origin, interactRange, turnTableLayer);
+
+        if (hit != null)
+        {
+            TurnTable table = hit.GetComponent<TurnTable>();
+            if (table != null)
+            {
+                return table;
+            }
+        }
+        return null;
+    }
+
     void Update()
     {
         if (null != playerInput)
@@ -98,6 +124,15 @@ public class PlayerController : MonoBehaviour
                     {
                         visualEffect.ShootEffect(transform);
                     }
+                }
+            }
+
+            if (playerInput.PushTablePressed)
+            {
+                TurnTable turnTable = HitTurnTable();
+                if (null != turnTable)
+                {
+                    turnTable.Turn();
                 }
             }
         }

@@ -695,7 +695,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1367924096
 Transform:
   m_ObjectHideFlags: 0
@@ -4796,7 +4796,7 @@ GameObject:
   - component: {fileID: 1613747582}
   - component: {fileID: 1613747581}
   m_Layer: 0
-  m_Name: LevelManager
+  m_Name: LevelPlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5099,7 +5099,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!156049354 &1902145070
 Grid:
   m_ObjectHideFlags: 0
