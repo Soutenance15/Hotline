@@ -267,7 +267,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.29585615, g: 0.3422134, b: 0.9169811, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -467,7 +467,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   minHealth: 0
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 3504991361199769932}
   isAlive: 1
 --- !u!1 &4862497413900583797
 GameObject:
