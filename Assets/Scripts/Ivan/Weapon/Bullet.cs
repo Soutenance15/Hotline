@@ -15,4 +15,16 @@ public class Bullet : MonoBehaviour
         // avance dans la direction "up" locale si state move
         transform.position += transform.up * speed * Time.deltaTime;
     }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("TurnTable"))
+        {
+            TurnTable turnTable = collision.GetComponent<TurnTable>();
+            if (turnTable.onSide)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
 }
