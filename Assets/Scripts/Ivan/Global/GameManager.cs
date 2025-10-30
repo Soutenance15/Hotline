@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -40,7 +41,8 @@ public class GameManager : MonoBehaviour
         switch (menuState)
         {
             case UIMenuEvent.MenuState.PlayGame:
-                LoadScene("PlayerScene");
+                // LoadScene("PlayerScene");
+                LoadScene("TestScene");
                 break;
             case UIMenuEvent.MenuState.ResumeGame:
                 ResumeGame();
@@ -61,7 +63,7 @@ public class GameManager : MonoBehaviour
 
     // Functions Menu
 
-    void OnPause()
+    void OnPause(InputValue value)
     {
         if (gameState == GameState.Pause)
         {

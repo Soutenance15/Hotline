@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.VFX;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -76,6 +77,7 @@ public class PlayerController : MonoBehaviour
     {
         if (null != playerInput)
         {
+            // if (playerInput.ShootPressed && null != playerAttack.ammoWeapon)
             if (playerInput.ShootPressed && null != playerAttack.ammoWeapon)
             {
                 if (!playerAttack.ammoWeapon.canNotShoot)
