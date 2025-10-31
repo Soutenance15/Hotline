@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class DialogueScene : MonoBehaviour
 {
@@ -18,40 +19,87 @@ public class DialogueScene : MonoBehaviour
     public TextMeshProUGUI nomUI;
     public TextMeshProUGUI phraseUI;
     public Image spriteUI;
-
     public Button boutonContinue;
 
     public string sceneSuivante;
+
+    [Header("Effets de texte")]
+    public float delaiEntreLettres = 0.03f;
+    public AudioClip sonLettre;
+    public AudioSource audioSource;
+
     private int index = 0;
+    private bool enCoursAffichage = false;
+    private Coroutine affichageCoroutine;
 
     void Start()
     {
         AfficherDialogue();
     }
 
-    void AfficherDialogue()
+    public void AfficherDialogue()
     {
         nomUI.text = dialogues[index].nom;
-        phraseUI.text = dialogues[index].phrase;
         spriteUI.sprite = dialogues[index].sprite;
+
+        if (affichageCoroutine != null)
+            StopCoroutine(affichageCoroutine);
+
+        affichageCoroutine = StartCoroutine(AfficherTexteLettreParLettre(dialogues[index].phrase));
+    }
+
+    IEnumerator AfficherTexteLettreParLettre(string phrase)
+    {
+        enCoursAffichage = true;
+        boutonContinue.interactable = false;
+        phraseUI.text = "";
+
+        if (sonLettre != null && audioSource != null)
+        {
+            audioSource.clip = sonLettre;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
+
+        foreach (char lettre in phrase)
+        {
+            phraseUI.text += lettre;
+            yield return new WaitForSeconds(delaiEntreLettres);
+        }
+
+        if (audioSource != null)
+            audioSource.Stop();
+
+        enCoursAffichage = false;
+        boutonContinue.interactable = true;
     }
 
     public void Suivant()
     {
-        boutonContinue.interactable = false;
+        if (enCoursAffichage)
+        {
+            StopCoroutine(affichageCoroutine);
+            phraseUI.text = dialogues[index].phrase;
+            enCoursAffichage = false;
+            boutonContinue.interactable = true;
 
+            if (audioSource != null)
+                audioSource.Stop();
+
+            return;
+        }
+
+        boutonContinue.interactable = false;
         index++;
 
         if (index >= dialogues.Length)
         {
             if (!string.IsNullOrEmpty(sceneSuivante))
-            {
                 SceneManager.LoadScene(sceneSuivante);
-            }
+
             return;
         }
 
         AfficherDialogue();
-        boutonContinue.interactable = true;
     }
 }

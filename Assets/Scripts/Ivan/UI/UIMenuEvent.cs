@@ -30,7 +30,7 @@ public class UIMenuEvent : MonoBehaviour
     //     }
     // }
 
-    void OnEnable()
+    public void OnEnable()
     {
         UITitleMenu.OnPlay += PlayGame;
         UITitleMenu.OnQuit += Quit;
@@ -40,7 +40,7 @@ public class UIMenuEvent : MonoBehaviour
         UIPauseMenu.OnQuit_Pause += Quit;
     }
 
-    void OnDisable()
+    public void OnDisable()
     {
         UITitleMenu.OnPlay -= PlayGame;
         UITitleMenu.OnQuit -= Quit;
@@ -50,25 +50,25 @@ public class UIMenuEvent : MonoBehaviour
         UIPauseMenu.OnQuit_Pause += Quit;
     }
 
-    void PlayGame()
+    public void PlayGame()
     {
         menuState = MenuState.PlayGame;
         OnMenuChange?.Invoke(menuState);
     }
 
-    void Quit()
+    public void Quit()
     {
         menuState = MenuState.Quit;
         OnMenuChange?.Invoke(menuState);
     }
 
-    void ResumeGame()
+    public void ResumeGame()
     {
         menuState = MenuState.ResumeGame;
         OnMenuChange?.Invoke(menuState);
     }
 
-    void BackTitle()
+    public void BackTitle()
     {
         menuState = MenuState.BackGame;
         OnMenuChange?.Invoke(menuState);

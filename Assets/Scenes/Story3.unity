@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 687463760}
   - component: {fileID: 687463759}
+  - component: {fileID: 687463761}
   m_Layer: 0
   m_Name: DialogueController
   m_TagString: Untagged
@@ -160,15 +161,15 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: d3d33b99599be1e4d9c98e2c2944ff03, type: 3}
     phrase: "J\u2019ai la cle. J\u2019ai la rage. Ils vont regretter chaque sourire
       qu\u2019ils ont vole."
-  - nom: 
-    sprite: {fileID: 0}
+  - nom: Copine
+    sprite: {fileID: 21300000, guid: 334391a880bb1e244a2b473fbbdbe0e6, type: 3}
     phrase: "Qu\u2019est-ce que t\u2019as trouve ?"
-  - nom: 
-    sprite: {fileID: 0}
+  - nom: Moi
+    sprite: {fileID: 21300000, guid: d3d33b99599be1e4d9c98e2c2944ff03, type: 3}
     phrase: "Une clef pour l\u2019ascenseur prive, quelques noms, une note \u2014
       \u201CConference privee, chambre 405, 22h\u201D."
-  - nom: 
-    sprite: {fileID: 0}
+  - nom: Copine
+    sprite: {fileID: 21300000, guid: 334391a880bb1e244a2b473fbbdbe0e6, type: 3}
     phrase: "Lucas Klein n\u2019est pas un simple homme d\u2019affaires. Il a la
       ville attachee \xE0 ses bottes \u2014 juges, flics, meme des ministres."
   - nom: Moi
@@ -232,6 +233,9 @@ MonoBehaviour:
   spriteUI: {fileID: 2129068419}
   boutonContinue: {fileID: 1564614136}
   sceneSuivante: 
+  delaiEntreLettres: 0.03
+  sonLettre: {fileID: 8300000, guid: cb81ed488c266f8498d397f46d1ea839, type: 3}
+  audioSource: {fileID: 687463761}
 --- !u!4 &687463760
 Transform:
   m_ObjectHideFlags: 0
@@ -247,6 +251,103 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &687463761
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687463758}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &872732778
 GameObject:
   m_ObjectHideFlags: 0
