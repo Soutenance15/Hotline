@@ -10,7 +10,7 @@ public class EnemyPatrol : MonoBehaviour
     private Transform targetPoint;
     private bool looping = true;
 
-    public Transform spawnTransform;
+    public Vector3 spawnPosition;
 
     public Health health;
 
@@ -23,7 +23,7 @@ public class EnemyPatrol : MonoBehaviour
             targetPoint = patrolPoints[0];
         }
 
-        spawnTransform = gameObject.transform;
+        spawnPosition = transform.position;
     }
 
     void FixedUpdate()

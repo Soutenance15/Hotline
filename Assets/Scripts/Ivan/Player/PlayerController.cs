@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask turnTableLayer;
     private float interactRange = 0.6f;
 
-    public Transform spawnTransform;
+    public Vector3 spawnPosition;
 
     // Gestion Evenement exterieur
 
@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        spawnTransform = gameObject.transform;
+        spawnPosition = transform.position;
     }
 
     void FixedUpdate()
@@ -152,6 +152,7 @@ public class PlayerController : MonoBehaviour
 
             if (playerInput.PushTablePressed)
             {
+                Debug.Log("PushTable Pressed");
                 TurnTable turnTable = HitTurnTable();
                 if (null != turnTable)
                 {

@@ -8,7 +8,7 @@ public class EnemyBullet : MonoBehaviour
     public float force;
     public Health health;
 
-    private int damage = -100;
+    private int damage = -35;
 
     void Start()
     {
