@@ -10,14 +10,20 @@ public class EnemyPatrol : MonoBehaviour
     private Transform targetPoint;
     private bool looping = true;
 
+    private Animator animator;
+    private Vector3 lastPosition;
 
     void Start()
     {
+        animator = enemy.GetComponent<Animator>();
+
         if (patrolPoints.Count > 0)
         {
             enemy.transform.position = patrolPoints[0].position;
             targetPoint = patrolPoints[0];
         }
+
+        lastPosition = enemy.transform.position;
     }
 
     void FixedUpdate()
@@ -36,30 +42,35 @@ public class EnemyPatrol : MonoBehaviour
 
         if (targetPoint == patrolPoints[1])
         {
-            enemy.transform.localScale = new Vector3(1, 1, 1); // Face left
+            enemy.transform.localScale = new Vector3(1, 1, 1); // Face gauche
         }
         else if (targetPoint == patrolPoints[0])
         {
-            enemy.transform.localScale = new Vector3(-1, 1, 1); // Face right
+            enemy.transform.localScale = new Vector3(-1, 1, 1); // Face droite
         }
 
-        
+        float moveDistance = (enemy.transform.position - lastPosition).magnitude;
+        if (animator != null)
+        {
+            animator.SetBool("IsWalking", moveDistance > 0.01f);
+        }
+
+        lastPosition = enemy.transform.position;
     }
 
     public void StopMovement()
     {
         speed = 0f;
         looping = false;
+        if (animator != null)
+        {
+            animator.SetBool("IsWalking", false);
+        }
     }
 
     public void ResumeMovement()
     {
         speed = 2f;
         looping = true;
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

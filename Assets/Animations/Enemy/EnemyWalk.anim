@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerWalk
+  m_Name: EnemyWalk
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -22,7 +22,7 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: 4617587087768064557, guid: 345eb03f790c2c540bb8060e51357b3d, type: 3}
-    - time: 0.083333336
+    - time: 0.1
       value: {fileID: 8674730890430617673, guid: 345eb03f790c2c540bb8060e51357b3d, type: 3}
     - time: 0.16666667
       value: {fileID: 8346155572910538219, guid: 345eb03f790c2c540bb8060e51357b3d, type: 3}

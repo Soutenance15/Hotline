@@ -3,19 +3,16 @@ using UnityEngine.VFX;
 
 public class PlayerController : MonoBehaviour
 {
-    // Scripts System
     PlayerMoveSystem playerMove;
     PlayerInputSystem playerInput;
     PlayerAttackSystem playerAttack;
     PlayerUISystem playerUI;
 
-    // Scripts Globaux
     GameVisualEffect visualEffect;
 
-    // Composants
     Rigidbody2D rb;
-
-    // Gestion Evenement exterieur
+    Animator animator;
+    private Vector3 lastPosition;
 
     void OnEnable()
     {
@@ -27,22 +24,20 @@ public class PlayerController : MonoBehaviour
         AmmoWeapon.OnAmmoWeaponEnter -= TakeAmmoWeapon;
     }
 
-    // Functions
     private void TakeAmmoWeapon(AmmoWeapon ammoWeapon)
     {
-        if (null != playerAttack)
+        if (playerAttack != null)
         {
             playerAttack.SetAmmoWeapon(ammoWeapon);
         }
-        string weaponName = playerAttack.ammoWeapon.weaponName.ToString();
-        if (null != weaponName)
+
+        if (playerAttack?.ammoWeapon != null)
         {
-            playerUI.UpdateWeaponNameText(weaponName);
-        }
-        string nbAmmo = playerAttack.ammoWeapon.nbAmmo.ToString();
-        if (null != nbAmmo)
-        {
-            playerUI.UpdateNbAmmoNameText(nbAmmo);
+            string weaponName = playerAttack.ammoWeapon.weaponName.ToString();
+            playerUI?.UpdateWeaponNameText(weaponName);
+
+            string nbAmmo = playerAttack.ammoWeapon.nbAmmo.ToString();
+            playerUI?.UpdateNbAmmoNameText(nbAmmo);
         }
     }
 
@@ -55,9 +50,11 @@ public class PlayerController : MonoBehaviour
         visualEffect = GetComponent<GameVisualEffect>();
 
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        lastPosition = transform.position;
 
         // Init
-        if (null != playerMove && null != rb)
+        if (playerMove != null && rb != null)
         {
             playerMove.Init(rb);
         }
@@ -65,38 +62,35 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (null != playerInput && null != playerMove)
+        if (playerInput != null && playerMove != null)
         {
             playerMove.Move(playerInput.MoveInput);
             playerMove.Turn(playerInput.TurnInput);
         }
+
+        float moveDistance = (transform.position - lastPosition).magnitude;
+        if (animator != null)
+        {
+            animator.SetBool("IsWalking", moveDistance > 0.01f);
+        }
+        lastPosition = transform.position;
     }
 
     void Update()
     {
-        if (null != playerInput)
+        if (playerInput != null && playerInput.ShootPressed && playerAttack?.ammoWeapon != null)
         {
-            if (playerInput.ShootPressed && null != playerAttack.ammoWeapon)
+            if (!playerAttack.ammoWeapon.canNotShoot)
             {
-                if (!playerAttack.ammoWeapon.canNotShoot)
-                {
-                    // Attack
-                    playerAttack.Shoot(rb.linearVelocity.magnitude);
-                    playerAttack.ammoWeapon.UsedOneWeapon();
-                    string nbAmmo = playerAttack.ammoWeapon.nbAmmo.ToString();
+                // Attack
+                playerAttack.Shoot(rb.linearVelocity.magnitude);
+                playerAttack.ammoWeapon.UsedOneWeapon();
 
-                    // UI
-                    if (null != nbAmmo)
-                    {
-                        playerUI.UpdateNbAmmoNameText(nbAmmo);
-                    }
+                string nbAmmo = playerAttack.ammoWeapon.nbAmmo.ToString();
+                playerUI?.UpdateNbAmmoNameText(nbAmmo);
 
-                    // Visual Effect
-                    if (null != visualEffect)
-                    {
-                        visualEffect.ShootEffect(transform);
-                    }
-                }
+                // Visual Effect
+                visualEffect?.ShootEffect(transform);
             }
         }
     }
