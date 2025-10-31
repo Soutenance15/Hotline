@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,13 +15,30 @@ public class EnemyPatrol : MonoBehaviour
 
     public Health health;
 
+    public GameObject prefabDieText;
+    public EnemyAttack enemyAttack;
+
+    void OnDisable()
+    {
+        if (null != health)
+        {
+            health.OnDie -= Die;
+        }
+    }
+
     void Start()
     {
         health = GetComponent<Health>();
+        enemyAttack = GetComponent<EnemyAttack>();
+
         if (patrolPoints.Count > 0)
         {
             enemy.transform.position = patrolPoints[0].position;
             targetPoint = patrolPoints[0];
+        }
+        if (null != health)
+        {
+            health.OnDie += Die;
         }
 
         spawnPosition = transform.position;
@@ -28,18 +46,31 @@ public class EnemyPatrol : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (patrolPoints.Count == 0)
-            return;
-
-        Vector3 direction = (targetPoint.position - enemy.transform.position).normalized;
-        Vector3 movement = direction * speed * Time.fixedDeltaTime;
-        enemy.transform.position += movement;
-
-        if (Vector3.Distance(enemy.transform.position, targetPoint.position) < 0.1f && looping)
+        if (null != health && health.isAlive)
         {
-            currentPointIndex = (currentPointIndex + 1) % patrolPoints.Count;
-            targetPoint = patrolPoints[currentPointIndex];
+            if (patrolPoints.Count == 0)
+                return;
+
+            Vector3 direction = (targetPoint.position - enemy.transform.position).normalized;
+            Vector3 movement = direction * speed * Time.fixedDeltaTime;
+            enemy.transform.position += movement;
+
+            if (Vector3.Distance(enemy.transform.position, targetPoint.position) < 0.1f && looping)
+            {
+                currentPointIndex = (currentPointIndex + 1) % patrolPoints.Count;
+                targetPoint = patrolPoints[currentPointIndex];
+            }
         }
+    }
+
+    void Die()
+    {
+        Debug.Log("oui die");
+        if (null != prefabDieText)
+        {
+            GameVisualEffect.DieEffectEnemy(transform, prefabDieText);
+        }
+        enemyAttack.isAlive = false;
     }
 
     public void StopMovement()

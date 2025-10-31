@@ -9,6 +9,8 @@ public class EnemyAttack : MonoBehaviour
     public float shootDistance;
     EnemyPatrol patrol;
 
+    public bool isAlive = true;
+
     void Start()
     {
         player = GameObject.FindWithTag("Player");
@@ -17,7 +19,7 @@ public class EnemyAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (null != player)
+        if (null != player && isAlive)
         {
             shootDistance = Vector2.Distance(transform.position, player.transform.position);
         }
@@ -25,21 +27,24 @@ public class EnemyAttack : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (shootDistance < 5)
+        if (isAlive)
         {
-            patrol = GetComponent<EnemyPatrol>();
-            patrol.StopMovement();
-            timer += Time.deltaTime;
-            if (timer > 1)
+            if (shootDistance < 5)
             {
-                timer = 0;
-                Shoot();
+                patrol = GetComponent<EnemyPatrol>();
+                patrol.StopMovement();
+                timer += Time.deltaTime;
+                if (timer > 1)
+                {
+                    timer = 0;
+                    Shoot();
+                }
             }
-        }
-        else if (shootDistance > 5)
-        {
-            patrol = GetComponent<EnemyPatrol>();
-            patrol.ResumeMovement();
+            else if (shootDistance > 5)
+            {
+                patrol = GetComponent<EnemyPatrol>();
+                patrol.ResumeMovement();
+            }
         }
     }
 

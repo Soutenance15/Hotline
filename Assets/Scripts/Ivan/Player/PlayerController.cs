@@ -12,9 +12,6 @@ public class PlayerController : MonoBehaviour
     PlayerUISystem playerUI;
     public Health health;
 
-    // Scripts Globaux
-    GameVisualEffect visualEffect;
-
     // Composants
     Rigidbody2D rb;
 
@@ -77,7 +74,6 @@ public class PlayerController : MonoBehaviour
         playerInput = GetComponent<PlayerInputSystem>();
         playerAttack = GetComponent<PlayerAttackSystem>();
         playerUI = GetComponent<PlayerUISystem>();
-        visualEffect = GetComponent<GameVisualEffect>();
         health = GetComponent<Health>();
 
         rb = GetComponent<Rigidbody2D>();
@@ -143,10 +139,7 @@ public class PlayerController : MonoBehaviour
                     }
 
                     // Visual Effect
-                    if (null != visualEffect)
-                    {
-                        visualEffect.ShootEffect(transform);
-                    }
+                    GameVisualEffect.ShootEffect(transform);
                 }
             }
 

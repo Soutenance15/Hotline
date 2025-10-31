@@ -6,10 +6,7 @@ public class Bullet : MonoBehaviour
     private float timer; // durée avant disparition
     public Health health;
 
-    void Start()
-    {
-    
-    }
+    void Start() { }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,7 +14,7 @@ public class Bullet : MonoBehaviour
         {
             Debug.Log("Hit Enemy");
             health = collision.gameObject.GetComponent<Health>();
-            health.UpdateDamage(-20);
+            health.UpdateDamage(-100);
             Destroy(gameObject);
         }
         if (collision.CompareTag("TurnTable"))
@@ -28,7 +25,6 @@ public class Bullet : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-
     }
 
     void Update()
