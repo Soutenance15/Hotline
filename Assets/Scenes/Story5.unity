@@ -173,7 +173,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: d3d33b99599be1e4d9c98e2c2944ff03, type: 3}
     phrase: Non. Je serai pire.
   - nom: Lucas Klein
-    sprite: {fileID: 21300000, guid: d3d33b99599be1e4d9c98e2c2944ff03, type: 3}
+    sprite: {fileID: 21300000, guid: 741171e387278bf46943ca5b62644b15, type: 3}
     phrase: "Tu as choisi le feu\u2026 petit."
   - nom: Moi
     sprite: {fileID: 21300000, guid: d3d33b99599be1e4d9c98e2c2944ff03, type: 3}
