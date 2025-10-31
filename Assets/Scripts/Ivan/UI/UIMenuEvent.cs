@@ -12,6 +12,7 @@ public class UIMenuEvent : MonoBehaviour
         None,
         PlayGame,
         ResumeGame,
+        ResumeGameFromGameOver,
         BackGame,
         Quit,
     }
@@ -38,6 +39,10 @@ public class UIMenuEvent : MonoBehaviour
         UIPauseMenu.OnResume_Pause += ResumeGame;
         UIPauseMenu.OnBack_Pause += BackTitle;
         UIPauseMenu.OnQuit_Pause += Quit;
+
+        UIGameOverMenu.OnResumeFromGameOver_Pause += ResumeGameFromGameOver;
+        UIGameOverMenu.OnBack_Pause += BackTitle;
+        UIGameOverMenu.OnQuit_Pause += Quit;
     }
 
     void OnDisable()
@@ -46,8 +51,12 @@ public class UIMenuEvent : MonoBehaviour
         UITitleMenu.OnQuit -= Quit;
 
         UIPauseMenu.OnResume_Pause += ResumeGame;
-        UIPauseMenu.OnBack_Pause += BackTitle;
-        UIPauseMenu.OnQuit_Pause += Quit;
+        UIPauseMenu.OnBack_Pause -= BackTitle;
+        UIPauseMenu.OnQuit_Pause -= Quit;
+
+        UIGameOverMenu.OnResumeFromGameOver_Pause -= ResumeGameFromGameOver;
+        UIGameOverMenu.OnBack_Pause -= BackTitle;
+        UIGameOverMenu.OnQuit_Pause -= Quit;
     }
 
     void PlayGame()
@@ -65,6 +74,12 @@ public class UIMenuEvent : MonoBehaviour
     void ResumeGame()
     {
         menuState = MenuState.ResumeGame;
+        OnMenuChange?.Invoke(menuState);
+    }
+
+    void ResumeGameFromGameOver()
+    {
+        menuState = MenuState.ResumeGameFromGameOver;
         OnMenuChange?.Invoke(menuState);
     }
 

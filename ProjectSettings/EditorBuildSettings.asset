@@ -41,6 +41,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ivan/TestScene.unity
     guid: d75ab908807c06b4f953d16f89cf80e5
+  - enabled: 1
+    path: Assets/Scenes/Ivan/FirstScene.unity
+    guid: 1c16c0c5d13c37745b4cdf280c9c00ee
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

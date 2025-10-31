@@ -1,5 +1,7 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public PlayerInputSystem playerInput;
     PlayerAttackSystem playerAttack;
     PlayerUISystem playerUI;
+    public Health health;
 
     // Scripts Globaux
     GameVisualEffect visualEffect;
@@ -19,14 +22,14 @@ public class PlayerController : MonoBehaviour
     public LayerMask turnTableLayer;
     private float interactRange = 0.6f;
 
-    // Interract Objects
-    TurnTable turnTableTouch;
+    public Transform spawnTransform;
 
     // Gestion Evenement exterieur
 
     void OnEnable()
     {
         AmmoWeapon.OnAmmoWeaponEnter += TakeAmmoWeapon;
+        health.OnDie += Die;
     }
 
     void OnDisable()
@@ -35,6 +38,20 @@ public class PlayerController : MonoBehaviour
     }
 
     // Functions
+
+    void Die()
+    {
+        Debug.Log("Animation Die");
+        StartCoroutine(WaitTwoSeconds());
+        GameManager.instance.GameOver();
+    }
+
+    IEnumerator WaitTwoSeconds()
+    {
+        Debug.Log("Début de la coroutine...");
+        yield return new WaitForSeconds(2f); // attend 2 secondes
+        Debug.Log("2 secondes écoulées !");
+    }
 
     private void TakeAmmoWeapon(AmmoWeapon ammoWeapon)
     {
@@ -61,6 +78,7 @@ public class PlayerController : MonoBehaviour
         playerAttack = GetComponent<PlayerAttackSystem>();
         playerUI = GetComponent<PlayerUISystem>();
         visualEffect = GetComponent<GameVisualEffect>();
+        health = GetComponent<Health>();
 
         rb = GetComponent<Rigidbody2D>();
 
@@ -69,6 +87,11 @@ public class PlayerController : MonoBehaviour
         {
             playerMove.Init(rb);
         }
+    }
+
+    void Start()
+    {
+        spawnTransform = gameObject.transform;
     }
 
     void FixedUpdate()

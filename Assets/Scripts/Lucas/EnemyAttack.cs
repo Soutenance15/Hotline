@@ -17,12 +17,15 @@ public class EnemyAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        shootDistance = Vector2.Distance(transform.position, player.transform.position);
+        if (null != player)
+        {
+            shootDistance = Vector2.Distance(transform.position, player.transform.position);
+        }
     }
 
     void FixedUpdate()
     {
-         if (shootDistance < 5)
+        if (shootDistance < 5)
         {
             patrol = GetComponent<EnemyPatrol>();
             patrol.StopMovement();
@@ -40,8 +43,8 @@ public class EnemyAttack : MonoBehaviour
         }
     }
 
-     public void Shoot()
-        {
-            GameObject proj = Instantiate(projectile, shootPos.position, Quaternion.identity);
-        }
+    public void Shoot()
+    {
+        GameObject proj = Instantiate(projectile, shootPos.position, Quaternion.identity);
+    }
 }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -6,6 +7,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public GameObject pauseMenu;
+    public GameObject gameOverMenu;
+
+    public Action OnResumeFromGameOver;
 
     public enum GameState
     {
@@ -41,11 +45,13 @@ public class GameManager : MonoBehaviour
         switch (menuState)
         {
             case UIMenuEvent.MenuState.PlayGame:
-                LoadScene("PlayerScene");
-                // LoadScene("TestScene");
+                LoadScene("FirstScene");
                 break;
             case UIMenuEvent.MenuState.ResumeGame:
                 ResumeGame();
+                break;
+            case UIMenuEvent.MenuState.ResumeGameFromGameOver:
+                ResumeGameFromGameOver();
                 break;
             case UIMenuEvent.MenuState.BackGame:
                 LoadScene("TitleMenu");
@@ -59,6 +65,11 @@ public class GameManager : MonoBehaviour
     public void RegisterMenuPause(GameObject pauseMenu)
     {
         this.pauseMenu = pauseMenu;
+    }
+
+    public void RegisterGameOverMenu(GameObject gameOverMenu)
+    {
+        this.gameOverMenu = gameOverMenu;
     }
 
     // Functions Menu
@@ -75,14 +86,39 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void GameOver()
+    {
+        gameState = GameState.GameOver;
+        if (null != gameOverMenu)
+        {
+            gameOverMenu.SetActive(true);
+        }
+    }
+
+    void StopTime()
+    {
+        Time.timeScale = 0f;
+    }
+
+    void PlayTime()
+    {
+        Time.timeScale = 1f;
+    }
+
     void PauseGame()
     {
         if (null != pauseMenu)
         {
             ShowMenu(pauseMenu, true);
             gameState = GameState.Pause;
+            StopTime();
         }
-        Debug.Log("Pause Game");
+    }
+
+    public void ResumeGameFromGameOver()
+    {
+        OnResumeFromGameOver?.Invoke();
+        ResumeGame();
     }
 
     public void ResumeGame()
@@ -92,7 +128,11 @@ public class GameManager : MonoBehaviour
             ShowMenu(pauseMenu, false);
             gameState = GameState.Play;
         }
-        Debug.Log("Resume Game");
+        if (null != gameOverMenu)
+        {
+            ShowMenu(gameOverMenu, false);
+        }
+        PlayTime();
     }
 
     void QuitApplication()

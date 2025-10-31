@@ -1,5 +1,5 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class EnemyPatrol : MonoBehaviour
 {
@@ -10,19 +10,26 @@ public class EnemyPatrol : MonoBehaviour
     private Transform targetPoint;
     private bool looping = true;
 
+    public Transform spawnTransform;
+
+    public Health health;
 
     void Start()
     {
+        health = GetComponent<Health>();
         if (patrolPoints.Count > 0)
         {
             enemy.transform.position = patrolPoints[0].position;
             targetPoint = patrolPoints[0];
         }
+
+        spawnTransform = gameObject.transform;
     }
 
     void FixedUpdate()
     {
-        if (patrolPoints.Count == 0) return;
+        if (patrolPoints.Count == 0)
+            return;
 
         Vector3 direction = (targetPoint.position - enemy.transform.position).normalized;
         Vector3 movement = direction * speed * Time.fixedDeltaTime;
@@ -46,9 +53,7 @@ public class EnemyPatrol : MonoBehaviour
         speed = 2f;
         looping = true;
     }
+
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    void Update() { }
 }

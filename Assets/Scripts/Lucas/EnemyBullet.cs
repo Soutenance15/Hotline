@@ -8,13 +8,17 @@ public class EnemyBullet : MonoBehaviour
     public float force;
     public Health health;
 
+    private int damage = -100;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
-
-        Vector3 direction = player.transform.position - transform.position;
-        rb.linearVelocity = new Vector2(direction.x, direction.y).normalized * force;
+        if (null != player)
+        {
+            Vector3 direction = player.transform.position - transform.position;
+            rb.linearVelocity = new Vector2(direction.x, direction.y).normalized * force;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -22,13 +26,12 @@ public class EnemyBullet : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             health = collision.gameObject.GetComponent<Health>();
-            health.UpdateDamage(-10);
+            health.UpdateDamage(damage);
             Destroy(gameObject);
         }
     }
 
-
-      void Update()
+    void Update()
     {
         timer += Time.deltaTime;
 
