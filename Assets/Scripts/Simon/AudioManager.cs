@@ -59,15 +59,25 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlayTypewriterSound()
-{
-    if (typewriter != null && SFXSource != null)
+    public void PlayTypewriterSoundLoop()
     {
-        SFXSource.pitch = Random.Range(0.95f, 1.05f);
-        SFXSource.PlayOneShot(typewriter);
-        SFXSource.pitch = 1f;
+        if (typewriter != null && SFXSource != null)
+        {
+            SFXSource.loop = true;
+            SFXSource.clip = typewriter;
+            SFXSource.Play();
+        }
     }
-}
+
+    public void StopTypewriterSound()
+    {
+        if (SFXSource != null && SFXSource.isPlaying && SFXSource.clip == typewriter)
+        {
+            SFXSource.Stop();
+            SFXSource.loop = false;
+            SFXSource.clip = null;
+        }
+    }
 
     void OnDestroy()
     {
@@ -86,13 +96,12 @@ public class AudioManager : MonoBehaviour
 
     void PlayMusicForScene(string sceneName)
     {
-        if (sceneName == "TitleMenu")
+        if (sceneName == "TitleMenu" && musicSource.clip != musicMenu)
         {
             musicSource.clip = musicMenu;
             musicSource.Play();
         }
-        else if (sceneName == "Story1" && musicSource.clip != musicNarratif || sceneName == "Story2" && musicSource.clip != musicNarratif || sceneName == "Story3" && musicSource.clip != musicNarratif ||
-        sceneName == "Story4" && musicSource.clip != musicNarratif || sceneName == "Story5" && musicSource.clip != musicNarratif || sceneName == "Story6" && musicSource.clip != musicNarratif)
+        else if ((sceneName == "Story1" || sceneName == "Story2" || sceneName == "Story3" || sceneName == "Story4" || sceneName == "Story5" || sceneName == "Story6") && musicSource.clip != musicNarratif)
         {
             musicSource.clip = musicNarratif;
             musicSource.Play();

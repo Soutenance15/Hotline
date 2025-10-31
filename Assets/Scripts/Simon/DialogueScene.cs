@@ -54,17 +54,17 @@ public class DialogueScene : MonoBehaviour
         boutonContinue.interactable = false;
         phraseUI.text = "";
 
-        foreach (char lettre in phrase)
+        // ✅ Lance le son une fois au début
+        AudioManager.Instance.PlayTypewriterSoundLoop();
+
+        foreach (char c in phrase)
         {
-            phraseUI.text += lettre;
-
-            if (audioManager != null && lettre != ' ')
-            {
-                audioManager.PlayTypewriterSound();
-            }
-
+            phraseUI.text += c;
             yield return new WaitForSeconds(delaiEntreLettres);
         }
+
+        // ✅ Arrête le son à la fin
+        AudioManager.Instance.StopTypewriterSound();
 
         enCoursAffichage = false;
         boutonContinue.interactable = true;
@@ -72,10 +72,17 @@ public class DialogueScene : MonoBehaviour
 
     public void Suivant()
     {
+        // Si on clique pendant que le texte s'affiche
         if (enCoursAffichage)
         {
             StopCoroutine(affichageCoroutine);
+
+            // ✅ On affiche directement tout le texte
             phraseUI.text = dialogues[index].phrase;
+
+            // ✅ Et on arrête le son
+            AudioManager.Instance.StopTypewriterSound();
+
             enCoursAffichage = false;
             boutonContinue.interactable = true;
             return;

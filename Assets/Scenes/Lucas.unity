@@ -196,6 +196,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerController
       objectReference: {fileID: 0}
+    - target: {fileID: 5966980218578065719, guid: 622ded992323adb479efa48d9028c386, type: 3}
+      propertyPath: shootSound
+      value: 
+      objectReference: {fileID: 8300000, guid: bd13b137dc6c11343a30f8e28e863f57, type: 3}
+    - target: {fileID: 5966980218578065719, guid: 622ded992323adb479efa48d9028c386, type: 3}
+      propertyPath: ammoPickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c87199e74cf8d9b419ab9fdc695e9238, type: 3}
     - target: {fileID: 7908870927203271737, guid: 622ded992323adb479efa48d9028c386, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.6315527
@@ -4502,7 +4510,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2006566926}
   - component: {fileID: 2006566925}
-  - component: {fileID: 2006566924}
   - component: {fileID: 2006566927}
   - component: {fileID: 2006566928}
   m_Layer: 0
@@ -4512,14 +4519,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &2006566924
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2006566923}
-  m_Enabled: 1
 --- !u!20 &2006566925
 Camera:
   m_ObjectHideFlags: 0

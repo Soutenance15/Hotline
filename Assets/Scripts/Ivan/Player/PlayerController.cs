@@ -7,12 +7,17 @@ public class PlayerController : MonoBehaviour
     PlayerInputSystem playerInput;
     PlayerAttackSystem playerAttack;
     PlayerUISystem playerUI;
-
     GameVisualEffect visualEffect;
 
     Rigidbody2D rb;
     Animator animator;
     private Vector3 lastPosition;
+
+    [Header("Audio Clips")]
+    public AudioClip ammoPickupSound;
+    public AudioClip shootSound;
+
+    private AudioSource audioSource;
 
     void OnEnable()
     {
@@ -38,6 +43,11 @@ public class PlayerController : MonoBehaviour
 
             string nbAmmo = playerAttack.ammoWeapon.nbAmmo.ToString();
             playerUI?.UpdateNbAmmoNameText(nbAmmo);
+
+            if (ammoPickupSound != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(ammoPickupSound);
+            }
         }
     }
 
@@ -52,6 +62,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         lastPosition = transform.position;
+
+        audioSource = GetComponent<AudioSource>();
 
         // Init
         if (playerMove != null && rb != null)
@@ -91,6 +103,11 @@ public class PlayerController : MonoBehaviour
 
                 // Visual Effect
                 visualEffect?.ShootEffect(transform);
+
+                if (shootSound != null && audioSource != null)
+                {
+                    audioSource.PlayOneShot(shootSound);
+                }
             }
         }
     }
