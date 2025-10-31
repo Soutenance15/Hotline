@@ -25,15 +25,15 @@ public class DialogueScene : MonoBehaviour
 
     [Header("Effets de texte")]
     public float delaiEntreLettres = 0.03f;
-    public AudioClip sonLettre;
-    public AudioSource audioSource;
-
     private int index = 0;
     private bool enCoursAffichage = false;
     private Coroutine affichageCoroutine;
 
+    private AudioManager audioManager;
+
     void Start()
     {
+        audioManager = AudioManager.Instance;
         AfficherDialogue();
     }
 
@@ -54,21 +54,17 @@ public class DialogueScene : MonoBehaviour
         boutonContinue.interactable = false;
         phraseUI.text = "";
 
-        if (sonLettre != null && audioSource != null)
-        {
-            audioSource.clip = sonLettre;
-            audioSource.loop = true;
-            audioSource.Play();
-        }
-
         foreach (char lettre in phrase)
         {
             phraseUI.text += lettre;
+
+            if (audioManager != null && lettre != ' ')
+            {
+                audioManager.PlayTypewriterSound();
+            }
+
             yield return new WaitForSeconds(delaiEntreLettres);
         }
-
-        if (audioSource != null)
-            audioSource.Stop();
 
         enCoursAffichage = false;
         boutonContinue.interactable = true;
@@ -82,10 +78,6 @@ public class DialogueScene : MonoBehaviour
             phraseUI.text = dialogues[index].phrase;
             enCoursAffichage = false;
             boutonContinue.interactable = true;
-
-            if (audioSource != null)
-                audioSource.Stop();
-
             return;
         }
 

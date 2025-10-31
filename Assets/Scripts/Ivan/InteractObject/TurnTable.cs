@@ -14,6 +14,7 @@ public class TurnTable : MonoBehaviour
     public void Turn()
     {
         onSide = !onSide;
+
         if (onSide)
         {
             collider2DOnSide.enabled = true;
@@ -23,6 +24,11 @@ public class TurnTable : MonoBehaviour
         {
             collider2DStand.enabled = true;
             collider2DOnSide.enabled = false;
+        }
+
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayTableSound();
         }
     }
 
