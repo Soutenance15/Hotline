@@ -65,6 +65,7 @@ public class LevelPlay : MonoBehaviour
             playerController.transform.position = playerController.spawnTransform.position;
             // playerController.health.currentHealth = playerController.health.maxHealth;
             playerController.health.currentHealth = 50;
+            playerController.health.isAlive = true;
             Debug.Log("player non null");
         }
     }
@@ -80,6 +81,7 @@ public class LevelPlay : MonoBehaviour
                 EnemyPatrol enemyPatrol = enemyObject.GetComponent<EnemyPatrol>();
                 enemyPatrol.transform.position = enemyPatrol.spawnTransform.position;
                 enemyPatrol.health.currentHealth = enemyPatrol.health.maxHealth;
+                enemyPatrol.health.isAlive = true;
             }
         }
     }

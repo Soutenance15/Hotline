@@ -93,6 +93,7 @@ public class GameManager : MonoBehaviour
         {
             gameOverMenu.SetActive(true);
         }
+        StopTime();
     }
 
     void StopTime()
