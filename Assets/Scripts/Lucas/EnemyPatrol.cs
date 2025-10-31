@@ -33,6 +33,17 @@ public class EnemyPatrol : MonoBehaviour
             currentPointIndex = (currentPointIndex + 1) % patrolPoints.Count;
             targetPoint = patrolPoints[currentPointIndex];
         }
+
+        if (targetPoint == patrolPoints[1])
+        {
+            enemy.transform.localScale = new Vector3(1, 1, 1); // Face left
+        }
+        else if (targetPoint == patrolPoints[0])
+        {
+            enemy.transform.localScale = new Vector3(-1, 1, 1); // Face right
+        }
+
+        
     }
 
     public void StopMovement()
