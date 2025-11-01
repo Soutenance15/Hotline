@@ -18,8 +18,9 @@ public class EnemyPatrol : MonoBehaviour
     public Vector3 spawnPosition;
 
     // Effets
-
     public GameObject prefabDieText;
+    public GameObject prefabDieBlood;
+    public GameObject dieBloodObject;
     public AudioClip shootClip;
     public AudioClip dieClip;
 
@@ -68,14 +69,26 @@ public class EnemyPatrol : MonoBehaviour
         }
     }
 
+    public void ForRespawn()
+    {
+        transform.position = spawnPosition;
+        Destroy(dieBloodObject);
+        health.ForRespawnHealth();
+        enemyAttack.ForRespawnAttack();
+    }
+
     void Die()
     {
-        Debug.Log("oui die");
         if (null != prefabDieText)
         {
-            GameVisualEffect.DieEffectEnemy(transform, prefabDieText);
-            GameSoundEffect.DieSoundEffectEnemy(dieClip, 100f);
+            GameVisualEffect.DieEffectTextEnemy(transform, prefabDieText);
+            GameSoundEffect.PlaySound(dieClip, 0.05f);
         }
+        if (null != prefabDieBlood)
+        {
+            dieBloodObject = GameVisualEffect.DieEffectBlood(transform, prefabDieBlood);
+        }
+
         enemyAttack.isAlive = false;
     }
 

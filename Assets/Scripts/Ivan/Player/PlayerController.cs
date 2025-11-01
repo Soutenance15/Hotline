@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour
 
     public Vector3 spawnPosition;
 
+    // Effet
+    public AudioClip dieClip;
+
     // Gestion Evenement exterieur
 
     void OnEnable()
@@ -38,9 +41,16 @@ public class PlayerController : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("Animation Die");
+        GameSoundEffect.PlaySound(dieClip, 100f);
         StartCoroutine(WaitTwoSeconds());
-        GameManager.instance.GameOver();
+        if (null != GameManager.instance)
+        {
+            GameManager.instance.GameOver();
+        }
+        else
+        {
+            Debug.LogWarning("Attention GameManager instance est NULL.");
+        }
     }
 
     IEnumerator WaitTwoSeconds()

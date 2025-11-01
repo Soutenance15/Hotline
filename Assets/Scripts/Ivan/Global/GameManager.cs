@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -31,6 +30,17 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+        }
+    }
+
+    public static void InstantiateIfNeeded()
+    {
+        if (instance == null)
+        {
+            // Crée un nouvel objet dans la scène
+            GameObject gm = new GameObject("GameManager");
+            instance = gm.AddComponent<GameManager>();
+            DontDestroyOnLoad(gm);
         }
     }
 
@@ -65,11 +75,14 @@ public class GameManager : MonoBehaviour
     public void RegisterMenuPause(GameObject pauseMenu)
     {
         this.pauseMenu = pauseMenu;
+        ShowMenu(this.pauseMenu, false);
     }
 
     public void RegisterGameOverMenu(GameObject gameOverMenu)
     {
         this.gameOverMenu = gameOverMenu;
+        ShowMenu(this.gameOverMenu, false);
+        Debug.Log("Call Register Game Over Menu");
     }
 
     // Functions Menu
@@ -88,11 +101,22 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        Debug.Log("GameOver appel");
         gameState = GameState.GameOver;
+        // if (null != gameOverMenu)
+        // {
+        //     gameOverMenu.SetActive(true);
+        //     Debug.Log("gameOverMenu existe");
+        // }
+        // else
+        // {
+        // gameOverMenu = GameObject.Find("GameOverMenu");
         if (null != gameOverMenu)
         {
             gameOverMenu.SetActive(true);
+            Debug.Log("gameOverMenu existe");
         }
+        // }
         StopTime();
     }
 

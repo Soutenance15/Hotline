@@ -30,6 +30,11 @@ public class LevelPlay : MonoBehaviour
             GameManager.instance.gameState = GameManager.GameState.Play;
             GameManager.instance.ResumeGame();
         }
+        else
+        {
+            GameManager.InstantiateIfNeeded();
+            Debug.LogWarning("Attention GameManager instance était NULL. au départ");
+        }
 
         // Créer un AudioSource s'il n'existe pas déjà
         if (audioSource == null)
@@ -49,11 +54,6 @@ public class LevelPlay : MonoBehaviour
         if (null != playerObject)
         {
             playerController = playerObject.GetComponent<PlayerController>();
-            Debug.Log("playerObject Non Null");
-        }
-        if (null != playerController)
-        {
-            Debug.Log("playerController Non Null");
         }
 
         if (null == enemies)
@@ -66,7 +66,6 @@ public class LevelPlay : MonoBehaviour
     {
         RespawnEnemies();
         RespawnPlayer();
-        Debug.Log("Restart Level");
     }
 
     void RespawnPlayer()
@@ -90,9 +89,13 @@ public class LevelPlay : MonoBehaviour
             {
                 GameObject enemyObject = child.gameObject;
                 EnemyPatrol enemyPatrol = enemyObject.GetComponent<EnemyPatrol>();
-                enemyPatrol.transform.position = enemyPatrol.spawnPosition;
-                enemyPatrol.health.currentHealth = enemyPatrol.health.maxHealth;
-                enemyPatrol.health.isAlive = true;
+                // enemyPatrol.transform.position = enemyPatrol.spawnPosition;
+                // enemyPatrol.health.currentHealth = enemyPatrol.health.maxHealth;
+                // enemyPatrol.health.UpdateHealthBar();
+                // enemyPatrol.health.isAlive = true;
+                // enemyPatrol.enemyAttack.isAlive = true;
+                // Destroy(enemyPatrol.dieBloodObject);
+                enemyPatrol.ForRespawn();
             }
         }
     }

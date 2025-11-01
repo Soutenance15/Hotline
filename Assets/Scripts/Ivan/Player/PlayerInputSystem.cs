@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.Animations;
 using UnityEngine.InputSystem;
 
 public class PlayerInputSystem : MonoBehaviour
@@ -10,7 +8,6 @@ public class PlayerInputSystem : MonoBehaviour
 
     public bool ShootPressed { get; private set; }
     public bool PushTablePressed { get; private set; }
-    private bool pushTableConsumed = false;
 
     // Ces fonctions seront appelées automatiquement par le PlayerInput
     public void OnMove(InputValue value)

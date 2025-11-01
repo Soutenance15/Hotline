@@ -8,9 +8,15 @@ public class GameVisualEffect : MonoBehaviour
         // Debug.Log("Visual Effect y: " + transform.position.y.ToString());
     }
 
-    public static void DieEffectEnemy(Transform transform, GameObject prefabDieText)
+    public static void DieEffectTextEnemy(Transform transform, GameObject prefabDieText)
     {
         // Instancier le prefab
         Instantiate(prefabDieText, transform.position, Quaternion.identity);
+    }
+
+    public static GameObject DieEffectBlood(Transform transform, GameObject prefabDieBlood)
+    {
+        // Instancier le prefab
+        return Instantiate(prefabDieBlood, transform.position, Quaternion.identity);
     }
 }

@@ -1,3 +1,4 @@
+using UnityEditor.MPE;
 using UnityEngine;
 
 public class GameSoundEffect : MonoBehaviour
@@ -21,32 +22,21 @@ public class GameSoundEffect : MonoBehaviour
         }
     }
 
-    // Joue un son "global" (2D)
     public static void PlaySound(AudioClip clip, float volume = 1f)
     {
         UpdateAudioSource();
         if (null != clip)
         {
+            // if(null != OptionGame.volume)
+            // {
+            //     volume = OptionGame.volume;
+            // }
             audioSource.PlayOneShot(clip, volume);
-            Debug.Log("Play Sound");
         }
         else
         {
-            Debug.Log("CLIP IS NULL****");
+            Debug.LogWarning("Attention Clip audio manquant.");
         }
     }
 
-    public static void DieSoundEffectEnemy(AudioClip clip, float volume = 1f)
-    {
-        PlaySound(clip, volume);
-    }
-
-    // // Joue un son à une position donnée (3D)
-    // public static void PlaySoundAt(AudioClip clip, Vector3 position, float volume = 1f)
-    // {
-    //     if (clip != null)
-    //     {
-    //         AudioSource.PlayClipAtPoint(clip, position, volume);
-    //     }
-    // }
 }

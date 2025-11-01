@@ -36,4 +36,11 @@ public class Health : MonoBehaviour
             OnDie?.Invoke();
         }
     }
+
+    public void ForRespawnHealth()
+    {
+        currentHealth = maxHealth;
+        UpdateHealthBar();
+        isAlive = true;
+    }
 }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7474185550342228185}
   - component: {fileID: 8607704419367149376}
   - component: {fileID: 8417028691551025573}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -180,8 +180,10 @@ MonoBehaviour:
   health: {fileID: 0}
   spawnPosition: {x: 0, y: 0, z: 0}
   prefabDieText: {fileID: 672354294152347998, guid: 7d9b845b99dda0d4b9b72a08446058e7, type: 3}
+  prefabDieBlood: {fileID: 215338100086065143, guid: 8d249a6036e47ef44891d327314cdf6c, type: 3}
+  dieBloodObject: {fileID: 0}
   shootClip: {fileID: 0}
-  dieClip: {fileID: 8300000, guid: a5be8a42369ae2f4eac468fc3613c9c8, type: 3}
+  dieClip: {fileID: 8300000, guid: ed841a11b3e4ce0498e9afd3b545f4cc, type: 3}
 --- !u!114 &8607704419367149376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,7 +229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5352736488832489603}
   - component: {fileID: 4372584458540325331}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,7 +320,7 @@ GameObject:
   - component: {fileID: 5053637223036169820}
   - component: {fileID: 6486937173319728152}
   - component: {fileID: 3497195435704906043}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -394,7 +396,7 @@ GameObject:
   - component: {fileID: 8692681066871427664}
   - component: {fileID: 5153491087616481810}
   - component: {fileID: 1301996584918433534}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -493,7 +495,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4812112943397206386}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -528,7 +530,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6052326302591045392}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -566,7 +568,7 @@ GameObject:
   - component: {fileID: 2432842698069133921}
   - component: {fileID: 5233133096020759889}
   - component: {fileID: 3089313105890686366}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}

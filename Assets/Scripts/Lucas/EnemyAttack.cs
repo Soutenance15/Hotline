@@ -25,6 +25,11 @@ public class EnemyAttack : MonoBehaviour
         }
     }
 
+    public void ForRespawnAttack()
+    {
+        isAlive = true;
+    }
+
     void FixedUpdate()
     {
         if (isAlive)

@@ -5,6 +5,9 @@ public class PlayerAttackSystem : MonoBehaviour
     public GameObject bulletPrefab;
     public AmmoWeapon ammoWeapon;
 
+    // Effet
+    public AudioClip shootClip;
+
     // Functions
     public void SetAmmoWeapon(AmmoWeapon ammoWeapon)
     {
@@ -27,6 +30,8 @@ public class PlayerAttackSystem : MonoBehaviour
                 // Ajoute la vitesse du player a la balle (utile si il avance)
                 bullet.speed += speedPlayer;
             }
+
+            GameSoundEffect.PlaySound(shootClip, 0.005f);
         }
     }
 }
