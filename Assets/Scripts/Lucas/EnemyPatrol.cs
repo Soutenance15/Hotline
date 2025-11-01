@@ -11,12 +11,17 @@ public class EnemyPatrol : MonoBehaviour
     private Transform targetPoint;
     private bool looping = true;
 
-    public Vector3 spawnPosition;
-
+    // Composants
+    public EnemyAttack enemyAttack;
     public Health health;
 
+    public Vector3 spawnPosition;
+
+    // Effets
+
     public GameObject prefabDieText;
-    public EnemyAttack enemyAttack;
+    public AudioClip shootClip;
+    public AudioClip dieClip;
 
     void OnDisable()
     {
@@ -69,6 +74,7 @@ public class EnemyPatrol : MonoBehaviour
         if (null != prefabDieText)
         {
             GameVisualEffect.DieEffectEnemy(transform, prefabDieText);
+            GameSoundEffect.DieSoundEffectEnemy(dieClip, 100f);
         }
         enemyAttack.isAlive = false;
     }

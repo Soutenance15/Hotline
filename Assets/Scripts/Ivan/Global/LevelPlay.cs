@@ -4,8 +4,8 @@ public class LevelPlay : MonoBehaviour
 {
     public GameObject enemies;
     public GameObject playerObject;
-
     private PlayerController playerController;
+    public AudioSource audioSource;
 
     void OnEnable()
     {
@@ -29,6 +29,17 @@ public class LevelPlay : MonoBehaviour
         {
             GameManager.instance.gameState = GameManager.GameState.Play;
             GameManager.instance.ResumeGame();
+        }
+
+        // Créer un AudioSource s'il n'existe pas déjà
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+
+            // Configuration du son global 2D
+            audioSource.playOnAwake = false;
+            audioSource.spatialBlend = 0f; // 0 = 2D, 1 = 3D
+            audioSource.volume = 1f;
         }
 
         if (null == playerObject)

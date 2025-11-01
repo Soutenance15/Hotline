@@ -13,12 +13,11 @@ public class DieText : MonoBehaviour
 
     void Start()
     {
-        Destroy(gameObject, 1.5f);
+        Destroy(gameObject, 2f);
 
-        // Récupérer le composant TextMeshPro
         TextMeshPro tmp = GetComponent<TextMeshPro>();
 
-        if (tmp != null)
+        if (null != tmp)
         {
             string randomMessage = randomTexts[Random.Range(0, randomTexts.Length)];
             tmp.text = randomMessage;

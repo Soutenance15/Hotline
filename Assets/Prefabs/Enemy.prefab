@@ -176,9 +176,12 @@ MonoBehaviour:
   - {fileID: 0}
   speed: 2
   enemy: {fileID: 72505651300908186}
-  spawnPosition: {x: 0, y: 0, z: 0}
+  enemyAttack: {fileID: 0}
   health: {fileID: 0}
+  spawnPosition: {x: 0, y: 0, z: 0}
   prefabDieText: {fileID: 672354294152347998, guid: 7d9b845b99dda0d4b9b72a08446058e7, type: 3}
+  shootClip: {fileID: 0}
+  dieClip: {fileID: 8300000, guid: a5be8a42369ae2f4eac468fc3613c9c8, type: 3}
 --- !u!114 &8607704419367149376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,6 +199,7 @@ MonoBehaviour:
   shootPos: {fileID: 7638076937040538184}
   timer: 0
   shootDistance: 0
+  isAlive: 1
 --- !u!114 &8417028691551025573
 MonoBehaviour:
   m_ObjectHideFlags: 0
