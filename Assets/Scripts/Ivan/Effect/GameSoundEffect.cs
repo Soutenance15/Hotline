@@ -32,8 +32,6 @@ public class GameSoundEffect : MonoBehaviour
             //     volume = OptionGame.volume;
             // }
             audioSource.PlayOneShot(clip, volume);
-            Debug.LogWarning("Clip audio EXISTANT.");
-
         }
         else
         {
@@ -45,5 +43,4 @@ public class GameSoundEffect : MonoBehaviour
     {
         audioSource.Stop();
     }
-
 }

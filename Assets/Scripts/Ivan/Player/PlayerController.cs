@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
@@ -21,6 +22,8 @@ public class PlayerController : MonoBehaviour
 
     public Vector3 spawnPosition;
 
+    public AmmoWeapon ammoWeapon;
+
     // Effet
     public AudioClip dieClip;
 
@@ -28,16 +31,20 @@ public class PlayerController : MonoBehaviour
 
     void OnEnable()
     {
-        AmmoWeapon.OnAmmoWeaponEnter += TakeAmmoWeapon;
+        AmmoToTake.OnAmmoToTakeEnter += TakeAmmoWeapon;
         health.OnDie += Die;
     }
 
     void OnDisable()
     {
-        AmmoWeapon.OnAmmoWeaponEnter -= TakeAmmoWeapon;
+        AmmoToTake.OnAmmoToTakeEnter -= TakeAmmoWeapon;
     }
 
     // Functions
+    public AmmoWeapon GetAmmo()
+    {
+        return playerAttack.ammoWeapon;
+    }
 
     void Die()
     {
@@ -55,16 +62,14 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator WaitTwoSeconds()
     {
-        Debug.Log("Début de la coroutine...");
         yield return new WaitForSeconds(2f); // attend 2 secondes
-        Debug.Log("2 secondes écoulées !");
     }
 
-    private void TakeAmmoWeapon(AmmoWeapon ammoWeapon)
+    private void TakeAmmoWeapon(AmmoToTake ammoToTake)
     {
         if (null != playerAttack)
         {
-            playerAttack.SetAmmoWeapon(ammoWeapon);
+            playerAttack.ConfigAmmoWeapon(ammoToTake);
         }
         string weaponName = playerAttack.ammoWeapon.weaponName.ToString();
         if (null != weaponName)
@@ -90,16 +95,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void ResetAmmo()
-    {
-        playerAttack.SetAmmoWeapon(null);
-    }
-
     void Awake()
     {
         playerMove = GetComponent<PlayerMoveSystem>();
         playerInput = GetComponent<PlayerInputSystem>();
         playerAttack = GetComponent<PlayerAttackSystem>();
+        ammoWeapon = GetComponent<AmmoWeapon>();
+        if (null == ammoWeapon)
+        {
+            ammoWeapon = GameObject.Find("AmmoWeapon").GetComponent<AmmoWeapon>();
+        }
+        playerAttack.SetAmmoWeapon(ammoWeapon);
         playerUI = GetComponent<PlayerUISystem>();
         health = GetComponent<Health>();
 
@@ -176,7 +182,6 @@ public class PlayerController : MonoBehaviour
 
             if (playerInput.PushTablePressed)
             {
-                Debug.Log("PushTable Pressed");
                 TurnTable turnTable = HitTurnTable();
                 if (null != turnTable)
                 {

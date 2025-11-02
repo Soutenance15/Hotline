@@ -4,7 +4,8 @@ using UnityEngine;
 public class AmmoWeapon : MonoBehaviour
 {
     public static Action<AmmoWeapon> OnAmmoWeaponEnter;
-    public int nbAmmo = 9;
+    public int nbAmmo = 0;
+    public int nbMaxAmmo = 9;
     public bool canNotShoot;
     public AudioClip reloadClip;
 
@@ -16,25 +17,7 @@ public class AmmoWeapon : MonoBehaviour
         Famas,
     }
 
-    void Awake()
-    {
-        if (nbAmmo <= 0)
-        {
-            // Au minimum 1 balles dans le chargeur a ramassé
-            nbAmmo = 1;
-        }
-    }
-
-    public WeaponName weaponName = WeaponName.Beretta;
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            GameSoundEffect.PlaySound(reloadClip, 1f);
-            OnAmmoWeaponEnter?.Invoke(this);
-        }
-    }
+    public WeaponName weaponName;
 
     public void UsedOneWeapon()
     {

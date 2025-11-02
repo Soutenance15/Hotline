@@ -76,7 +76,6 @@ public class LevelPlay : MonoBehaviour
             playerController.transform.position = playerController.spawnPosition;
             playerController.health.currentHealth = playerController.health.maxHealth;
             playerController.health.isAlive = true;
-            playerController.ResetAmmo();
             playerController.ShowWeaponHUD(false);
         }
     }

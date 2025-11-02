@@ -14,6 +14,13 @@ public class PlayerAttackSystem : MonoBehaviour
         this.ammoWeapon = ammoWeapon;
     }
 
+    public void ConfigAmmoWeapon(AmmoToTake ammoToTake)
+    {
+        ammoWeapon.nbAmmo = ammoToTake.nbAmmo;
+        ammoWeapon.weaponName = ammoToTake.weaponName;
+        ammoWeapon.canNotShoot = false;
+    }
+
     public void Shoot(float speedPlayer)
     {
         if (null != bulletPrefab)

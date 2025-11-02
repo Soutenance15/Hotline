@@ -40,6 +40,15 @@ public class PlayerUISystem : MonoBehaviour
         if (null != nbBulletText)
         {
             nbBulletText.text = nbBullet;
+            int nbBulletInt = int.Parse(nbBullet);
+            if (nbBulletInt == 0)
+            {
+                nbBulletText.color = Color.red;
+            }
+            else
+            {
+                nbBulletText.color = Color.white;
+            }
         }
     }
 
