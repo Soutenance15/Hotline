@@ -182,7 +182,7 @@ MonoBehaviour:
   prefabDieText: {fileID: 672354294152347998, guid: 7d9b845b99dda0d4b9b72a08446058e7, type: 3}
   prefabDieBlood: {fileID: 215338100086065143, guid: 8d249a6036e47ef44891d327314cdf6c, type: 3}
   dieBloodObject: {fileID: 0}
-  shootClip: {fileID: 0}
+  shootClip: {fileID: 8300000, guid: bb464f05e7823ad4095e23e3d7d60ccc, type: 3}
   dieClip: {fileID: 8300000, guid: ed841a11b3e4ce0498e9afd3b545f4cc, type: 3}
 --- !u!114 &8607704419367149376
 MonoBehaviour:

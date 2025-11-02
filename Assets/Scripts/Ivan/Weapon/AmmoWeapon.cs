@@ -6,7 +6,7 @@ public class AmmoWeapon : MonoBehaviour
     public static Action<AmmoWeapon> OnAmmoWeaponEnter;
     public int nbAmmo = 0;
     public int nbMaxAmmo = 9;
-    public bool canNotShoot;
+    public bool canNotShoot = true;
     public AudioClip reloadClip;
 
     public enum WeaponName
@@ -25,7 +25,7 @@ public class AmmoWeapon : MonoBehaviour
         canNotShoot = CanNotShoot();
     }
 
-    bool CanNotShoot()
+    public bool CanNotShoot()
     {
         if (nbAmmo < 1)
         {

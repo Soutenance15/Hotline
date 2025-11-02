@@ -18,7 +18,7 @@ public class PlayerAttackSystem : MonoBehaviour
     {
         ammoWeapon.nbAmmo = ammoToTake.nbAmmo;
         ammoWeapon.weaponName = ammoToTake.weaponName;
-        ammoWeapon.canNotShoot = false;
+        ammoWeapon.canNotShoot = ammoWeapon.CanNotShoot();
     }
 
     public void Shoot(float speedPlayer)
@@ -38,7 +38,7 @@ public class PlayerAttackSystem : MonoBehaviour
                 bullet.speed += speedPlayer;
             }
 
-            GameSoundEffect.PlaySound(shootClip, 0.005f);
+            GameSoundEffect.PlaySound(shootClip, 0.05f);
         }
     }
 }

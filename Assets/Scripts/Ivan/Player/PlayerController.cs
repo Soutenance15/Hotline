@@ -105,7 +105,9 @@ public class PlayerController : MonoBehaviour
         {
             ammoWeapon = GameObject.Find("AmmoWeapon").GetComponent<AmmoWeapon>();
         }
+        ammoWeapon.canNotShoot = true;
         playerAttack.SetAmmoWeapon(ammoWeapon);
+
         playerUI = GetComponent<PlayerUISystem>();
         health = GetComponent<Health>();
 

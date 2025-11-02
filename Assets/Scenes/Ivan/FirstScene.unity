@@ -243,11 +243,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 668809501818190956, guid: 622ded992323adb479efa48d9028c386, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 668809501818190956, guid: 622ded992323adb479efa48d9028c386, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1032941061192509565, guid: 622ded992323adb479efa48d9028c386, type: 3}
       propertyPath: m_NotificationBehavior
@@ -405,6 +405,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerController
       objectReference: {fileID: 0}
+    - target: {fileID: 5015324517236121457, guid: 622ded992323adb479efa48d9028c386, type: 3}
+      propertyPath: ammoWeapon
+      value: 
+      objectReference: {fileID: 504447221}
     - target: {fileID: 5966980218578065719, guid: 622ded992323adb479efa48d9028c386, type: 3}
       propertyPath: turnTableLayer.m_Bits
       value: 128
@@ -449,6 +453,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8384614380271751435, guid: 622ded992323adb479efa48d9028c386, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8590903311562961909, guid: 622ded992323adb479efa48d9028c386, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1584783106}
     - target: {fileID: 9160253550027152997, guid: 622ded992323adb479efa48d9028c386, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.03
@@ -475,6 +487,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1163885176795001964, guid: 8cc895c4ec6d2d940b77861dc95daba2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -219
+      objectReference: {fileID: 0}
+    - target: {fileID: 1163885176795001964, guid: 8cc895c4ec6d2d940b77861dc95daba2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 454
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293075631465422052, guid: 8cc895c4ec6d2d940b77861dc95daba2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293075631465422052, guid: 8cc895c4ec6d2d940b77861dc95daba2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2063927016566904959, guid: 8cc895c4ec6d2d940b77861dc95daba2, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -813,6 +841,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1149385856622773162, guid: e0de8f98d0e33fd4d9396fabf6223127, type: 3}
   m_PrefabInstance: {fileID: 240873784}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &504447221 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2958675866772768655, guid: 622ded992323adb479efa48d9028c386, type: 3}
+  m_PrefabInstance: {fileID: 158493225}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e53fa14dd2f05b4da0252ffed90ce4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AmmoWeapon
 --- !u!1 &665844043
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,6 +1042,17 @@ MonoBehaviour:
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
   FollowOffset: {x: 0, y: 0, z: -10}
+--- !u!114 &1584783106 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8422591301328101165, guid: 8cc895c4ec6d2d940b77861dc95daba2, type: 3}
+  m_PrefabInstance: {fileID: 172235575}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
 --- !u!1001 &1597912368
 PrefabInstance:
   m_ObjectHideFlags: 0

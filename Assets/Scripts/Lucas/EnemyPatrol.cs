@@ -36,7 +36,7 @@ public class EnemyPatrol : MonoBehaviour
     {
         health = GetComponent<Health>();
         enemyAttack = GetComponent<EnemyAttack>();
-
+        enemyAttack.shootClip = shootClip;
         if (patrolPoints.Count > 0)
         {
             enemy.transform.position = patrolPoints[0].position;

@@ -11,6 +11,9 @@ public class EnemyAttack : MonoBehaviour
 
     public bool isAlive = true;
 
+    // Effet
+    public AudioClip shootClip;
+
     void Start()
     {
         player = GameObject.FindWithTag("Player");
@@ -55,6 +58,7 @@ public class EnemyAttack : MonoBehaviour
 
     public void Shoot()
     {
-        GameObject proj = Instantiate(projectile, shootPos.position, Quaternion.identity);
+        Instantiate(projectile, shootPos.position, Quaternion.identity);
+        GameSoundEffect.PlaySound(shootClip, 0.05f);
     }
 }
