@@ -6,6 +6,7 @@ public class AmmoWeapon : MonoBehaviour
     public static Action<AmmoWeapon> OnAmmoWeaponEnter;
     public int nbAmmo = 9;
     public bool canNotShoot;
+    public AudioClip reloadClip;
 
     public enum WeaponName
     {
@@ -30,7 +31,7 @@ public class AmmoWeapon : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Trigger enter");
+            GameSoundEffect.PlaySound(reloadClip, 1f);
             OnAmmoWeaponEnter?.Invoke(this);
         }
     }

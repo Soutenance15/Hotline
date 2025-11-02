@@ -76,6 +76,23 @@ public class PlayerController : MonoBehaviour
         {
             playerUI.UpdateNbAmmoNameText(nbAmmo);
         }
+        if (null != playerUI)
+        {
+            playerUI.ShowWeaponHUD(true);
+        }
+    }
+
+    public void ShowWeaponHUD(bool show)
+    {
+        if (null != playerUI)
+        {
+            playerUI.ShowWeaponHUD(show);
+        }
+    }
+
+    public void ResetAmmo()
+    {
+        playerAttack.SetAmmoWeapon(null);
     }
 
     void Awake()
@@ -92,6 +109,10 @@ public class PlayerController : MonoBehaviour
         if (null != playerMove && null != rb)
         {
             playerMove.Init(rb);
+        }
+        if (null != playerUI)
+        {
+            playerUI.ShowWeaponHUD(false);
         }
     }
 

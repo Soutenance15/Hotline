@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerUISystem : MonoBehaviour
 {
     GameObject HUD;
+    GameObject weaponHUD;
     TextMeshProUGUI weaponNameText;
     TextMeshProUGUI nbBulletText;
 
@@ -13,8 +14,16 @@ public class PlayerUISystem : MonoBehaviour
 
         if (null != HUD)
         {
-            weaponNameText = HUD.transform.Find("WeaponNameText").GetComponent<TextMeshProUGUI>();
-            nbBulletText = HUD.transform.Find("NbBulletText").GetComponent<TextMeshProUGUI>();
+            weaponHUD = HUD.transform.Find("WeaponHUD").gameObject;
+            if (null != weaponHUD)
+            {
+                weaponNameText = weaponHUD
+                    .transform.Find("WeaponNameText")
+                    .GetComponent<TextMeshProUGUI>();
+                nbBulletText = weaponHUD
+                    .transform.Find("NbBulletText")
+                    .GetComponent<TextMeshProUGUI>();
+            }
         }
     }
 
@@ -31,6 +40,14 @@ public class PlayerUISystem : MonoBehaviour
         if (null != nbBulletText)
         {
             nbBulletText.text = nbBullet;
+        }
+    }
+
+    public void ShowWeaponHUD(bool show)
+    {
+        if (null != weaponHUD)
+        {
+            weaponHUD.SetActive(show);
         }
     }
 }

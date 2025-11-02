@@ -106,6 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   nbAmmo: 12
   canNotShoot: 0
+  reloadClip: {fileID: 8300000, guid: 56406de997791dd47aaf3c1ab9053bd5, type: 3}
   weaponName: 0
 --- !u!58 &7542852101072240536
 CircleCollider2D:

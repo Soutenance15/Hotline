@@ -64,6 +64,7 @@ public class LevelPlay : MonoBehaviour
 
     void RestartLevel()
     {
+        GameSoundEffect.StopAudioSource();
         RespawnEnemies();
         RespawnPlayer();
     }
@@ -73,10 +74,10 @@ public class LevelPlay : MonoBehaviour
         if (null != playerController)
         {
             playerController.transform.position = playerController.spawnPosition;
-            // playerController.health.currentHealth = playerController.health.maxHealth;
-            playerController.health.currentHealth = 50;
+            playerController.health.currentHealth = playerController.health.maxHealth;
             playerController.health.isAlive = true;
-            Debug.Log("player non null");
+            playerController.ResetAmmo();
+            playerController.ShowWeaponHUD(false);
         }
     }
 
@@ -84,17 +85,10 @@ public class LevelPlay : MonoBehaviour
     {
         if (null != enemies)
         {
-            Debug.Log("enemies non null");
             foreach (Transform child in enemies.transform)
             {
                 GameObject enemyObject = child.gameObject;
                 EnemyPatrol enemyPatrol = enemyObject.GetComponent<EnemyPatrol>();
-                // enemyPatrol.transform.position = enemyPatrol.spawnPosition;
-                // enemyPatrol.health.currentHealth = enemyPatrol.health.maxHealth;
-                // enemyPatrol.health.UpdateHealthBar();
-                // enemyPatrol.health.isAlive = true;
-                // enemyPatrol.enemyAttack.isAlive = true;
-                // Destroy(enemyPatrol.dieBloodObject);
                 enemyPatrol.ForRespawn();
             }
         }
