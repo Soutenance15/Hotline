@@ -6,6 +6,8 @@ public class LevelPlay : MonoBehaviour
     public GameObject playerObject;
     private PlayerController playerController;
     public AudioSource audioSource;
+    public AudioSource audioSourceMusic;
+    public AudioClip musicLevel;
 
     void OnEnable()
     {
@@ -60,6 +62,13 @@ public class LevelPlay : MonoBehaviour
         {
             enemies = GameObject.Find("Enemies");
         }
+    }
+
+    void Start()
+    {
+        GameSoundEffect.SetAudioSource(audioSource);
+        GameSoundEffect.SetAudioSourceMusic(audioSourceMusic);
+        GameSoundEffect.PlaySoundMusic(musicLevel);
     }
 
     void RestartLevel()

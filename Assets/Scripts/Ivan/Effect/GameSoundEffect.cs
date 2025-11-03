@@ -1,9 +1,28 @@
+using Unity.VisualScripting;
 using UnityEditor.MPE;
 using UnityEngine;
 
 public class GameSoundEffect : MonoBehaviour
 {
     private static AudioSource audioSource;
+    private static AudioSource audioSourceMusic;
+
+    private static void UpdateAudioSourceMusic()
+    {
+        // Recupere l'adioSource du LevelPlay s'il existe
+        GameObject levelPlayObject = GameObject.Find("LevelPlay");
+        if (null != levelPlayObject)
+        {
+            LevelPlay levelPlay = levelPlayObject.GetComponent<LevelPlay>();
+            if (null != levelPlay)
+            {
+                if (null != levelPlay.audioSourceMusic)
+                {
+                    audioSourceMusic = levelPlay.audioSourceMusic;
+                }
+            }
+        }
+    }
 
     private static void UpdateAudioSource()
     {
@@ -22,15 +41,21 @@ public class GameSoundEffect : MonoBehaviour
         }
     }
 
+    public static void SetAudioSource(AudioSource audioSource)
+    {
+        GameSoundEffect.audioSource = audioSource;
+    }
+
+    public static void SetAudioSourceMusic(AudioSource audioSourceMusic)
+    {
+        GameSoundEffect.audioSourceMusic = audioSourceMusic;
+    }
+
     public static void PlaySound(AudioClip clip, float volume = 1f)
     {
         UpdateAudioSource();
         if (null != clip)
         {
-            // if(null != OptionGame.volume)
-            // {
-            //     volume = OptionGame.volume;
-            // }
             audioSource.PlayOneShot(clip, volume);
         }
         else
@@ -39,8 +64,22 @@ public class GameSoundEffect : MonoBehaviour
         }
     }
 
+    public static void PlaySoundMusic(AudioClip clip, float volume = 1f)
+    {
+        UpdateAudioSourceMusic();
+        if (null != clip)
+        {
+            audioSourceMusic.PlayOneShot(clip, volume);
+        }
+    }
+
     public static void StopAudioSource()
     {
         audioSource.Stop();
+    }
+
+    public static void StopAudioSourceMusic()
+    {
+        audioSourceMusic.Stop();
     }
 }
