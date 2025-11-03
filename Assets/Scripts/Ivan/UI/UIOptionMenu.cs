@@ -10,7 +10,7 @@ public class UIOptionMenu : MonoBehaviour
     public Button resumeButton;
     public Toggle VFXToogle;
 
-    public static Action OnBack_Option;
+    // public static Action OnBack_Option;
     public static Action<float> OnMusicSlider_Option;
     public static Action<float> OnEffectSlider_Option;
     public static Action<bool> OnVFXToggleChanged_Option;
@@ -18,10 +18,10 @@ public class UIOptionMenu : MonoBehaviour
 
     void Awake()
     {
-        if (null == backButton)
-        {
-            backButton = GameObject.Find("BackButton").GetComponent<Button>();
-        }
+        // if (null == backButton)
+        // {
+        //     backButton = GameObject.Find("BackButton").GetComponent<Button>();
+        // }
         if (null == resumeButton)
         {
             resumeButton = GameObject.Find("ResumeButton").GetComponent<Button>();
@@ -41,10 +41,10 @@ public class UIOptionMenu : MonoBehaviour
 
         // Init All Buttons
 
-        if (null != backButton)
-        {
-            backButton.onClick.AddListener(() => OnClickBack());
-        }
+        // if (null != backButton)
+        // {
+        //     backButton.onClick.AddListener(() => OnClickBack());
+        // }
         if (null != resumeButton)
         {
             resumeButton.onClick.AddListener(() => OnClickResume());
@@ -78,10 +78,10 @@ public class UIOptionMenu : MonoBehaviour
         OnEffectSlider_Option?.Invoke(volume);
     }
 
-    void OnClickBack()
-    {
-        OnBack_Option?.Invoke();
-    }
+    // void OnClickBack()
+    // {
+    //     OnBack_Option?.Invoke();
+    // }
 
     void OnClickResume()
     {
