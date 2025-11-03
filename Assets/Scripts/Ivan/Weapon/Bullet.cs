@@ -12,12 +12,15 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            Debug.Log("Hit Enemy");
             health = collision.gameObject.GetComponent<Health>();
             health.UpdateDamage(-100);
             Destroy(gameObject);
         }
-        if (collision.CompareTag("TurnTable"))
+        else if (collision.gameObject.tag == "TileMapCollider")
+        {
+            Destroy(gameObject);
+        }
+        else if (collision.CompareTag("TurnTable"))
         {
             TurnTable turnTable = collision.GetComponent<TurnTable>();
             if (turnTable.onSide)

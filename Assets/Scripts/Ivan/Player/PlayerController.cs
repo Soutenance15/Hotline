@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     PlayerMoveSystem playerMove;
     public PlayerInputSystem playerInput;
     PlayerAttackSystem playerAttack;
-    PlayerUISystem playerUI;
+    public PlayerUISystem playerUI;
     public Health health;
 
     // Composants

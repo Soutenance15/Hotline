@@ -158,6 +158,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void JustPauseTime()
+    {
+        gameState = GameState.Pause;
+        StopTime();
+    }
+
     public void ResumeGameFromGameOver()
     {
         OnResumeFromGameOver?.Invoke();

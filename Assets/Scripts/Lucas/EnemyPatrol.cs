@@ -23,6 +23,7 @@ public class EnemyPatrol : MonoBehaviour
     public GameObject dieBloodObject;
     public AudioClip shootClip;
     public AudioClip dieClip;
+    public static Action enemyDie;
 
     void OnDisable()
     {
@@ -34,6 +35,23 @@ public class EnemyPatrol : MonoBehaviour
 
     void Start()
     {
+        // Sauvegarde des positions mondiales des points
+        Vector3[] worldPositions = new Vector3[patrolPoints.Count];
+        for (int i = 0; i < patrolPoints.Count; i++)
+        {
+            worldPositions[i] = patrolPoints[i].position;
+        }
+
+        // Détache les points de leur parent
+        foreach (Transform point in patrolPoints)
+            point.SetParent(null);
+
+        // Replace les points aux positions sauvegardées (au cas où)
+        for (int i = 0; i < patrolPoints.Count; i++)
+        {
+            patrolPoints[i].position = worldPositions[i];
+        }
+
         health = GetComponent<Health>();
         enemyAttack = GetComponent<EnemyAttack>();
         enemyAttack.shootClip = shootClip;
@@ -88,8 +106,9 @@ public class EnemyPatrol : MonoBehaviour
         {
             dieBloodObject = GameVisualEffect.DieEffectBlood(transform, prefabDieBlood);
         }
-        health.healthBar.enabled = false;
+        health.healthBar.gameObject.SetActive(false);
         enemyAttack.isAlive = false;
+        EnemyPatrol.enemyDie?.Invoke();
     }
 
     public void StopMovement()

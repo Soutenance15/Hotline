@@ -8,12 +8,43 @@ public class LevelPlay : MonoBehaviour
     public AudioSource audioSource;
     public AudioSource audioSourceMusic;
     public AudioClip musicLevel;
+    public GameObject panelSuccess;
+    public int enemiesTotal;
+    public int nbKill;
 
     void OnEnable()
     {
         if (null != GameManager.instance)
         {
             GameManager.instance.OnResumeFromGameOver += RestartLevel;
+        }
+        EnemyPatrol.enemyDie += ManageDying;
+    }
+
+    void ManageDying()
+    {
+        nbKill += 1;
+        if (null != playerController)
+        {
+            playerController.playerUI.UpdateNbEnemyKilledText(nbKill.ToString());
+        }
+        if (nbKill == enemiesTotal)
+        {
+            SuccessLevel();
+        }
+    }
+
+    void SuccessLevel()
+    {
+        // ShowPanelSuccess();
+        GameManager.instance.JustPauseTime();
+    }
+
+    void ShowPanelSuccess()
+    {
+        if (null != panelSuccess)
+        {
+            panelSuccess.SetActive(true);
         }
     }
 
@@ -27,6 +58,11 @@ public class LevelPlay : MonoBehaviour
 
     void Awake()
     {
+        if (null != panelSuccess)
+        {
+            panelSuccess.SetActive(false);
+        }
+
         if (GameManager.instance != null)
         {
             GameManager.instance.gameState = GameManager.GameState.Play;
@@ -53,14 +89,16 @@ public class LevelPlay : MonoBehaviour
         {
             playerObject = GameObject.Find("PlayerController");
         }
-        if (null != playerObject)
-        {
-            playerController = playerObject.GetComponent<PlayerController>();
-        }
-
         if (null == enemies)
         {
             enemies = GameObject.Find("Enemies");
+        }
+        enemiesTotal = enemies.transform.childCount;
+
+        if (null != playerObject)
+        {
+            playerController = playerObject.GetComponent<PlayerController>();
+            playerController.playerUI.UpdateNbEnemyTotalText(enemiesTotal.ToString());
         }
     }
 
@@ -87,6 +125,8 @@ public class LevelPlay : MonoBehaviour
             playerController.health.isAlive = true;
             playerController.health.UpdateHealthBar();
             playerController.ShowWeaponHUD(false);
+            nbKill = 0;
+            playerController.playerUI.UpdateNbEnemyKilledText(nbKill.ToString());
         }
     }
 

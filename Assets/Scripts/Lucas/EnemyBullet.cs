@@ -1,3 +1,4 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
@@ -23,7 +24,11 @@ public class EnemyBullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "TileMapCollider")
+        {
+            Destroy(gameObject);
+        }
+        else if (collision.gameObject.tag == "Player")
         {
             health = collision.gameObject.GetComponent<Health>();
             health.UpdateDamage(damage);
