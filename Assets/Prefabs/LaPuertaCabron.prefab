@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5824745197527227684}
   - component: {fileID: 7396031427915310247}
   - component: {fileID: 2673752643656799910}
+  - component: {fileID: 3627670180135710120}
   m_Layer: 0
   m_Name: LaPuertaCabron
   m_TagString: Untagged
@@ -136,7 +137,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -1, y: 0}
-  m_ConnectedAnchor: {x: -0.999723, y: 9.872}
+  m_ConnectedAnchor: {x: -10.13, y: -0.016723275}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -192,3 +193,56 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.022981, y: 0.29370156}
   m_EdgeRadius: 0
+--- !u!114 &3627670180135710120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2781893975820881366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.ShadowCaster2D
+  m_ShadowGroup: 0
+  m_Priority: 0
+  m_ComponentVersion: 5
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_AlphaCutoff: 0.1
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -1.0258904, y: -0.13203962, z: 0}
+  - {x: -1.0365578, y: 1.2747064, z: 0}
+  - {x: 0.9938899, y: 1.2501347, z: 0}
+  - {x: 0.99388987, y: -0.11975143, z: 0}
+  m_ShapePathHash: -53342497
+  m_InstanceId: 0
+  m_ShadowShape2DComponent: {fileID: 2673752643656799910}
+  m_ShadowShape2DProvider:
+    rid: 147662285619069036
+  m_ShadowCastingSource: 2
+  m_ShadowMesh:
+    m_Mesh: {fileID: 0}
+    m_LocalBounds:
+      m_Center: {x: 0.004875183, y: 0, z: 0}
+      m_Extent: {x: 1.0014877, y: 0.13685608, z: 0}
+    m_EdgeProcessing: 1
+    m_TrimEdge: 0.01
+    m_FlipX: 0
+    m_FlipY: 0
+    m_InitialTrim: 0
+  m_CastingOption: 1
+  m_PreviousTrimEdge: 0.01
+  m_PreviousEdgeProcessing: 1
+  m_PreviousShadowCastingSource: 2
+  m_PreviousShadowShape2DSource: {fileID: 2673752643656799910}
+  references:
+    version: 2
+    RefIds:
+    - rid: 147662285619069036
+      type: {class: ShadowShape2DProvider_Collider2D, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
+      data: 

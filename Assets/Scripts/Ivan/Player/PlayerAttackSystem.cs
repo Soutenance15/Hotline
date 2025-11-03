@@ -4,11 +4,20 @@ public class PlayerAttackSystem : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public AmmoWeapon ammoWeapon;
+    public  Animator animator;
 
     // Functions
     public void SetAmmoWeapon(AmmoWeapon ammoWeapon)
     {
         this.ammoWeapon = ammoWeapon;
+        if (ammoWeapon.nbAmmo > 1)
+        {
+            animator.SetBool("IsGun", true);
+        }
+        else
+        {
+            animator.SetBool("IsGun", false);
+        }
     }
 
     public void Shoot(float speedPlayer)
