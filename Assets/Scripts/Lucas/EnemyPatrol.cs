@@ -82,7 +82,7 @@ public class EnemyPatrol : MonoBehaviour
         if (null != prefabDieText)
         {
             GameVisualEffect.DieEffectTextEnemy(transform, prefabDieText);
-            GameSoundEffect.PlaySound(dieClip, 0.05f);
+            GameSoundEffect.PlaySound(dieClip);
         }
         if (null != prefabDieBlood)
         {

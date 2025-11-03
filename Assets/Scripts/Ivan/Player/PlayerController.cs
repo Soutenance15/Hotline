@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
 
     void Die()
     {
-        GameSoundEffect.PlaySound(dieClip, 100f);
+        GameSoundEffect.PlaySound(dieClip);
         StartCoroutine(WaitTwoSeconds());
         if (null != GameManager.instance)
         {
@@ -176,9 +176,6 @@ public class PlayerController : MonoBehaviour
                     {
                         playerUI.UpdateNbAmmoNameText(nbAmmo);
                     }
-
-                    // Visual Effect
-                    GameVisualEffect.ShootEffect(transform);
                 }
             }
 
@@ -189,6 +186,11 @@ public class PlayerController : MonoBehaviour
                 {
                     turnTable.Turn();
                 }
+            }
+
+            if (playerInput.PausePressed)
+            {
+                GameManager.instance.TooglePause();
             }
         }
     }

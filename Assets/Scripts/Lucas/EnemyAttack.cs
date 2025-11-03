@@ -59,6 +59,6 @@ public class EnemyAttack : MonoBehaviour
     public void Shoot()
     {
         Instantiate(projectile, shootPos.position, Quaternion.identity);
-        GameSoundEffect.PlaySound(shootClip, 0.05f);
+        GameSoundEffect.PlaySound(shootClip);
     }
 }

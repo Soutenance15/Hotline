@@ -7,7 +7,7 @@ public class GameSoundEffect : MonoBehaviour
     private static AudioSource audioSource;
     private static AudioSource audioSourceMusic;
 
-    private static void UpdateAudioSourceMusic()
+    public static void UpdateAudioSourceMusic()
     {
         // Recupere l'adioSource du LevelPlay s'il existe
         GameObject levelPlayObject = GameObject.Find("LevelPlay");
@@ -19,12 +19,13 @@ public class GameSoundEffect : MonoBehaviour
                 if (null != levelPlay.audioSourceMusic)
                 {
                     audioSourceMusic = levelPlay.audioSourceMusic;
+                    audioSourceMusic.volume = OptionManager.GetVolumeMusic();
                 }
             }
         }
     }
 
-    private static void UpdateAudioSource()
+    public static void UpdateAudioSource()
     {
         // Recupere l'adioSource du LevelPlay s'il existe
         GameObject levelPlayObject = GameObject.Find("LevelPlay");
@@ -36,6 +37,7 @@ public class GameSoundEffect : MonoBehaviour
                 if (null != levelPlay.audioSource)
                 {
                     audioSource = levelPlay.audioSource;
+                    audioSource.volume = OptionManager.GetVolumeEffect();
                 }
             }
         }
@@ -51,12 +53,13 @@ public class GameSoundEffect : MonoBehaviour
         GameSoundEffect.audioSourceMusic = audioSourceMusic;
     }
 
-    public static void PlaySound(AudioClip clip, float volume = 1f)
+    public static void PlaySound(AudioClip clip)
     {
         UpdateAudioSource();
         if (null != clip)
         {
-            audioSource.PlayOneShot(clip, volume);
+            float volumeOtion = OptionManager.GetVolumeEffect();
+            audioSource.PlayOneShot(clip, volumeOtion);
         }
         else
         {
@@ -64,12 +67,13 @@ public class GameSoundEffect : MonoBehaviour
         }
     }
 
-    public static void PlaySoundMusic(AudioClip clip, float volume = 1f)
+    public static void PlaySoundMusic(AudioClip clip)
     {
         UpdateAudioSourceMusic();
         if (null != clip)
         {
-            audioSourceMusic.PlayOneShot(clip, volume);
+            float volumeOtion = OptionManager.GetVolumeMusic();
+            audioSourceMusic.PlayOneShot(clip, volumeOtion);
         }
     }
 

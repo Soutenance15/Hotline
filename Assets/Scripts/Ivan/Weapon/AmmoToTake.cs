@@ -26,7 +26,7 @@ public class AmmoToTake : MonoBehaviour
             PlayerController playerController =
                 collision.gameObject.GetComponent<PlayerController>();
             AmmoWeapon ammo = playerController.GetAmmo();
-            GameSoundEffect.PlaySound(reloadClip, 1f);
+            GameSoundEffect.PlaySound(reloadClip);
             OnAmmoToTakeEnter?.Invoke(this);
         }
     }

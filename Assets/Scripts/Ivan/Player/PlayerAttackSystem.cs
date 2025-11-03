@@ -38,7 +38,7 @@ public class PlayerAttackSystem : MonoBehaviour
                 bullet.speed += speedPlayer;
             }
 
-            GameSoundEffect.PlaySound(shootClip, 0.05f);
+            GameSoundEffect.PlaySound(shootClip);
         }
     }
 }

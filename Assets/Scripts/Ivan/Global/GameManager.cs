@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public GameObject pauseMenu;
     public GameObject gameOverMenu;
+    public GameObject optionMenu;
 
     public Action OnResumeFromGameOver;
 
@@ -63,6 +64,12 @@ public class GameManager : MonoBehaviour
             case UIMenuEvent.MenuState.ResumeGameFromGameOver:
                 ResumeGameFromGameOver();
                 break;
+            case UIMenuEvent.MenuState.Pause:
+                PauseGame();
+                break;
+            case UIMenuEvent.MenuState.Option:
+                OptionOpen();
+                break;
             case UIMenuEvent.MenuState.BackGame:
                 LoadScene("TitleMenu");
                 break;
@@ -70,6 +77,17 @@ public class GameManager : MonoBehaviour
                 QuitApplication();
                 break;
         }
+    }
+
+    public void OptionMenuPause(GameObject optionMenu)
+    {
+        this.optionMenu = optionMenu;
+        // ShowMenu(this.optionMenu, false);
+    }
+
+    public void OptionOpen()
+    {
+        ShowMenu(optionMenu, true);
     }
 
     public void RegisterMenuPause(GameObject pauseMenu)
@@ -87,7 +105,7 @@ public class GameManager : MonoBehaviour
 
     // Functions Menu
 
-    void OnPause()
+    public void TooglePause()
     {
         if (gameState == GameState.Pause)
         {
@@ -156,6 +174,10 @@ public class GameManager : MonoBehaviour
         if (null != gameOverMenu)
         {
             ShowMenu(gameOverMenu, false);
+        }
+        if (null != optionMenu)
+        {
+            ShowMenu(optionMenu, false);
         }
         PlayTime();
     }
