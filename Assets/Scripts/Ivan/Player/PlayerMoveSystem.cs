@@ -10,6 +10,7 @@ public class PlayerMoveSystem : MonoBehaviour
 
     // --- Composant ---
     private Rigidbody2D rb;
+    public Animator animator;
 
     public void Init(Rigidbody2D rb)
     {
@@ -22,6 +23,15 @@ public class PlayerMoveSystem : MonoBehaviour
 
         // --- Appliquer la vitesse ---
         rb.linearVelocity = direction * currentSpeed;
+
+        if (moveInput != Vector2.zero)
+        {
+            animator.SetBool("IsWalking", true);
+        }
+        else
+        {
+            animator.SetBool("IsWalking", false);
+        }
     }
 
     void Awake()

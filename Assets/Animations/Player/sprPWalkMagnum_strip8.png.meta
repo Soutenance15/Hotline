@@ -1,25 +1,31 @@
 fileFormatVersion: 2
-guid: 71dc572678222f347acb69200bd0feb0
+guid: 974c5e5a7d08a1140acdb14a260661e2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8344751931236179115
-    second: sprBloodDrop2_strip10_0
+      213: -4440581156935096606
+    second: sprPWalkMagnum_strip8_0
   - first:
-      213: -2669340319108365207
-    second: sprBloodDrop2_strip10_1
+      213: 473186104999561450
+    second: sprPWalkMagnum_strip8_1
   - first:
-      213: -1798959091366679508
-    second: sprBloodDrop2_strip10_2
+      213: -2923056900944656366
+    second: sprPWalkMagnum_strip8_2
   - first:
-      213: -2721103556027348549
-    second: sprBloodDrop2_strip10_3
+      213: 9050232110400475767
+    second: sprPWalkMagnum_strip8_3
   - first:
-      213: -8361840545082544753
-    second: sprBloodDrop2_strip10_4
+      213: -5065398833823506
+    second: sprPWalkMagnum_strip8_4
   - first:
-      213: 87457657561202713
-    second: sprBloodDrop2_strip10_5
+      213: 5462092617098020428
+    second: sprPWalkMagnum_strip8_5
+  - first:
+      213: 1626513449855854233
+    second: sprPWalkMagnum_strip8_6
+  - first:
+      213: -8301651220786630112
+    second: sprPWalkMagnum_strip8_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,13 +121,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprBloodDrop2_strip10_0
+      name: sprPWalkMagnum_strip8_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 7
-        width: 61
-        height: 12
+        x: 8
+        y: 308
+        width: 15
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +136,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bac56184ba38ec370800000000000000
-      internalID: 8344751931236179115
+      spriteID: 2e6279807f2ef52c0800000000000000
+      internalID: -4440581156935096606
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprBloodDrop2_strip10_1
+      name: sprPWalkMagnum_strip8_1
       rect:
         serializedVersion: 2
-        x: 83
-        y: 10
-        width: 33
-        height: 8
+        x: 8
+        y: 265
+        width: 16
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9640bee5f1994fad0800000000000000
-      internalID: -2669340319108365207
+      spriteID: ae846256148119600800000000000000
+      internalID: 473186104999561450
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprBloodDrop2_strip10_2
+      name: sprPWalkMagnum_strip8_2
       rect:
         serializedVersion: 2
-        x: 137
-        y: 9
-        width: 14
-        height: 9
+        x: 8
+        y: 221
+        width: 17
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +180,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c2c21a9dc30d807e0800000000000000
-      internalID: -1798959091366679508
+      spriteID: 21880f05c373f67d0800000000000000
+      internalID: -2923056900944656366
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprBloodDrop2_strip10_3
+      name: sprPWalkMagnum_strip8_3
       rect:
         serializedVersion: 2
-        x: 163
-        y: 10
-        width: 7
-        height: 6
+        x: 8
+        y: 176
+        width: 16
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bb900f99bb2bc3ad0800000000000000
-      internalID: -2721103556027348549
+      spriteID: 772114b7722e89d70800000000000000
+      internalID: 9050232110400475767
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprBloodDrop2_strip10_4
+      name: sprPWalkMagnum_strip8_4
       rect:
         serializedVersion: 2
-        x: 191
-        y: 6
-        width: 33
-        height: 13
+        x: 8
+        y: 132
+        width: 15
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,20 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f8d65e1c356c4fb80800000000000000
-      internalID: -8361840545082544753
+      spriteID: ee04dddeb010eeff0800000000000000
+      internalID: -5065398833823506
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprBloodDrop2_strip10_5
+      name: sprPWalkMagnum_strip8_5
       rect:
         serializedVersion: 2
-        x: 246
-        y: 10
-        width: 12
-        height: 6
+        x: 8
+        y: 87
+        width: 15
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,8 +246,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 910c2d3b646b63100800000000000000
-      internalID: 87457657561202713
+      spriteID: c46496cbb404dcb40800000000000000
+      internalID: 5462092617098020428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprPWalkMagnum_strip8_6
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 43
+        width: 15
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 996ad017d59829610800000000000000
+      internalID: 1626513449855854233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprPWalkMagnum_strip8_7
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 0
+        width: 15
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02233dfd23c9acc80800000000000000
+      internalID: -8301651220786630112
       vertices: []
       indices: 
       edges: []
@@ -260,12 +310,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sprBloodDrop2_strip10_0: 8344751931236179115
-      sprBloodDrop2_strip10_1: -2669340319108365207
-      sprBloodDrop2_strip10_2: -1798959091366679508
-      sprBloodDrop2_strip10_3: -2721103556027348549
-      sprBloodDrop2_strip10_4: -8361840545082544753
-      sprBloodDrop2_strip10_5: 87457657561202713
+      sprPWalkMagnum_strip8_0: -4440581156935096606
+      sprPWalkMagnum_strip8_1: 473186104999561450
+      sprPWalkMagnum_strip8_2: -2923056900944656366
+      sprPWalkMagnum_strip8_3: 9050232110400475767
+      sprPWalkMagnum_strip8_4: -5065398833823506
+      sprPWalkMagnum_strip8_5: 5462092617098020428
+      sprPWalkMagnum_strip8_6: 1626513449855854233
+      sprPWalkMagnum_strip8_7: -8301651220786630112
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
