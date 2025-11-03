@@ -40,6 +40,7 @@ public class Health : MonoBehaviour
     public void ForRespawnHealth()
     {
         currentHealth = maxHealth;
+        healthBar.enabled = true;
         UpdateHealthBar();
         isAlive = true;
     }

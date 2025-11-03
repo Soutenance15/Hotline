@@ -88,7 +88,7 @@ public class EnemyPatrol : MonoBehaviour
         {
             dieBloodObject = GameVisualEffect.DieEffectBlood(transform, prefabDieBlood);
         }
-
+        health.healthBar.enabled = false;
         enemyAttack.isAlive = false;
     }
 
