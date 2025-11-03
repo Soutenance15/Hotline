@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
         switch (menuState)
         {
             case UIMenuEvent.MenuState.PlayGame:
-                LoadScene("FirstScene");
+                LoadScene("Story1");
                 break;
             case UIMenuEvent.MenuState.ResumeGame:
                 ResumeGame();
