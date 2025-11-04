@@ -1,6 +1,5 @@
-using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
@@ -9,7 +8,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource SFXSource;
 
-    [Header("-----------------Audio Source-----------------")]
+    [Header("-----------------Music Clips-----------------")]
     public AudioClip musicMenu;
     public AudioClip musicLevel1;
     public AudioClip musicLevel2;
@@ -26,57 +25,28 @@ public class AudioManager : MonoBehaviour
     public AudioClip ammo;
     public AudioClip typewriter;
 
-   
     private static AudioManager instance = null;
     public static AudioManager Instance => instance;
 
+    [Header("------------------- Settings -----------------")]
+    [Range(0f, 5f)] public float fadeDuration = 1.5f;
+
     void Awake()
     {
-        instance = this;
-
-        if (Object.FindObjectsByType<AudioManager>(FindObjectsSortMode.None).Length > 1)
+        if (instance != null && instance != this)
         {
             Destroy(gameObject);
             return;
         }
 
+        instance = this;
         DontDestroyOnLoad(gameObject);
 
-        if (musicSource.clip != musicMenu)
-        {
-            musicSource.clip = musicMenu;
-            musicSource.Play();
-        }
-
         SceneManager.sceneLoaded += OnSceneLoaded;
-    }
 
-    public void PlayTableSound()
-    {
-        if (table != null && SFXSource != null)
-        {
-            SFXSource.PlayOneShot(table);
-        }
-    }
-
-    public void PlayTypewriterSoundLoop()
-    {
-        if (typewriter != null && SFXSource != null)
-        {
-            SFXSource.loop = true;
-            SFXSource.clip = typewriter;
-            SFXSource.Play();
-        }
-    }
-
-    public void StopTypewriterSound()
-    {
-        if (SFXSource != null && SFXSource.isPlaying && SFXSource.clip == typewriter)
-        {
-            SFXSource.Stop();
-            SFXSource.loop = false;
-            SFXSource.clip = null;
-        }
+        musicSource.clip = musicMenu;
+        musicSource.volume = 1f;
+        musicSource.Play();
     }
 
     void OnDestroy()
@@ -96,35 +66,76 @@ public class AudioManager : MonoBehaviour
 
     void PlayMusicForScene(string sceneName)
     {
-        if (sceneName == "TitleMenu" && musicSource.clip != musicMenu)
+        AudioClip nextClip = null;
+
+        if (sceneName == "TitleMenu") nextClip = musicMenu;
+        else if (sceneName.StartsWith("Story")) nextClip = musicNarratif;
+        else if (sceneName == "Underground") nextClip = musicLevel1;
+        else if (sceneName == "Hall") nextClip = musicLevel2;
+        else if (sceneName == "Level3") nextClip = musicLevel3;
+
+        if (nextClip != null && nextClip != musicSource.clip)
         {
-            musicSource.clip = musicMenu;
-            musicSource.Play();
+            StartCoroutine(FadeToNewMusic(nextClip));
         }
-        else if ((sceneName == "Story1" || sceneName == "Story2" || sceneName == "Story3" || sceneName == "Story4" || sceneName == "Story5" || sceneName == "Story6") && musicSource.clip != musicNarratif)
+    }
+
+    private IEnumerator FadeToNewMusic(AudioClip newClip)
+    {
+        if (musicSource.isPlaying)
         {
-            musicSource.clip = musicNarratif;
-            musicSource.Play();
+            float startVolume = musicSource.volume;
+
+            for (float t = 0; t < fadeDuration; t += Time.deltaTime)
+            {
+                musicSource.volume = Mathf.Lerp(startVolume, 0, t / fadeDuration);
+                yield return null;
+            }
+
+            musicSource.volume = 0;
+            musicSource.Stop();
         }
-        else if (sceneName == "Level1" && musicSource.clip != musicLevel1)
+
+        musicSource.clip = newClip;
+        musicSource.Play();
+
+        for (float t = 0; t < fadeDuration; t += Time.deltaTime)
         {
-            musicSource.clip = musicLevel1;
-            musicSource.Play();
+            musicSource.volume = Mathf.Lerp(0, 1f, t / fadeDuration);
+            yield return null;
         }
-        else if (sceneName == "Level2" && musicSource.clip != musicLevel2)
-        {
-            musicSource.clip = musicLevel2;
-            musicSource.Play();
-        }
-        else if (sceneName == "Level3" && musicSource.clip != musicLevel3)
-        {
-            musicSource.clip = musicLevel3;
-            musicSource.Play();
-        }
+
+        musicSource.volume = 1f;
     }
 
     public void PlaySFX(AudioClip clip)
     {
-        SFXSource.PlayOneShot(clip);
+        if (clip != null)
+            SFXSource.PlayOneShot(clip);
+    }
+
+    public void PlayTableSound()
+    {
+        PlaySFX(table);
+    }
+
+    public void PlayTypewriterSoundLoop()
+    {
+        if (typewriter != null)
+        {
+            SFXSource.loop = true;
+            SFXSource.clip = typewriter;
+            SFXSource.Play();
+        }
+    }
+
+    public void StopTypewriterSound()
+    {
+        if (SFXSource.isPlaying && SFXSource.clip == typewriter)
+        {
+            SFXSource.Stop();
+            SFXSource.loop = false;
+            SFXSource.clip = null;
+        }
     }
 }

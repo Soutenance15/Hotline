@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Story1.unity
     guid: f7d86e2caaaa5464f98e9062ef9bd96d
   - enabled: 1
+    path: Assets/Scenes/Underground.unity
+    guid: 80bea22a4b1080148af3844226028097
+  - enabled: 1
     path: Assets/Scenes/Lucas.unity
     guid: 64dc7decf7844d04680851f27eaa69f6
   - enabled: 1
