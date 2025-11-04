@@ -14,8 +14,10 @@ public class EnemyPatrol : MonoBehaviour
     // Composants
     public EnemyAttack enemyAttack;
     public Health health;
+    Animator animator;
 
     public Vector3 spawnPosition;
+    private Vector3 lastPosition;
 
     // Effets
     public GameObject prefabDieText;
@@ -35,6 +37,8 @@ public class EnemyPatrol : MonoBehaviour
 
     void Start()
     {
+        animator = enemy.GetComponent<Animator>();
+
         // Sauvegarde des positions mondiales des points
         Vector3[] worldPositions = new Vector3[patrolPoints.Count];
         for (int i = 0; i < patrolPoints.Count; i++)
@@ -66,6 +70,7 @@ public class EnemyPatrol : MonoBehaviour
         }
 
         spawnPosition = transform.position;
+        lastPosition = enemy.transform.position;
     }
 
     void FixedUpdate()
@@ -84,6 +89,13 @@ public class EnemyPatrol : MonoBehaviour
                 currentPointIndex = (currentPointIndex + 1) % patrolPoints.Count;
                 targetPoint = patrolPoints[currentPointIndex];
             }
+            float moveDistance = (enemy.transform.position - lastPosition).magnitude;
+            if (animator != null)
+            {
+                animator.SetBool("IsWalking", moveDistance > 0.01f);
+            }
+
+            lastPosition = enemy.transform.position;
         }
     }
 
@@ -115,6 +127,10 @@ public class EnemyPatrol : MonoBehaviour
     {
         speed = 0f;
         looping = false;
+        if (animator != null)
+        {
+            animator.SetBool("IsWalking", false);
+        }
     }
 
     public void ResumeMovement()
