@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
 
     // Composants
     Rigidbody2D rb;
+    Animator animator;
+    private Vector3 lastPosition;
 
     [Header("Interaction")]
     public LayerMask turnTableLayer;
@@ -112,6 +114,8 @@ public class PlayerController : MonoBehaviour
         health = GetComponent<Health>();
 
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        lastPosition = transform.position;
 
         // Init
         if (null != playerMove && null != rb)
@@ -136,6 +140,14 @@ public class PlayerController : MonoBehaviour
             playerMove.Move(playerInput.MoveInput);
             playerMove.Turn(playerInput.TurnInput);
         }
+
+        // Simon en dessous
+        float moveDistance = (transform.position - lastPosition).magnitude;
+        if (animator != null)
+        {
+            animator.SetBool("IsWalking", moveDistance > 0.01f);
+        }
+        lastPosition = transform.position;
     }
 
     TurnTable HitTurnTable()
