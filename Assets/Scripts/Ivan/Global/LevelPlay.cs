@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelPlay : MonoBehaviour
 {
@@ -9,6 +11,8 @@ public class LevelPlay : MonoBehaviour
     public AudioSource audioSourceMusic;
     public AudioClip musicLevel;
     public GameObject panelSuccess;
+
+    public string nextSceneName;
     public int enemiesTotal;
     public int nbKill;
 
@@ -36,15 +40,20 @@ public class LevelPlay : MonoBehaviour
 
     void SuccessLevel()
     {
-        // ShowPanelSuccess();
         GameManager.instance.JustPauseTime();
+        StartCoroutine(WaitAndLoadNextScene());
     }
 
-    void ShowPanelSuccess()
+    IEnumerator WaitAndLoadNextScene()
     {
         if (null != panelSuccess)
         {
             panelSuccess.SetActive(true);
+        }
+        yield return new WaitForSeconds(3f);
+        if (null != nextSceneName && nextSceneName != "")
+        {
+            SceneManager.LoadScene(nextSceneName);
         }
     }
 
