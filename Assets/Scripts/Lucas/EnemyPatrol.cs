@@ -1,6 +1,5 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class EnemyPatrol : MonoBehaviour
 {
@@ -11,110 +10,62 @@ public class EnemyPatrol : MonoBehaviour
     private Transform targetPoint;
     private bool looping = true;
 
-    // Composants
-    public EnemyAttack enemyAttack;
-    public Health health;
-
-    public Vector3 spawnPosition;
-
-    // Effets
-    public GameObject prefabDieText;
-    public GameObject prefabDieBlood;
-    public GameObject dieBloodObject;
-    public AudioClip shootClip;
-    public AudioClip dieClip;
-    public static Action enemyDie;
-
-    void OnDisable()
-    {
-        if (null != health)
-        {
-            health.OnDie -= Die;
-        }
-    }
+    private Animator animator;
+    private Vector3 lastPosition;
 
     void Start()
     {
-        // Sauvegarde des positions mondiales des points
-        Vector3[] worldPositions = new Vector3[patrolPoints.Count];
-        for (int i = 0; i < patrolPoints.Count; i++)
-        {
-            worldPositions[i] = patrolPoints[i].position;
-        }
+        animator = enemy.GetComponent<Animator>();
 
-        // Détache les points de leur parent
-        foreach (Transform point in patrolPoints)
-            point.SetParent(null);
-
-        // Replace les points aux positions sauvegardées (au cas où)
-        for (int i = 0; i < patrolPoints.Count; i++)
-        {
-            patrolPoints[i].position = worldPositions[i];
-        }
-
-        health = GetComponent<Health>();
-        enemyAttack = GetComponent<EnemyAttack>();
-        enemyAttack.shootClip = shootClip;
         if (patrolPoints.Count > 0)
         {
             enemy.transform.position = patrolPoints[0].position;
             targetPoint = patrolPoints[0];
         }
-        if (null != health)
-        {
-            health.OnDie += Die;
-        }
 
-        spawnPosition = transform.position;
+        lastPosition = enemy.transform.position;
     }
 
     void FixedUpdate()
     {
-        if (null != health && health.isAlive)
+        if (patrolPoints.Count == 0) return;
+
+        Vector3 direction = (targetPoint.position - enemy.transform.position).normalized;
+        Vector3 movement = direction * speed * Time.fixedDeltaTime;
+        enemy.transform.position += movement;
+
+        if (Vector3.Distance(enemy.transform.position, targetPoint.position) < 0.1f && looping)
         {
-            if (patrolPoints.Count == 0)
-                return;
-
-            Vector3 direction = (targetPoint.position - enemy.transform.position).normalized;
-            Vector3 movement = direction * speed * Time.fixedDeltaTime;
-            enemy.transform.position += movement;
-
-            if (Vector3.Distance(enemy.transform.position, targetPoint.position) < 0.1f && looping)
-            {
-                currentPointIndex = (currentPointIndex + 1) % patrolPoints.Count;
-                targetPoint = patrolPoints[currentPointIndex];
-            }
+            currentPointIndex = (currentPointIndex + 1) % patrolPoints.Count;
+            targetPoint = patrolPoints[currentPointIndex];
         }
-    }
 
-    public void ForRespawn()
-    {
-        transform.position = spawnPosition;
-        Destroy(dieBloodObject);
-        health.ForRespawnHealth();
-        enemyAttack.ForRespawnAttack();
-    }
-
-    void Die()
-    {
-        if (null != prefabDieText)
+        if (targetPoint == patrolPoints[1])
         {
-            GameVisualEffect.DieEffectTextEnemy(transform, prefabDieText);
-            GameSoundEffect.PlaySound(dieClip);
+            enemy.transform.localScale = new Vector3(1, 1, 1); // Face gauche
         }
-        if (null != prefabDieBlood)
+        else if (targetPoint == patrolPoints[0])
         {
-            dieBloodObject = GameVisualEffect.DieEffectBlood(transform, prefabDieBlood);
+            enemy.transform.localScale = new Vector3(-1, 1, 1); // Face droite
         }
-        health.healthBar.gameObject.SetActive(false);
-        enemyAttack.isAlive = false;
-        EnemyPatrol.enemyDie?.Invoke();
+
+        float moveDistance = (enemy.transform.position - lastPosition).magnitude;
+        if (animator != null)
+        {
+            animator.SetBool("IsWalking", moveDistance > 0.01f);
+        }
+
+        lastPosition = enemy.transform.position;
     }
 
     public void StopMovement()
     {
         speed = 0f;
         looping = false;
+        if (animator != null)
+        {
+            animator.SetBool("IsWalking", false);
+        }
     }
 
     public void ResumeMovement()
@@ -122,7 +73,4 @@ public class EnemyPatrol : MonoBehaviour
         speed = 2f;
         looping = true;
     }
-
-    // Update is called once per frame
-    void Update() { }
 }

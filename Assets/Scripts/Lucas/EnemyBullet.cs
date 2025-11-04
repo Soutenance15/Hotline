@@ -1,4 +1,3 @@
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
@@ -9,34 +8,27 @@ public class EnemyBullet : MonoBehaviour
     public float force;
     public Health health;
 
-    private int damage = -35;
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
-        if (null != player)
-        {
-            Vector3 direction = player.transform.position - transform.position;
-            rb.linearVelocity = new Vector2(direction.x, direction.y).normalized * force;
-        }
+
+        Vector3 direction = player.transform.position - transform.position;
+        rb.linearVelocity = new Vector2(direction.x, direction.y).normalized * force;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "TileMapCollider")
-        {
-            Destroy(gameObject);
-        }
-        else if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             health = collision.gameObject.GetComponent<Health>();
-            health.UpdateDamage(damage);
+            health.UpdateDamage(-10);
             Destroy(gameObject);
         }
     }
 
-    void Update()
+
+      void Update()
     {
         timer += Time.deltaTime;
 

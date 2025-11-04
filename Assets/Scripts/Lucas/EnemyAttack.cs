@@ -9,11 +9,6 @@ public class EnemyAttack : MonoBehaviour
     public float shootDistance;
     EnemyPatrol patrol;
 
-    public bool isAlive = true;
-
-    // Effet
-    public AudioClip shootClip;
-
     void Start()
     {
         player = GameObject.FindWithTag("Player");
@@ -22,43 +17,31 @@ public class EnemyAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (null != player && isAlive)
-        {
-            shootDistance = Vector2.Distance(transform.position, player.transform.position);
-        }
-    }
-
-    public void ForRespawnAttack()
-    {
-        isAlive = true;
+        shootDistance = Vector2.Distance(transform.position, player.transform.position);
     }
 
     void FixedUpdate()
     {
-        if (isAlive)
+         if (shootDistance < 5)
         {
-            if (shootDistance < 5)
+            patrol = GetComponent<EnemyPatrol>();
+            patrol.StopMovement();
+            timer += Time.deltaTime;
+            if (timer > 1)
             {
-                patrol = GetComponent<EnemyPatrol>();
-                patrol.StopMovement();
-                timer += Time.deltaTime;
-                if (timer > 1)
-                {
-                    timer = 0;
-                    Shoot();
-                }
+                timer = 0;
+                Shoot();
             }
-            else if (shootDistance > 5)
-            {
-                patrol = GetComponent<EnemyPatrol>();
-                patrol.ResumeMovement();
-            }
+        }
+        else if (shootDistance > 5)
+        {
+            patrol = GetComponent<EnemyPatrol>();
+            patrol.ResumeMovement();
         }
     }
 
-    public void Shoot()
-    {
-        Instantiate(projectile, shootPos.position, Quaternion.identity);
-        GameSoundEffect.PlaySound(shootClip);
-    }
+     public void Shoot()
+        {
+            GameObject proj = Instantiate(projectile, shootPos.position, Quaternion.identity);
+        }
 }
