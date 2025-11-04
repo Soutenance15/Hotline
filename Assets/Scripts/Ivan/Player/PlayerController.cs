@@ -1,54 +1,97 @@
+using System.Collections;
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.VFX;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
+    // Scripts System
     PlayerMoveSystem playerMove;
-    PlayerInputSystem playerInput;
+    public PlayerInputSystem playerInput;
     PlayerAttackSystem playerAttack;
-    PlayerUISystem playerUI;
-    GameVisualEffect visualEffect;
+    public PlayerUISystem playerUI;
+    public Health health;
 
+    // Composants
     Rigidbody2D rb;
-    Animator animator;
-    private Vector3 lastPosition;
 
-    [Header("Audio Clips")]
-    public AudioClip ammoPickupSound;
-    public AudioClip shootSound;
+    [Header("Interaction")]
+    public LayerMask turnTableLayer;
+    private float interactRange = 0.6f;
 
-    private AudioSource audioSource;
+    public Vector3 spawnPosition;
+
+    public AmmoWeapon ammoWeapon;
+
+    // Effet
+    public AudioClip dieClip;
+
+    // Gestion Evenement exterieur
 
     void OnEnable()
     {
-        AmmoWeapon.OnAmmoWeaponEnter += TakeAmmoWeapon;
+        AmmoToTake.OnAmmoToTakeEnter += TakeAmmoWeapon;
+        health.OnDie += Die;
     }
 
     void OnDisable()
     {
-        AmmoWeapon.OnAmmoWeaponEnter -= TakeAmmoWeapon;
+        AmmoToTake.OnAmmoToTakeEnter -= TakeAmmoWeapon;
     }
 
-    private void TakeAmmoWeapon(AmmoWeapon ammoWeapon)
+    // Functions
+    public AmmoWeapon GetAmmo()
     {
-        if (playerAttack != null)
+        return playerAttack.ammoWeapon;
+    }
+
+    void Die()
+    {
+        GameSoundEffect.PlaySound(dieClip);
+        StartCoroutine(WaitTwoSeconds());
+        if (null != GameManager.instance)
         {
-            playerAttack.SetAmmoWeapon(ammoWeapon);
+            GameManager.instance.GameOver();
         }
-
-        if (playerAttack?.ammoWeapon != null)
+        else
         {
-            string weaponName = playerAttack.ammoWeapon.weaponName.ToString();
-            playerUI?.UpdateWeaponNameText(weaponName);
+            Debug.LogWarning("Attention GameManager instance est NULL.");
+        }
+    }
 
-            string nbAmmo = playerAttack.ammoWeapon.nbAmmo.ToString();
-            playerUI?.UpdateNbAmmoNameText(nbAmmo);
+    IEnumerator WaitTwoSeconds()
+    {
+        yield return new WaitForSeconds(2f); // attend 2 secondes
+    }
 
-            if (ammoPickupSound != null && audioSource != null)
-            {
-                audioSource.PlayOneShot(ammoPickupSound);
-            }
+    private void TakeAmmoWeapon(AmmoToTake ammoToTake)
+    {
+        if (null != playerAttack)
+        {
+            playerAttack.ConfigAmmoWeapon(ammoToTake);
+        }
+        string weaponName = playerAttack.ammoWeapon.weaponName.ToString();
+        if (null != weaponName)
+        {
+            playerUI.UpdateWeaponNameText(weaponName);
+        }
+        string nbAmmo = playerAttack.ammoWeapon.nbAmmo.ToString();
+        if (null != nbAmmo)
+        {
+            playerUI.UpdateNbAmmoNameText(nbAmmo);
+        }
+        if (null != playerUI)
+        {
+            playerUI.ShowWeaponHUD(true);
+        }
+    }
+
+    public void ShowWeaponHUD(bool show)
+    {
+        if (null != playerUI)
+        {
+            playerUI.ShowWeaponHUD(show);
         }
     }
 
@@ -57,58 +100,97 @@ public class PlayerController : MonoBehaviour
         playerMove = GetComponent<PlayerMoveSystem>();
         playerInput = GetComponent<PlayerInputSystem>();
         playerAttack = GetComponent<PlayerAttackSystem>();
+        ammoWeapon = GetComponent<AmmoWeapon>();
+        if (null == ammoWeapon)
+        {
+            ammoWeapon = GameObject.Find("AmmoWeapon").GetComponent<AmmoWeapon>();
+        }
+        ammoWeapon.canNotShoot = true;
+        playerAttack.SetAmmoWeapon(ammoWeapon);
+
         playerUI = GetComponent<PlayerUISystem>();
-        visualEffect = GetComponent<GameVisualEffect>();
+        health = GetComponent<Health>();
 
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-        lastPosition = transform.position;
-
-        audioSource = GetComponent<AudioSource>();
 
         // Init
-        if (playerMove != null && rb != null)
+        if (null != playerMove && null != rb)
         {
             playerMove.Init(rb);
         }
+        if (null != playerUI)
+        {
+            playerUI.ShowWeaponHUD(false);
+        }
+    }
+
+    void Start()
+    {
+        spawnPosition = transform.position;
     }
 
     void FixedUpdate()
     {
-        if (playerInput != null && playerMove != null)
+        if (null != playerInput && null != playerMove)
         {
             playerMove.Move(playerInput.MoveInput);
             playerMove.Turn(playerInput.TurnInput);
         }
+    }
 
-        float moveDistance = (transform.position - lastPosition).magnitude;
-        if (animator != null)
+    TurnTable HitTurnTable()
+    {
+        // Centre de détection = position du joueur
+        Vector2 origin = transform.position;
+
+        // On cherche un collider de type TurnTable dans la zone
+        Collider2D hit = Physics2D.OverlapCircle(origin, interactRange, turnTableLayer);
+
+        if (hit != null)
         {
-            animator.SetBool("IsWalking", moveDistance > 0.01f);
+            TurnTable table = hit.GetComponent<TurnTable>();
+            if (table != null)
+            {
+                return table;
+            }
         }
-        lastPosition = transform.position;
+        return null;
     }
 
     void Update()
     {
-        if (playerInput != null && playerInput.ShootPressed && playerAttack?.ammoWeapon != null)
+        if (null != playerInput)
         {
-            if (!playerAttack.ammoWeapon.canNotShoot)
+            // if (playerInput.ShootPressed && null != playerAttack.ammoWeapon)
+            if (playerInput.ShootPressed && null != playerAttack.ammoWeapon)
             {
-                // Attack
-                playerAttack.Shoot(rb.linearVelocity.magnitude);
-                playerAttack.ammoWeapon.UsedOneWeapon();
-
-                string nbAmmo = playerAttack.ammoWeapon.nbAmmo.ToString();
-                playerUI?.UpdateNbAmmoNameText(nbAmmo);
-
-                // Visual Effect
-                visualEffect?.ShootEffect(transform);
-
-                if (shootSound != null && audioSource != null)
+                if (!playerAttack.ammoWeapon.canNotShoot)
                 {
-                    audioSource.PlayOneShot(shootSound);
+                    // Attack
+                    playerAttack.Shoot(rb.linearVelocity.magnitude);
+                    playerAttack.ammoWeapon.UsedOneWeapon();
+                    string nbAmmo = playerAttack.ammoWeapon.nbAmmo.ToString();
+
+                    // UI
+                    if (null != nbAmmo)
+                    {
+                        playerUI.UpdateNbAmmoNameText(nbAmmo);
+                    }
                 }
+            }
+
+            if (playerInput.PushTablePressed)
+            {
+                TurnTable turnTable = HitTurnTable();
+                if (null != turnTable)
+                {
+                    turnTable.Turn();
+                }
+            }
+
+            if (playerInput.PausePressed)
+            {
+                GameManager.instance.TooglePause();
             }
         }
     }

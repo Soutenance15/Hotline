@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class TurnTable : MonoBehaviour
@@ -6,9 +7,12 @@ public class TurnTable : MonoBehaviour
     public Collider2D collider2DStand;
     public Collider2D collider2DOnSide;
 
+    public SpriteRenderer sr;
+
     void Awake()
     {
         collider2DOnSide.enabled = false;
+        sr = GetComponent<SpriteRenderer>();
     }
 
     public void Turn()
@@ -19,9 +23,11 @@ public class TurnTable : MonoBehaviour
         {
             collider2DOnSide.enabled = true;
             collider2DStand.enabled = false;
+            sr.color = Color.red;
         }
         else
         {
+            sr.color = Color.green;
             collider2DStand.enabled = true;
             collider2DOnSide.enabled = false;
         }
@@ -29,14 +35,6 @@ public class TurnTable : MonoBehaviour
         if (AudioManager.Instance != null)
         {
             AudioManager.Instance.PlayTableSound();
-        }
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.CompareTag("Player"))
-        {
-            Turn();
         }
     }
 }
