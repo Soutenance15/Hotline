@@ -1,49 +1,43 @@
 fileFormatVersion: 2
-guid: 449172cb6ea326047b6ce6acc1f00140
+guid: 4b702276fa925264491d2cc24b924534
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5040581086965019514
-    second: sprEBackScissor_strip14_0
+      213: -4213683611910796240
+    second: EIdle_0
   - first:
-      213: 7771189097490581221
-    second: sprEBackScissor_strip14_1
+      213: 5578066991168251525
+    second: EIdle_1
   - first:
-      213: -5747396711172821231
-    second: sprEBackScissor_strip14_2
+      213: -3230777891404405133
+    second: EIdle_2
   - first:
-      213: -4023996950299199605
-    second: sprEBackScissor_strip14_3
+      213: -1660550455251540543
+    second: EIdle_3
   - first:
-      213: 581313103754661867
-    second: sprEBackScissor_strip14_4
+      213: -2193627249555665784
+    second: EIdle_4
   - first:
-      213: -3757250007179278068
-    second: sprEBackScissor_strip14_5
+      213: -31429110236358489
+    second: EIdle_5
   - first:
-      213: 7645105776682020302
-    second: sprEBackScissor_strip14_6
+      213: -824729627315624479
+    second: EIdle_6
   - first:
-      213: 1896649616637756673
-    second: sprEBackScissor_strip14_7
+      213: -4373960459361552673
+    second: EIdle_7
   - first:
-      213: -3099891625629678758
-    second: sprEBackScissor_strip14_8
+      213: 4877490958060411822
+    second: EIdle_8
   - first:
-      213: 638755199177454882
-    second: sprEBackScissor_strip14_9
+      213: -2531795384341732760
+    second: EIdle_9
   - first:
-      213: 8393972062289417035
-    second: sprEBackScissor_strip14_10
+      213: 8161688364413402140
+    second: EIdle_10
   - first:
-      213: -1789872826388326087
-    second: sprEBackScissor_strip14_11
-  - first:
-      213: 1364812707425434999
-    second: sprEBackScissor_strip14_12
-  - first:
-      213: 2360809296098491024
-    second: sprEBackScissor_strip14_13
+      213: -604990923475074308
+    second: EIdle_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -90,7 +84,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 60
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,309 +133,265 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprEBackScissor_strip14_0
+      name: EIdle_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 16
-        width: 51
-        height: 28
+        x: 0
+        y: 0
+        width: 60
+        height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 68cc5e125324c0ab0800000000000000
-      internalID: -5040581086965019514
+      spriteID: 03c0c2c741df585c0800000000000000
+      internalID: -4213683611910796240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprEBackScissor_strip14_1
+      name: EIdle_1
       rect:
         serializedVersion: 2
-        x: 69
-        y: 17
-        width: 50
-        height: 26
+        x: 60
+        y: 0
+        width: 60
+        height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5e680568f4fc8db60800000000000000
-      internalID: 7771189097490581221
+      spriteID: 5866ae5ef56496d40800000000000000
+      internalID: 5578066991168251525
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprEBackScissor_strip14_2
+      name: EIdle_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 17
-        width: 51
-        height: 25
+        x: 120
+        y: 0
+        width: 60
+        height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 11fab4764252d30b0800000000000000
-      internalID: -5747396711172821231
+      spriteID: 376a7aa00a8f923d0800000000000000
+      internalID: -3230777891404405133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprEBackScissor_strip14_3
+      name: EIdle_3
       rect:
         serializedVersion: 2
-        x: 189
-        y: 17
-        width: 51
-        height: 26
+        x: 180
+        y: 0
+        width: 60
+        height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b8739200814e728c0800000000000000
-      internalID: -4023996950299199605
+      spriteID: 1c56e1fa82a84f8e0800000000000000
+      internalID: -1660550455251540543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprEBackScissor_strip14_4
+      name: EIdle_4
       rect:
         serializedVersion: 2
-        x: 248
-        y: 17
-        width: 51
-        height: 28
+        x: 240
+        y: 0
+        width: 60
+        height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bef839c103d311800800000000000000
-      internalID: 581313103754661867
+      spriteID: 88c0e9c83abae81e0800000000000000
+      internalID: -2193627249555665784
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprEBackScissor_strip14_5
+      name: EIdle_5
       rect:
         serializedVersion: 2
-        x: 309
-        y: 17
-        width: 51
-        height: 26
+        x: 300
+        y: 0
+        width: 60
+        height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c09ceb576019bdbc0800000000000000
-      internalID: -3757250007179278068
+      spriteID: 7a851c80467509ff0800000000000000
+      internalID: -31429110236358489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprEBackScissor_strip14_6
+      name: EIdle_6
       rect:
         serializedVersion: 2
-        x: 368
-        y: 18
-        width: 53
-        height: 25
+        x: 360
+        y: 0
+        width: 60
+        height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ecd2b69c23fd81a60800000000000000
-      internalID: 7645105776682020302
+      spriteID: 1e5ac1806c8fd84f0800000000000000
+      internalID: -824729627315624479
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprEBackScissor_strip14_7
+      name: EIdle_7
       rect:
         serializedVersion: 2
-        x: 429
-        y: 17
-        width: 50
-        height: 26
+        x: 420
+        y: 0
+        width: 60
+        height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 105031707c0425a10800000000000000
-      internalID: 1896649616637756673
+      spriteID: fd6762ee2229c43c0800000000000000
+      internalID: -4373960459361552673
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprEBackScissor_strip14_8
+      name: EIdle_8
       rect:
         serializedVersion: 2
-        x: 488
-        y: 16
-        width: 51
-        height: 28
+        x: 480
+        y: 0
+        width: 60
+        height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a53822c8df8faf4d0800000000000000
-      internalID: -3099891625629678758
+      spriteID: eabde5e2f2450b340800000000000000
+      internalID: 4877490958060411822
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprEBackScissor_strip14_9
+      name: EIdle_9
       rect:
         serializedVersion: 2
-        x: 549
-        y: 16
-        width: 50
-        height: 28
+        x: 540
+        y: 0
+        width: 60
+        height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 225f76928705dd800800000000000000
-      internalID: 638755199177454882
+      spriteID: 862665013814ddcd0800000000000000
+      internalID: -2531795384341732760
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprEBackScissor_strip14_10
+      name: EIdle_10
       rect:
         serializedVersion: 2
-        x: 608
-        y: 16
-        width: 51
-        height: 28
+        x: 600
+        y: 0
+        width: 60
+        height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b4350531e116d7470800000000000000
-      internalID: 8393972062289417035
+      spriteID: c1cbc403354244170800000000000000
+      internalID: 8161688364413402140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprEBackScissor_strip14_11
+      name: EIdle_11
       rect:
         serializedVersion: 2
-        x: 668
-        y: 16
-        width: 51
-        height: 28
+        x: 660
+        y: 0
+        width: 60
+        height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 939dff5c5281927e0800000000000000
-      internalID: -1789872826388326087
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprEBackScissor_strip14_12
-      rect:
-        serializedVersion: 2
-        x: 728
-        y: 9
-        width: 51
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 77d38032de9c0f210800000000000000
-      internalID: 1364812707425434999
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprEBackScissor_strip14_13
-      rect:
-        serializedVersion: 2
-        x: 788
-        y: 8
-        width: 51
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 09af364fb8743c020800000000000000
-      internalID: 2360809296098491024
+      spriteID: cf2cee1e5f3aa97f0800000000000000
+      internalID: -604990923475074308
       vertices: []
       indices: 
       edges: []
@@ -450,7 +400,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9a5136d447aa2a64ea9f5f67fc92824b
     internalID: 0
     vertices: []
     indices: 
@@ -458,22 +408,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":60.0,"y":60.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      sprEBackScissor_strip14_0: -5040581086965019514
-      sprEBackScissor_strip14_1: 7771189097490581221
-      sprEBackScissor_strip14_10: 8393972062289417035
-      sprEBackScissor_strip14_11: -1789872826388326087
-      sprEBackScissor_strip14_12: 1364812707425434999
-      sprEBackScissor_strip14_13: 2360809296098491024
-      sprEBackScissor_strip14_2: -5747396711172821231
-      sprEBackScissor_strip14_3: -4023996950299199605
-      sprEBackScissor_strip14_4: 581313103754661867
-      sprEBackScissor_strip14_5: -3757250007179278068
-      sprEBackScissor_strip14_6: 7645105776682020302
-      sprEBackScissor_strip14_7: 1896649616637756673
-      sprEBackScissor_strip14_8: -3099891625629678758
-      sprEBackScissor_strip14_9: 638755199177454882
+      EIdle_0: -4213683611910796240
+      EIdle_1: 5578066991168251525
+      EIdle_10: 8161688364413402140
+      EIdle_11: -604990923475074308
+      EIdle_2: -3230777891404405133
+      EIdle_3: -1660550455251540543
+      EIdle_4: -2193627249555665784
+      EIdle_5: -31429110236358489
+      EIdle_6: -824729627315624479
+      EIdle_7: -4373960459361552673
+      EIdle_8: 4877490958060411822
+      EIdle_9: -2531795384341732760
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

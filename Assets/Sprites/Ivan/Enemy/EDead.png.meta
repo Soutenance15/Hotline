@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: 25fb37e8e63f36d4abc530999f26097e
+guid: 16cab97a1405a6f4bae211b58f2e7837
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7249775506897706102
-    second: sprEBackShotgun_strip4_0
+      213: 2858165163735397598
+    second: EDead_0
   - first:
-      213: -7116038957487651077
-    second: sprEBackShotgun_strip4_1
-  - first:
-      213: 4919466922839247096
-    second: sprEBackShotgun_strip4_2
-  - first:
-      213: -6549227475452289360
-    second: sprEBackShotgun_strip4_3
+      213: -4800551598743544529
+    second: EDead_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 60
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -109,89 +103,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprEBackShotgun_strip4_0
+      name: EDead_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 17
-        width: 51
-        height: 27
+        x: 0
+        y: 0
+        width: 60
+        height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 67c17fd99606c9460800000000000000
-      internalID: 7249775506897706102
+      spriteID: ed438ddb21e3aa720800000000000000
+      internalID: 2858165163735397598
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprEBackShotgun_strip4_1
+      name: EDead_1
       rect:
         serializedVersion: 2
-        x: 68
-        y: 17
-        width: 51
-        height: 27
+        x: 60
+        y: 0
+        width: 60
+        height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bf68b134540ce3d90800000000000000
-      internalID: -7116038957487651077
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprEBackShotgun_strip4_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 17
-        width: 51
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8f80e141a15754440800000000000000
-      internalID: 4919466922839247096
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprEBackShotgun_strip4_3
-      rect:
-        serializedVersion: 2
-        x: 188
-        y: 17
-        width: 52
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0be10747f487c15a0800000000000000
-      internalID: -6549227475452289360
+      spriteID: f2d15fe51c3016db0800000000000000
+      internalID: -4800551598743544529
       vertices: []
       indices: 
       edges: []
@@ -200,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9d7156130393d834f83e2eeda556f75d
     internalID: 0
     vertices: []
     indices: 
@@ -208,12 +158,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":60.0,"y":60.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      sprEBackShotgun_strip4_0: 7249775506897706102
-      sprEBackShotgun_strip4_1: -7116038957487651077
-      sprEBackShotgun_strip4_2: 4919466922839247096
-      sprEBackShotgun_strip4_3: -6549227475452289360
+      EDead_0: 2858165163735397598
+      EDead_1: -4800551598743544529
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
