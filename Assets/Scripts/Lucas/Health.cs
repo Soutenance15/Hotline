@@ -23,6 +23,7 @@ public class Health : MonoBehaviour
     public void UpdateHealthBar()
     {
         healthBar.value = currentHealth;
+        Debug.Log("Update Health Bar");
     }
 
     public void UpdateDamage(int damage)

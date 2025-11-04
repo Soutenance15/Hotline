@@ -13,7 +13,7 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             health = collision.gameObject.GetComponent<Health>();
-            health.UpdateDamage(-100);
+            health.UpdateDamage(-50);
             Destroy(gameObject);
         }
         else if (collision.gameObject.tag == "TileMapCollider")
