@@ -189,6 +189,7 @@ MonoBehaviour:
   click: {fileID: 8300000, guid: fd270a9dea07cc9488b77e561857e08b, type: 3}
   ammo: {fileID: 8300000, guid: c87199e74cf8d9b419ab9fdc695e9238, type: 3}
   typewriter: {fileID: 8300000, guid: cb81ed488c266f8498d397f46d1ea839, type: 3}
+  fadeDuration: 1.5
 --- !u!1 &121769670
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,8 +695,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 146}
-  m_SizeDelta: {x: 257.1573, y: 114.496}
+  m_AnchoredPosition: {x: 0, y: 54.66}
+  m_SizeDelta: {x: 158.5, y: 64.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &534943047
 MonoBehaviour:
@@ -826,8 +827,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00002718, y: -139}
-  m_SizeDelta: {x: 263.2814, y: 116.5373}
+  m_AnchoredPosition: {x: 0.0000033375782, y: -75.8}
+  m_SizeDelta: {x: 166.5, y: 64.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &854246957
 MonoBehaviour:
