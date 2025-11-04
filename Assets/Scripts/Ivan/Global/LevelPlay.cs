@@ -10,7 +10,7 @@ public class LevelPlay : MonoBehaviour
     public AudioSource audioSource;
     public AudioSource audioSourceMusic;
     public AudioClip musicLevel;
-    public GameObject panelSuccess;
+    public GameObject panelNextLevel;
 
     public string nextSceneName;
     public int enemiesTotal;
@@ -46,9 +46,9 @@ public class LevelPlay : MonoBehaviour
 
     IEnumerator WaitAndLoadNextScene()
     {
-        if (null != panelSuccess)
+        if (null != panelNextLevel)
         {
-            panelSuccess.SetActive(true);
+            panelNextLevel.SetActive(true);
         }
         yield return new WaitForSeconds(3f);
         if (null != nextSceneName && nextSceneName != "")
@@ -67,9 +67,9 @@ public class LevelPlay : MonoBehaviour
 
     void Awake()
     {
-        if (null != panelSuccess)
+        if (null != panelNextLevel)
         {
-            panelSuccess.SetActive(false);
+            panelNextLevel.SetActive(false);
         }
 
         if (GameManager.instance != null)
