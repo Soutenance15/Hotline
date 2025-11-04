@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 2fb194cb6b161c946bc3757aa0220478
+guid: 12b7535f2e97b6e46b643ef907bc737e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3615831220842488515
-    second: EAttackM16_0
-  - first:
-      213: 5187595637794506293
-    second: EAttackM16_1
+      213: 6536926701370240639
+    second: EAttackM16_0000_Layer-2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 60
+  spritePixelsToUnits: 1
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,45 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EAttackM16_0
+      name: EAttackM16_0000_Layer-2_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 60
-        height: 60
+        x: 12
+        y: 21
+        width: 36
+        height: 18
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3c2651e76530e2230800000000000000
-      internalID: 3615831220842488515
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EAttackM16_1
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 0
-        width: 60
-        height: 60
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5368b1d5fba0ef740800000000000000
-      internalID: 5187595637794506293
+      spriteID: f7e60f56334d7ba50800000000000000
+      internalID: 6536926701370240639
       vertices: []
       indices: 
       edges: []
@@ -150,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 75b7e46cc2428ad4486563996447a90d
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -158,12 +133,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":60.0,"y":60.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      EAttackM16_0: 3615831220842488515
-      EAttackM16_1: 5187595637794506293
+      EAttackM16_0000_Layer-2_0: 6536926701370240639
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
