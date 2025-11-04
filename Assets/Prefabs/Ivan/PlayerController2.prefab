@@ -47,9 +47,9 @@ MonoBehaviour:
   m_ComponentVersion: 2
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.244
+  m_FalloffIntensity: 1
   m_Color: {r: 0.8679245, g: 0.6399151, b: 0.30295467, a: 1}
-  m_Intensity: 1
+  m_Intensity: 2
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -70,8 +70,8 @@ MonoBehaviour:
   m_LocalBounds:
     m_Center: {x: 0, y: -0.00000011920929, z: 0}
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
-  m_PointLightInnerAngle: 113.02327
-  m_PointLightOuterAngle: 121.39529
+  m_PointLightInnerAngle: 91.03
+  m_PointLightOuterAngle: 91.03
   m_PointLightInnerRadius: 0
   m_PointLightOuterRadius: 10
   m_ShapeLightParametricSides: 5
@@ -84,55 +84,6 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!1 &2837296984951525341
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5234886155743191725}
-  - component: {fileID: 2958675866772768655}
-  m_Layer: 0
-  m_Name: AmmoWeapon
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5234886155743191725
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2837296984951525341}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 358.8684, y: 203.76013, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7908870927203271737}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2958675866772768655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2837296984951525341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e53fa14dd2f05b4da0252ffed90ce4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AmmoWeapon
-  nbAmmo: 9
-  nbMaxAmmo: 9
-  canNotShoot: 0
-  reloadClip: {fileID: 8300000, guid: 56406de997791dd47aaf3c1ab9053bd5, type: 3}
-  weaponName: 0
 --- !u!1 &3843284248071124142
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8635166096767134663}
   - component: {fileID: 6569518178307949942}
+  - component: {fileID: 9083033546211711770}
   m_Layer: 0
   m_Name: Pointer
   m_TagString: Untagged
@@ -159,8 +111,8 @@ Transform:
   m_GameObject: {fileID: 3843284248071124142}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalPosition: {x: 0, y: 2.616, z: 0}
+  m_LocalScale: {x: 0.8008109, y: 0.804062, z: 0.1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7908870927203271737}
@@ -211,9 +163,9 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 9
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -6000044186122703227, guid: c9356b7ffae08c74698f80f96f7e2c60, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -223,6 +175,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &9083033546211711770
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3843284248071124142}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f20f3b3babb0c2f4c83f21793615ebd6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4089716006832711108
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,7 +217,7 @@ GameObject:
   - component: {fileID: 3876447044603170057}
   - component: {fileID: 413274981560146287}
   - component: {fileID: 8590903311562961909}
-  - component: {fileID: 4266240302404323739}
+  - component: {fileID: 2981120534294750349}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Player
@@ -266,9 +240,7 @@ Transform:
   m_Children:
   - {fileID: 8635166096767134663}
   - {fileID: 9160253550027152997}
-  - {fileID: 4890038688683065473}
   - {fileID: 5554208322296619270}
-  - {fileID: 5234886155743191725}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4219920404456307116
@@ -317,7 +289,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 0
   m_Sprite: {fileID: -5043878925869372783, guid: 1975755f605103f4297d3df13ce81cfe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -379,6 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b3f7ae24374fce40bb408ded8f65b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  animator: {fileID: 2981120534294750349}
 --- !u!114 &5966980218578065719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,15 +364,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b9c04dbdbd11f44dab79f74770fd025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  playerInput: {fileID: 0}
-  playerUI: {fileID: 0}
-  health: {fileID: 0}
-  turnTableLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  spawnPosition: {x: 0, y: 0, z: 0}
-  ammoWeapon: {fileID: 0}
-  dieClip: {fileID: 8300000, guid: a5be8a42369ae2f4eac468fc3613c9c8, type: 3}
 --- !u!114 &1852450432894873240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,8 +389,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttackSystem
   bulletPrefab: {fileID: 5432595796052714190, guid: 4d0a8924d8f9c30419ed89b8ce024761, type: 3}
-  ammoWeapon: {fileID: 2958675866772768655}
-  shootClip: {fileID: 8300000, guid: bb464f05e7823ad4095e23e3d7d60ccc, type: 3}
+  ammoWeapon: {fileID: 0}
+  animator: {fileID: 2981120534294750349}
 --- !u!114 &5237156780894679098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439,10 +403,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e32580b137a6d5499ab73ff0bcfa9b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerUISystem
-  weaponNameText: {fileID: 0}
-  nbBulletText: {fileID: 0}
-  nbEnemyKilledText: {fileID: 0}
-  nbEnemyTotalText: {fileID: 0}
 --- !u!114 &7470015822269332441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,7 +458,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -535,7 +495,7 @@ MonoBehaviour:
   minHealth: 0
   healthBar: {fileID: 3504991361199769932}
   isAlive: 1
---- !u!95 &4266240302404323739
+--- !u!95 &2981120534294750349
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -703,90 +663,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1.4000015, y: 0.29999995}
   m_SizeDelta: {x: -8.65, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &8327276655616314730
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4890038688683065473}
-  - component: {fileID: 1211581481848204061}
-  m_Layer: 0
-  m_Name: Spot Light 2D (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4890038688683065473
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8327276655616314730}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7908870927203271737}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1211581481848204061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8327276655616314730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.Light2D
-  m_ComponentVersion: 2
-  m_LightType: 3
-  m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.171
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.24
-  m_LightVolumeIntensity: 1
-  m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000
-  m_LightCookieSprite: {fileID: 0}
-  m_DeprecatedPointLightCookieSprite: {fileID: 0}
-  m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 0
-  m_OverlapOperation: 0
-  m_NormalMapDistance: 3
-  m_NormalMapQuality: 2
-  m_UseNormalMap: 0
-  m_ShadowsEnabled: 1
-  m_ShadowIntensity: 0.75
-  m_ShadowSoftness: 0.3
-  m_ShadowSoftnessFalloffIntensity: 0.5
-  m_ShadowVolumeIntensityEnabled: 0
-  m_ShadowVolumeIntensity: 0.75
-  m_LocalBounds:
-    m_Center: {x: 0, y: -0.00000011920929, z: 0}
-    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
-  m_PointLightInnerAngle: 359.99997
-  m_PointLightOuterAngle: 359.99997
-  m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 7
-  m_ShapeLightParametricSides: 5
-  m_ShapeLightParametricAngleOffset: 0
-  m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
-  m_ShapeLightFalloffOffset: {x: 0, y: 0}
-  m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &8384614380271751435
 GameObject:
   m_ObjectHideFlags: 0
