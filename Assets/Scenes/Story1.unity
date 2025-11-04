@@ -153,21 +153,20 @@ MonoBehaviour:
   - nom: Moi
     sprite: {fileID: 21300000, guid: c9e2d817fee92994a8a36b670e7b413a, type: 3}
     phrase: "Six mois. Six mois que je vois sa chute dans mes reves. Ils ont appele
-      ca un accident. La verite sent le sang et le cuir neuf. Ce soir, je remonte.
-      Ce soir, l\u2019hotel brule."
-  - nom: Copine
+      ca un accident... Ce soir, je remonte. Ce soir, l\u2019hotel brule."
+  - nom: Sylvie
     sprite: {fileID: 21300000, guid: 334391a880bb1e244a2b473fbbdbe0e6, type: 3}
     phrase: "Tu\u2026 tu fais vraiment ca ? Tu ne vas pas\u2026 te faire tuer ?"
   - nom: Moi
     sprite: {fileID: 21300000, guid: d3d33b99599be1e4d9c98e2c2944ff03, type: 3}
-    phrase: "Il est mort il y a six mois. J\u2019ai attendu. Ce soir, je rentre le
-      couteau."
-  - nom: Copine
+    phrase: "Il est mort il y a six mois. J\u2019ai attendu. Ce soir, c'est le moment
+      de la vengeance."
+  - nom: Sylvie
     sprite: {fileID: 21300000, guid: 334391a880bb1e244a2b473fbbdbe0e6, type: 3}
     phrase: Promets moi que tu reviendras.
   - nom: Moi
     sprite: {fileID: 21300000, guid: d3d33b99599be1e4d9c98e2c2944ff03, type: 3}
-    phrase: Je ne peux rien te promettre.
+    phrase: Je ne peux rien te promettre, mais je ferai de mon mieux.
   nomUI: {fileID: 1539353678}
   phraseUI: {fileID: 872732781}
   spriteUI: {fileID: 2129068419}

@@ -224,23 +224,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueScene
   dialogues:
-  - nom: GARDE 1
+  - nom: Romain
     sprite: {fileID: 21300000, guid: 4114c43af141182478c016d8b6f1e925, type: 3}
     phrase: Le patron veut rien entendre des histoires. Pas de gene. Pas de discussion.
-  - nom: GARDE 2
+  - nom: Dani
     sprite: {fileID: 21300000, guid: 546851b35175b694ba4df6f56057fdf0, type: 3}
     phrase: "Parait que c\u2019etait un journaliste, non ? Le frere d\u2019un p\u2019tit
       communiquant. Trop curieux, comme d\u2019hab."
-  - nom: GARDES
+  - nom: Romain
     sprite: {fileID: 21300000, guid: 4114c43af141182478c016d8b6f1e925, type: 3}
-    phrase: (Ils remarquent la silhouette)
-  - nom: GARDE 1
-    sprite: {fileID: 21300000, guid: 4114c43af141182478c016d8b6f1e925, type: 3}
-    phrase: 'He ! Qui va la ? Montre toi ! '
+    phrase: '[Ils remarquent la silhouette]
+
+      He ! Qui va la ? Montre toi ! '
   - nom: Moi
     sprite: {fileID: 21300000, guid: d3d33b99599be1e4d9c98e2c2944ff03, type: 3}
-    phrase: Montrez moi juste ou il se cache. Et personne ne se souviendra de mon
-      passage.
+    phrase: "Montrez moi juste ou se cache Klein, j'ai des choses \xE0 r\xE9gler
+      avec lui.. Et apr\xE8s \xE7a, personne ne se souviendra de mon passage."
+  - nom: Romain
+    sprite: {fileID: 21300000, guid: 4114c43af141182478c016d8b6f1e925, type: 3}
+    phrase: "Tu crois\u2026 tu crois que t\u2019es le premier ? Il a bris\xE9 des
+      types comme toi. Tu vas\u2026 tu vas tomber."
   - nom: Moi
     sprite: {fileID: 21300000, guid: d3d33b99599be1e4d9c98e2c2944ff03, type: 3}
     phrase: "J\u2019ai deja perdu ce que j\u2019aimais. J\u2019ai plus rien a perdre."
@@ -248,7 +251,7 @@ MonoBehaviour:
   phraseUI: {fileID: 872732781}
   spriteUI: {fileID: 2129068419}
   boutonContinue: {fileID: 1564614136}
-  sceneSuivante: 
+  sceneSuivante: Hall
   delaiEntreLettres: 0.03
 --- !u!4 &687463760
 Transform:
