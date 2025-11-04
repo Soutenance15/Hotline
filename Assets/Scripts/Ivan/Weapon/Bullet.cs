@@ -6,21 +6,21 @@ public class Bullet : MonoBehaviour
     private float timer; // durée avant disparition
     public Health health;
 
-    void Start() { }
+    void Start()
+    {
+    
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
+            Debug.Log("Hit Enemy");
             health = collision.gameObject.GetComponent<Health>();
-            health.UpdateDamage(-50);
+            health.UpdateDamage(-20);
             Destroy(gameObject);
         }
-        else if (collision.gameObject.tag == "TileMapCollider")
-        {
-            Destroy(gameObject);
-        }
-        else if (collision.CompareTag("TurnTable"))
+        if (collision.CompareTag("TurnTable"))
         {
             TurnTable turnTable = collision.GetComponent<TurnTable>();
             if (turnTable.onSide)
@@ -28,6 +28,7 @@ public class Bullet : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+
     }
 
     void Update()

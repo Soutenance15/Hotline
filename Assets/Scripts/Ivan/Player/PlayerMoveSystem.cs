@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerMoveSystem : MonoBehaviour
 {
     // --- Mouvements ---
-    private float currentSpeed = 5f;
+    private float currentSpeed = 3f;
 
     private Camera mainCam;
 

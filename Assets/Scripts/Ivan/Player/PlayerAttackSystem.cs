@@ -6,9 +6,6 @@ public class PlayerAttackSystem : MonoBehaviour
     public AmmoWeapon ammoWeapon;
     public  Animator animator;
 
-    // Effet
-    public AudioClip shootClip;
-
     // Functions
     public void SetAmmoWeapon(AmmoWeapon ammoWeapon)
     {
@@ -21,13 +18,6 @@ public class PlayerAttackSystem : MonoBehaviour
         {
             animator.SetBool("IsGun", false);
         }
-    }
-
-    public void ConfigAmmoWeapon(AmmoToTake ammoToTake)
-    {
-        ammoWeapon.nbAmmo = ammoToTake.nbAmmo;
-        ammoWeapon.weaponName = ammoToTake.weaponName;
-        ammoWeapon.canNotShoot = ammoWeapon.CanNotShoot();
     }
 
     public void Shoot(float speedPlayer)
@@ -46,8 +36,6 @@ public class PlayerAttackSystem : MonoBehaviour
                 // Ajoute la vitesse du player a la balle (utile si il avance)
                 bullet.speed += speedPlayer;
             }
-
-            GameSoundEffect.PlaySound(shootClip);
         }
     }
 }

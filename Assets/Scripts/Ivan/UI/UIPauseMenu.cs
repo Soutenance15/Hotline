@@ -7,12 +7,10 @@ public class UIPauseMenu : MonoBehaviour
     public Button resumeButton;
     public Button backButton;
     public Button quitButton;
-    public Button optionButton;
 
     public static Action OnResume_Pause;
     public static Action OnBack_Pause;
     public static Action OnQuit_Pause;
-    public static Action OnOption_Pause;
 
     void Awake()
     {
@@ -27,10 +25,6 @@ public class UIPauseMenu : MonoBehaviour
         if (null == quitButton)
         {
             quitButton = GameObject.Find("QuitButton").GetComponent<Button>();
-        }
-        if (null == optionButton)
-        {
-            optionButton = GameObject.Find("OptionButton").GetComponent<Button>();
         }
 
         // Init All Buttons
@@ -47,10 +41,6 @@ public class UIPauseMenu : MonoBehaviour
         {
             quitButton.onClick.AddListener(() => OnClickQuit());
         }
-        if (null != optionButton)
-        {
-            optionButton.onClick.AddListener(() => OnClickOption());
-        }
     }
 
     void OnClickResume()
@@ -66,10 +56,5 @@ public class UIPauseMenu : MonoBehaviour
     void OnClickQuit()
     {
         OnQuit_Pause?.Invoke();
-    }
-
-    void OnClickOption()
-    {
-        OnOption_Pause?.Invoke();
     }
 }

@@ -6,8 +6,6 @@ TagManager:
   tags:
   - Weapon
   - TurnTable
-  - Enemy
-  - TileMapCollider
   layers:
   - Default
   - TransparentFX
@@ -16,8 +14,8 @@ TagManager:
   - Water
   - UI
   - Glow
-  - TurnTable
-  - Enemy
+  - 
+  - 
   - 
   - 
   - 

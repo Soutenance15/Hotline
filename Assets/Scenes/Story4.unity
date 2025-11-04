@@ -149,40 +149,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueScene
   dialogues:
-  - nom: Portier
-    sprite: {fileID: 21300000, guid: 4c4f834555d9b3a479ef761d648b38e9, type: 3}
-    phrase: "Je savais qu\u2019un jour quelqu\u2019un reviendrait pour lui."
-  - nom: Portier
-    sprite: {fileID: 21300000, guid: 4c4f834555d9b3a479ef761d648b38e9, type: 3}
-    phrase: "Et oui, je connais tout le monde, et je vois clair dans ton petit jeu,
-      tu es l\xE0 pour te venger ! Tu as besoin de savoir quelque chose, peut-\xEAtre,
-      ou avoir acc\xE8s \xE0 quelque part\u2026 ?!"
+  - nom: Ivan
+    sprite: {fileID: 21300000, guid: b876757e16d3fc14b9822dfe144c8eaf, type: 3}
+    phrase: "T\u2019es venu\u2026 Je pensais que personne ne reviendrait."
   - nom: Moi
     sprite: {fileID: 21300000, guid: d3d33b99599be1e4d9c98e2c2944ff03, type: 3}
-    phrase: Je ne veux pas ton aide.
-  - nom: Portier
-    sprite: {fileID: 21300000, guid: 4c4f834555d9b3a479ef761d648b38e9, type: 3}
-    phrase: "Tu sais, comme je suis trait\xE9 ici, je te laisse volontiers essayer
-      de a d\xE9tr\xF4ner. Tiens, prends cette carte quand m\xEAme."
-  - nom: Portier
-    sprite: {fileID: 21300000, guid: 4c4f834555d9b3a479ef761d648b38e9, type: 3}
-    phrase: "Il m\xE9rite tout ce qui va lui arriver."
-  - nom: Portier
-    sprite: {fileID: 21300000, guid: 4c4f834555d9b3a479ef761d648b38e9, type: 3}
-    phrase: "Tu crois venger ton fr\xE8re ? Il a trahi LUCAS KLAIN. Il volait des
-      fichiers."
+    phrase: "Ivan ? Tu travaillais avec mon frere. Ou est-il alle ? Qu\u2019a-t-il
+      trouve ?"
+  - nom: Ivan
+    sprite: {fileID: 21300000, guid: b876757e16d3fc14b9822dfe144c8eaf, type: 3}
+    phrase: "Il a pris des fichiers. Il voulait tout exposer\u2026 Trafic d\u2019armes,
+      pots-de-vin, contrats montes jusqu\u2019au sommet. Lucas n\u2019a pas aime
+      qu\u2019on les lise."
   - nom: Moi
-    sprite: {fileID: 21300000, guid: c9e2d817fee92994a8a36b670e7b413a, type: 3}
-    phrase: "Non. Il cherchait juste la v\xE9rit\xE9."
-  - nom: Portier
-    sprite: {fileID: 21300000, guid: 4c4f834555d9b3a479ef761d648b38e9, type: 3}
-    phrase: "Crois ce que tu penses, et surtout bonne chance \xE0 toi, sois fort
-      !"
+    sprite: {fileID: 21300000, guid: d3d33b99599be1e4d9c98e2c2944ff03, type: 3}
+    phrase: Ou est le code pour le toit ?
+  - nom: Ivan
+    sprite: {fileID: 21300000, guid: b876757e16d3fc14b9822dfe144c8eaf, type: 3}
+    phrase: "Le code\u2026 dans son penthouse. Etage 25. Mais\u2026 il t\u2019attend.
+      Il est\u2026 prepare."
+  - nom: Moi
+    sprite: {fileID: 21300000, guid: d3d33b99599be1e4d9c98e2c2944ff03, type: 3}
+    phrase: Alors il paiera.
+  - nom: Ivan
+    sprite: {fileID: 21300000, guid: b876757e16d3fc14b9822dfe144c8eaf, type: 3}
+    phrase: "Tu crois qu\u2019on peut tuer la corruption avec une balle ? Non. Mais
+      on peut allumer un feu. Si tu montes, tu ne redescendras peut-etre pas."
+  - nom: Moi
+    sprite: {fileID: 21300000, guid: d3d33b99599be1e4d9c98e2c2944ff03, type: 3}
+    phrase: "Tant mieux. J\u2019ai pas prevu de redescendre."
+  - nom: Ivan
+    sprite: {fileID: 21300000, guid: b876757e16d3fc14b9822dfe144c8eaf, type: 3}
+    phrase: "Il n\u2019y a pas de justice ici\u2026 il n\u2019y a que du feu."
   nomUI: {fileID: 1539353678}
   phraseUI: {fileID: 872732781}
   spriteUI: {fileID: 2129068419}
   boutonContinue: {fileID: 1564614136}
   sceneSuivante: 
+  delaiEntreLettres: 0.03
 --- !u!4 &687463760
 Transform:
   m_ObjectHideFlags: 0
@@ -232,8 +236,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 145.64, y: 70.767}
-  m_SizeDelta: {x: 1502.9, y: 141.534}
+  m_AnchoredPosition: {x: 93.82517, y: 72.057236}
+  m_SizeDelta: {x: 1399.3083, y: 144.1145}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &872732780
 CanvasRenderer:
@@ -413,7 +417,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1035278800}
   m_CullTransparentMesh: 1
---- !u!1 &1052405196
+--- !u!1 &1060364965
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -421,9 +425,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1052405197}
-  - component: {fileID: 1052405199}
-  - component: {fileID: 1052405198}
+  - component: {fileID: 1060364966}
+  - component: {fileID: 1060364968}
+  - component: {fileID: 1060364967}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -431,13 +435,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1052405197
+--- !u!224 &1060364966
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052405196}
+  m_GameObject: {fileID: 1060364965}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -450,13 +454,13 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1052405198
+--- !u!114 &1060364967
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052405196}
+  m_GameObject: {fileID: 1060364965}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -470,7 +474,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8666664153384852542, guid: a59790fbba1c177409daa7c8592d0b2f, type: 3}
+  m_Sprite: {fileID: -118444934011705414, guid: 4d072bdd9af1a3d4ea4624977a6399b3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -480,13 +484,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &1052405199
+--- !u!222 &1060364968
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1052405196}
+  m_GameObject: {fileID: 1060364965}
   m_CullTransparentMesh: 1
 --- !u!1 &1539353675
 GameObject:
@@ -522,7 +526,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -302.9, y: 70}
+  m_AnchoredPosition: {x: -302.9, y: 72.297}
   m_SizeDelta: {x: 605.81, y: 70.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1539353677
@@ -586,7 +590,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 3
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -659,8 +663,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 796.5, y: -60.4}
-  m_SizeDelta: {x: 76.475, y: 74.9302}
+  m_AnchoredPosition: {x: 833, y: -79.404}
+  m_SizeDelta: {x: 67.384, y: 56.1859}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1564614136
 MonoBehaviour:
@@ -766,7 +770,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1663766057}
   - component: {fileID: 1663766056}
-  - component: {fileID: 1663766055}
   - component: {fileID: 1663766058}
   m_Layer: 0
   m_Name: Main Camera
@@ -775,14 +778,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1663766055
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1663766054}
-  m_Enabled: 1
 --- !u!20 &1663766056
 Camera:
   m_ObjectHideFlags: 0
@@ -1003,7 +998,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1052405197}
+  - {fileID: 1060364966}
   - {fileID: 1035278801}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1147,8 +1142,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 131, y: -1.7195}
-  m_SizeDelta: {x: 230.6041, y: 209.8338}
+  m_AnchoredPosition: {x: 142, y: 0.0000038147}
+  m_SizeDelta: {x: 233.1846, y: 214.9949}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
