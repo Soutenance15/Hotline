@@ -8,6 +8,7 @@ public class GameVisualEffect : MonoBehaviour
     {
         if (showVFX)
         {
+            Debug.Log("effet text mort");
             // Instancier le prefab
             Instantiate(prefabDieText, transform.position, Quaternion.identity);
         }
