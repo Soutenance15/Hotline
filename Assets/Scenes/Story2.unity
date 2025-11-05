@@ -224,26 +224,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueScene
   dialogues:
-  - nom: ENNEMI 1
+  - nom: Romain
     sprite: {fileID: 21300000, guid: 4114c43af141182478c016d8b6f1e925, type: 3}
-    phrase: "Parait que le proprio veut pas qu\u2019on parle du type qu\u2019ils
-      ont bute le mois dernier."
-  - nom: ENNEMI 2
+    phrase: Le patron veut rien entendre des histoires. Pas de gene. Pas de discussion.
+  - nom: Dani
     sprite: {fileID: 21300000, guid: 546851b35175b694ba4df6f56057fdf0, type: 3}
-    phrase: "Ouais, le frere d\u2019un petit journaliste. Un emmerdeur de premiere."
+    phrase: "Parait que c\u2019etait un journaliste, non ? Le frere d\u2019un p\u2019tit
+      communiquant. Trop curieux, comme d\u2019hab."
+  - nom: Romain
+    sprite: {fileID: 21300000, guid: 4114c43af141182478c016d8b6f1e925, type: 3}
+    phrase: '[Ils remarquent la silhouette]
+
+      He ! Qui va la ? Montre toi ! '
   - nom: Moi
     sprite: {fileID: 21300000, guid: d3d33b99599be1e4d9c98e2c2944ff03, type: 3}
-    phrase: "C\u2019est ici qu\u2019ils t\u2019ont eu mon frere\u2026 J\u2019vais
-      pas les rater"
-  - nom: ENNEMI 1
+    phrase: "Montrez moi juste ou se cache Klein, j'ai des choses \xE0 r\xE9gler
+      avec lui.. Et apr\xE8s \xE7a, personne ne se souviendra de mon passage."
+  - nom: Romain
     sprite: {fileID: 21300000, guid: 4114c43af141182478c016d8b6f1e925, type: 3}
-    phrase: "Hey, toi la-bas !!!! Tu crois que t\u2019es le premier \xE0 venir pour
-      LUCAS KLEIN ? Il te brisera comme tous les autres."
+    phrase: "Tu crois\u2026 tu crois que t\u2019es le premier ? Il a bris\xE9 des
+      types comme toi. Tu vas\u2026 tu vas tomber."
+  - nom: Moi
+    sprite: {fileID: 21300000, guid: d3d33b99599be1e4d9c98e2c2944ff03, type: 3}
+    phrase: "J\u2019ai deja perdu ce que j\u2019aimais. J\u2019ai plus rien a perdre."
   nomUI: {fileID: 1539353678}
   phraseUI: {fileID: 872732781}
   spriteUI: {fileID: 2129068419}
   boutonContinue: {fileID: 1564614136}
-  sceneSuivante: 
+  sceneSuivante: Hall
+  delaiEntreLettres: 0.03
 --- !u!4 &687463760
 Transform:
   m_ObjectHideFlags: 0
@@ -293,8 +302,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 145.65, y: 73.799}
-  m_SizeDelta: {x: 1502.9, y: 143.3984}
+  m_AnchoredPosition: {x: 86.743, y: 93.041}
+  m_SizeDelta: {x: 1385.1, y: 143.3984}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &872732780
 CanvasRenderer:
@@ -572,7 +581,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 3
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -645,7 +654,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 814.71204, y: -65}
+  m_AnchoredPosition: {x: 836, y: -67.021}
   m_SizeDelta: {x: 70.8307, y: 68.2751}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1564614136
@@ -752,7 +761,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1663766057}
   - component: {fileID: 1663766056}
-  - component: {fileID: 1663766055}
   - component: {fileID: 1663766058}
   m_Layer: 0
   m_Name: Main Camera
@@ -761,14 +769,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1663766055
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1663766054}
-  m_Enabled: 1
 --- !u!20 &1663766056
 Camera:
   m_ObjectHideFlags: 0
