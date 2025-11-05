@@ -21,14 +21,23 @@ EditorBuildSettings:
     path: Assets/Scenes/Lucas.unity
     guid: 64dc7decf7844d04680851f27eaa69f6
   - enabled: 1
+    path: Assets/Scenes/Underground.unity
+    guid: 80bea22a4b1080148af3844226028097
+  - enabled: 1
     path: Assets/Scenes/Story2.unity
     guid: c8735cae9a34df4409972ef54bc603e9
+  - enabled: 1
+    path: Assets/Scenes/Hall.unity
+    guid: 2d117b410d03d1741812d319c3f2931a
   - enabled: 1
     path: Assets/Scenes/Story3.unity
     guid: 46b38f9744f3c6b47ae8a1df126f28a8
   - enabled: 1
     path: Assets/Scenes/Story4.unity
     guid: 1637966aae6c004459f2c593ed2c9c5c
+  - enabled: 1
+    path: Assets/Scenes/RoofTopScene.unity
+    guid: 81c9a8e8059ddd946bbeb61fdb9c4db7
   - enabled: 1
     path: Assets/Scenes/Story5.unity
     guid: 4d5c37741698bad408823bfe78e0f370
@@ -44,6 +53,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ivan/FirstScene.unity
     guid: 1c16c0c5d13c37745b4cdf280c9c00ee
+  - enabled: 1
+    path: Assets/Scenes/FinalScene.unity
+    guid: cfff97da05236304dada5751bcb114ea
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
