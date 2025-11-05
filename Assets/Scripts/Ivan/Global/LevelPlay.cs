@@ -50,7 +50,7 @@ public class LevelPlay : MonoBehaviour
         {
             panelNextLevel.SetActive(true);
         }
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSecondsRealtime(2f);
         if (null != nextSceneName && nextSceneName != "")
         {
             SceneManager.LoadScene(nextSceneName);
