@@ -717,7 +717,7 @@ GameObject:
   - component: {fileID: 7548991014204509745}
   - component: {fileID: 5321577242038924805}
   m_Layer: 5
-  m_Name: PlayButton
+  m_Name: ResumeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1395,7 +1395,7 @@ GameObject:
   - component: {fileID: 4193777587932417949}
   - component: {fileID: 7669896119703744689}
   m_Layer: 5
-  m_Name: Volume Music
+  m_Name: VolumeMusicSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1636,7 +1636,7 @@ GameObject:
   - component: {fileID: 726915286433762300}
   - component: {fileID: 7372849438544176268}
   m_Layer: 5
-  m_Name: Volume Effet
+  m_Name: VolumeEffectSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
