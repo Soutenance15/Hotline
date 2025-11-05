@@ -14,7 +14,7 @@ public class UIGameOverMenu : MonoBehaviour
 
     void Awake()
     {
-        if (null == resumeButton)
+        if (!resumeButton)
         {
             resumeButton = GameObject.Find("ResumeButton").GetComponent<Button>();
         }
@@ -29,7 +29,7 @@ public class UIGameOverMenu : MonoBehaviour
 
         // Init All Buttons
 
-        if (null != resumeButton)
+        if (!resumeButton)
         {
             resumeButton.onClick.AddListener(() => OnClickResumeFromGameOver());
         }
@@ -46,6 +46,7 @@ public class UIGameOverMenu : MonoBehaviour
     void OnClickResumeFromGameOver()
     {
         OnResumeFromGameOver_Pause?.Invoke();
+        // gameObject.transform.Find("LevelPlay").GetComponent<LevelPlay>().RestartLevel();
     }
 
     void OnClickBack()

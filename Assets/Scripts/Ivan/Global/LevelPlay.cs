@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +12,8 @@ public class LevelPlay : MonoBehaviour
     public AudioSource audioSourceMusic;
     public AudioClip musicLevel;
     public GameObject panelNextLevel;
+
+    public TextMeshProUGUI text;
 
     public string nextSceneName;
     public int enemiesTotal;
@@ -67,6 +70,10 @@ public class LevelPlay : MonoBehaviour
 
     void Awake()
     {
+        if (null != text)
+        {
+            text.text = "Start OK";
+        }
         if (null != panelNextLevel)
         {
             panelNextLevel.SetActive(false);
@@ -94,14 +101,14 @@ public class LevelPlay : MonoBehaviour
             audioSource.volume = 1f;
         }
 
-        if (null == playerObject)
-        {
-            playerObject = GameObject.Find("PlayerController");
-        }
-        if (null == enemies)
-        {
-            enemies = GameObject.Find("Enemies");
-        }
+        // if (null == playerObject)
+        // {
+        //     playerObject = GameObject.Find("PlayerController");
+        // }
+        // if (null == enemies)
+        // {
+        //     enemies = GameObject.Find("Enemies");
+        // }
         enemiesTotal = enemies.transform.childCount;
 
         if (null != playerObject)
@@ -118,8 +125,12 @@ public class LevelPlay : MonoBehaviour
         GameSoundEffect.PlaySoundMusic(musicLevel);
     }
 
-    void RestartLevel()
+    public void RestartLevel()
     {
+        if (null != text)
+        {
+            text.text = "Restart Level is called";
+        }
         GameSoundEffect.StopAudioSource();
         RespawnEnemies();
         RespawnPlayer();
