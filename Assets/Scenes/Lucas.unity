@@ -443,6 +443,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OptionMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 1254757048563795972, guid: 21434685f446d9d46b075791b87810fb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2257022580184777714, guid: 21434685f446d9d46b075791b87810fb, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4692,6 +4696,10 @@ MonoBehaviour:
   audioSource: {fileID: 1580018772}
   audioSourceMusic: {fileID: 1580018771}
   musicLevel: {fileID: 8300000, guid: 1208c67446d56f74eae9045ad77fba59, type: 3}
+  panelNextLevel: {fileID: 0}
+  nextSceneName: 
+  enemiesTotal: 0
+  nbKill: 0
 --- !u!4 &1580018774
 Transform:
   m_ObjectHideFlags: 0
