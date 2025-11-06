@@ -42,6 +42,7 @@ public class EnemyAttack : MonoBehaviour
                 patrol = GetComponent<EnemyPatrol>();
                 patrol.StopMovement();
                 timer += Time.deltaTime;
+                TurnToPlayer();
                 if (timer > 1)
                 {
                     timer = 0;
@@ -54,6 +55,19 @@ public class EnemyAttack : MonoBehaviour
                 patrol.ResumeMovement();
             }
         }
+    }
+
+    void TurnToPlayer()
+    {
+        Vector3 direction = player.transform.position - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        Quaternion targetRotation = Quaternion.Euler(0, 0, angle);
+        transform.rotation = Quaternion.Slerp(
+            transform.rotation,
+            targetRotation,
+            Time.deltaTime * 5f
+        );
     }
 
     public void Shoot()

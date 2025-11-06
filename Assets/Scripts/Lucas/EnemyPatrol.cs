@@ -14,6 +14,8 @@ public class EnemyPatrol : MonoBehaviour
     // Composants
     public EnemyAttack enemyAttack;
     public Health health;
+    public SpriteRenderer spriteNormal;
+    public SpriteRenderer spriteDead;
 
     // Animator animator;
 
@@ -36,8 +38,18 @@ public class EnemyPatrol : MonoBehaviour
         }
     }
 
+    public void InitSprite()
+    {
+        if (null != spriteNormal && null != spriteDead)
+        {
+            spriteNormal.enabled = true;
+            spriteDead.enabled = false;
+        }
+    }
+
     void Start()
     {
+        InitSprite();
         // animator = enemy.GetComponent<Animator>();
 
         // Sauvegarde des positions mondiales des points
@@ -121,6 +133,11 @@ public class EnemyPatrol : MonoBehaviour
         }
         health.healthBar.gameObject.SetActive(false);
         enemyAttack.isAlive = false;
+        if (null != spriteNormal && null != spriteDead)
+        {
+            spriteNormal.enabled = false;
+            spriteDead.enabled = true;
+        }
         EnemyPatrol.enemyDie?.Invoke();
     }
 

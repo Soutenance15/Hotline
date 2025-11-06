@@ -13,8 +13,6 @@ public class LevelPlay : MonoBehaviour
     public AudioClip musicLevel;
     public GameObject panelNextLevel;
 
-    public TextMeshProUGUI text;
-
     public string nextSceneName;
     public int enemiesTotal;
     public int nbKill;
@@ -70,10 +68,6 @@ public class LevelPlay : MonoBehaviour
 
     void Awake()
     {
-        if (null != text)
-        {
-            text.text = "Start OK";
-        }
         if (null != panelNextLevel)
         {
             panelNextLevel.SetActive(false);
@@ -127,10 +121,6 @@ public class LevelPlay : MonoBehaviour
 
     public void RestartLevel()
     {
-        if (null != text)
-        {
-            text.text = "Restart Level is called";
-        }
         GameSoundEffect.StopAudioSource();
         RespawnEnemies();
         RespawnPlayer();
@@ -159,6 +149,7 @@ public class LevelPlay : MonoBehaviour
                 GameObject enemyObject = child.gameObject;
                 EnemyPatrol enemyPatrol = enemyObject.GetComponent<EnemyPatrol>();
                 enemyPatrol.ForRespawn();
+                enemyPatrol.InitSprite();
             }
         }
     }
