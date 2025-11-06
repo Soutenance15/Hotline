@@ -72,7 +72,7 @@ public class AudioManager : MonoBehaviour
         else if (sceneName.StartsWith("Story")) nextClip = musicNarratif;
         else if (sceneName == "Underground") nextClip = musicLevel1;
         else if (sceneName == "Hall") nextClip = musicLevel2;
-        else if (sceneName == "Level3") nextClip = musicLevel3;
+        else if (sceneName == "RoofTopScene") nextClip = musicLevel3;
 
         if (nextClip != null && nextClip != musicSource.clip)
         {
