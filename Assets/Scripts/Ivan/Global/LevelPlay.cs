@@ -92,7 +92,7 @@ public class LevelPlay : MonoBehaviour
             // Configuration du son global 2D
             audioSource.playOnAwake = false;
             audioSource.spatialBlend = 0f; // 0 = 2D, 1 = 3D
-            audioSource.volume = 1f;
+            audioSource.volume = 5f;
         }
 
         // if (null == playerObject)
@@ -108,7 +108,8 @@ public class LevelPlay : MonoBehaviour
         if (null != playerObject)
         {
             playerController = playerObject.GetComponent<PlayerController>();
-            playerController.playerUI.UpdateNbEnemyTotalText(enemiesTotal.ToString());
+            if (null != playerController.playerUI && 0 != enemiesTotal)
+                playerController.playerUI.UpdateNbEnemyTotalText(enemiesTotal.ToString());
         }
     }
 

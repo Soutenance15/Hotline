@@ -191,6 +191,7 @@ public class GameManager : MonoBehaviour
     void QuitApplication()
     {
         Debug.Log("Quitter Application");
+        Application.Quit();
     }
 
     public void LoadScene(string nameScene)

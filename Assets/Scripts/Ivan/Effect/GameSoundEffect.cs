@@ -71,8 +71,11 @@ public class GameSoundEffect : MonoBehaviour
         UpdateAudioSourceMusic();
         if (null != clip)
         {
-            float volumeOtion = OptionManager.GetVolumeMusic();
-            audioSourceMusic.PlayOneShot(clip, volumeOtion);
+            // float volumeOtion = OptionManager.GetVolumeMusic();
+            // audioSourceMusic.PlayOneShot(clip, volumeOtion);
+            audioSourceMusic.clip = clip;
+            audioSourceMusic.loop = true; // active la boucle
+            audioSourceMusic.Play();
         }
     }
 
